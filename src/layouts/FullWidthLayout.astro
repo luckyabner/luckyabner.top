@@ -5,23 +5,23 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
 const { title, description} = Astro.props;
 ---
 
 <html lang="en" class="bg-background text-text">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+    <head>
+        <BaseHead title={title} description={description} />
+    </head>
 
-	<body class="min-h-screen p-4">
-		<Header />
-		<main class="max-w-3xl mx-auto ">
-			<slot />
-		</main>
-		<Footer />
-	</body>
+    <body class="min-h-screen p-4">
+        <Header />
+        <main >
+            <slot />
+        </main>
+        <Footer />
+    </body>
 </html>

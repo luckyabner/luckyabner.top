@@ -1,0 +1,13 @@
+---
+// export const prerender = false;
+
+import Layout from '../layouts/Layout.astro';
+import PhotosList from '../components/photos/PhotosList.astro';
+import FullWidthLayout from '../layouts/FullWidthLayout.astro';
+
+
+---
+
+<FullWidthLayout title="Photos" description='A page that displays a collection of photos'>
+  <PhotosList />
+</FullWidthLayout>

@@ -1,10 +1,14 @@
 ---
 import Layout from './Layout.astro';
+const data = Astro.props;
 ---
 
 <Layout title='Blog Post' description='Read our latest blog posts.'>
-  
-  <article class="prose max-w-none">
+  <h1 class="text-2xl mb-2">{data.title}</h1>
+  <p class="text-subtext">
+    <time datetime={data.date.toISOString()}>{data.date.toLocaleDateString()}</time>
+  </p>
+  <article class="prose mt-4 max-w-none">
     <slot />
   </article>
 </Layout>

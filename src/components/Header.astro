@@ -2,11 +2,13 @@
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header class="my-4 flex items-center">
-	<!-- <div>logo</div> -->
-	<nav class="flex items-center gap-2 ">
+<header class="my-4 flex items-center justify-between max-w-3xl mx-auto">
+	<img src="/logo-light.png" class="size-20" alt="Logo">
+	<!-- <img src="/logo-dark.png" class="size-20" alt="Logo"> -->
+	<nav class="flex items-center gap-2 ml-auto">
 		<HeaderLink href="/" title='Home'>Home</HeaderLink>
 		<HeaderLink href="/blog" title='Blog'>Blog</HeaderLink>
-		<HeaderLink href="/about" title='About'>About</HeaderLink>
+		<HeaderLink href="/projects" title='Projects'>Projects</HeaderLink>
+		<HeaderLink href="/photos" title='Photos'>Photos</HeaderLink>
 	</nav>
 </header>

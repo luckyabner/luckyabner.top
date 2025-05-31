@@ -7,10 +7,19 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
-  integrations: [mdx(), sitemap()],
+	site: 'https://example.com',
+	integrations: [mdx(), sitemap()],
+	markdown: {
+		shikiConfig: {
+			theme: 'dracula',
+		},
+	},
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
+	image: {
+		domains: ['unsplash.com', 'photos.luckyabner.top'],
+	},
+
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
