@@ -1,14 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 import HeaderLink from './HeaderLink.astro';
+import ThemeIcon from './ThemeIcon.astro';
 ---
 
 <header class="my-4 flex items-center justify-between max-w-3xl mx-auto">
-	<img src="/logo-light.png" class="size-20" alt="Logo">
-	<!-- <img src="/logo-dark.png" class="size-20" alt="Logo"> -->
+	<HeaderLink href="/" title='Home' class="">
+		<Image src="/logo-light.png" width={80} height={60} class="block dark:hidden" alt="Logo" />
+		<Image src="/logo-dark.png" width={80} height={60} class=" hidden dark:block" alt="Logo" />
+	</HeaderLink>
 	<nav class="flex items-center gap-2 ml-auto">
 		<HeaderLink href="/" title='Home'>Home</HeaderLink>
 		<HeaderLink href="/blog" title='Blog'>Blog</HeaderLink>
 		<HeaderLink href="/projects" title='Projects'>Projects</HeaderLink>
 		<HeaderLink href="/photos" title='Photos'>Photos</HeaderLink>
+		<ThemeIcon />
 	</nav>
 </header>
