@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import HeaderLink from './HeaderLink.astro';
 import ThemeIcon from './ThemeIcon.astro';
+import { Github } from '@lucide/astro';
 ---
 
 <header class="my-4 flex items-center justify-between max-w-3xl mx-auto">
@@ -14,6 +15,9 @@ import ThemeIcon from './ThemeIcon.astro';
 		<HeaderLink href="/blog" title='Blog'>Blog</HeaderLink>
 		<HeaderLink href="/projects" title='Projects'>Projects</HeaderLink>
 		<HeaderLink href="/photos" title='Photos'>Photos</HeaderLink>
+		<a href="https://github.com/luckyabner" title='Github' target='blank' class="ml-2">
+			<Github />
+		</a>
 		<ThemeIcon />
 	</nav>
 </header>
