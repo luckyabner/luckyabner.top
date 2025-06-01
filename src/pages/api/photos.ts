@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import { ListObjectsV2Command } from '@aws-sdk/client-s3';
 import type { APIRoute } from 'astro';
 import { getSecret } from 'astro:env/server';
