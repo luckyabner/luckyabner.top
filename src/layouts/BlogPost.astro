@@ -4,8 +4,8 @@ const data = Astro.props;
 ---
 
 <Layout 
-  title='Blog Post' 
-  description='Read our latest blog posts.'
+  title={data.title}
+  description='Thanks for your visit.'
   image='/og/og-blog.png'
   >
   <h1 class="text-2xl mb-2">{data.title}</h1>

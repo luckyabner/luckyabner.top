@@ -48,4 +48,7 @@ const { title, description, image = '/og/og.png' } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+<!-- rss -->
+<link rel="alternate" type="application/rss+xml" title="Subscribe to my blog" href={new URL('/rss.xml', Astro.url)} />
+
 <ClientRouter />
