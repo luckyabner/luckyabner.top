@@ -1,7 +1,6 @@
 ---
 title: 在React/Typescript中使用Barrel Pattern
 date: 2025.04.21
-description: "null"
 ---
 
 ### 引言
@@ -30,7 +29,6 @@ description: "null"
 import Button from './components/Button';
 import Input from './components/Input';
 import Checkbox from './components/Checkbox';
-
 ```
 
 而通过 **Barrel 模式**，你只需在 `components` 目录下创建一个 `index.js` 文件：
@@ -40,14 +38,12 @@ import Checkbox from './components/Checkbox';
 export { default as Button } from './Button';
 export { default as Input } from './Input';
 export { default as Checkbox } from './Checkbox';
-
 ```
 
 此后，所有组件可以通过一行代码导入：
 
 ```jsx
 import { Button, Input, Checkbox } from './components'; // 自动指向 index.js
-
 ```
 
 ---
@@ -71,7 +67,6 @@ import { Button, Input, Checkbox } from './components'; // 自动指向 index.js
 // components/index.js
 export { PrimaryButton as Button } from './Button'; // 别名导出
 export * from './Input'; // 批量导出所有具名导出
-
 ```
 
 ### 2. 嵌套 Barrel 文件
@@ -92,7 +87,6 @@ export * from './Input'; // 批量导出所有具名导出
 ```jsx
 // components/forms/index.js
 export { TextInput, Select } from './forms';
-
 ```
 
 ### 3. TypeScript 支持
@@ -103,7 +97,6 @@ export { TextInput, Select } from './forms';
 // components/index.ts
 export type { ButtonProps } from './Button';
 export { default as Button } from './Button';
-
 ```
 
 ---

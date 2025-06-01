@@ -1,6 +1,5 @@
 ---
 title: 'cursor-talk-to-figma-mcp使用方法(window版)'
-description: '使用 cursor-talk-to-figma-mcp 让 AI 通过 figma 插件来操作 figma'
 date: '2025.05.10'
 ---
 
@@ -49,7 +48,6 @@ bun install
 
 我们根据下面的提示，在终端执行这段命令
 ![image.png](https://blog-images.luckyabner.top/20250601135032868.webp)
-
 
 然后再次点击 Connect，显示连接成功，将上面显示的 MCP Configuration 复制下来
 
