@@ -12,7 +12,7 @@ export async function GET(context) {
 		description: SITE_DESCRIPTION,
 		site: context.site,
 		items: posts.map((post) => ({
-			...post.data,
+			title: post.data.title,
 			link: `/blog/${post.slug}/`,
 			content: sanitizeHtml(parser.render(post.body), {
 				allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
