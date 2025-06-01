@@ -18,6 +18,8 @@
     "@lucide/astro": "^0.511.0",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.8.1",
+    "markdown-it": "^14.1.0",
+    "sanitize-html": "^2.17.0",
     "tailwindcss": "^4.1.8"
   },
   "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
