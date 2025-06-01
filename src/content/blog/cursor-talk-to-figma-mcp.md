@@ -8,7 +8,7 @@ date: '2025.05.10'
 
 项目地址：https://github.com/sonnylazuardi/cursor-talk-to-figma-mcp?tab=readme-ov-file
 
-mac 端可根据项目 redme 进行部署。
+mac 端可根据项目 readme 进行部署。
 
 ## 准备工作
 
