@@ -1,10 +1,11 @@
 ---
-const res = await fetch('http://localhost:4321/api/photos');
+const apiUrl = new URL('/api/photos', Astro.url);
+const res = await fetch(apiUrl);
 const data = await res.json();
-const photos = data.photos || data; // 兼容新旧格式
+const photos = data.photos; // 兼容新旧格式
 ---
 <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4">
   {photos.map((photo) => (
-      <img src={photo.url} alt={photo.title} class="mb-4" loading="lazy"/>
+      <img src={photo.url} alt={photo.title} class="mb-4" loading="lazy" />
   ))}
 </div>

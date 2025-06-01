@@ -6,8 +6,8 @@ import ThemeIcon from './ThemeIcon.astro';
 
 <header class="my-4 flex items-center justify-between max-w-3xl mx-auto">
 	<HeaderLink href="/" title='Home' class="">
-		<Image src="/logo-light.png" width={80} height={60} class="block dark:hidden" alt="Logo" />
-		<Image src="/logo-dark.png" width={80} height={60} class=" hidden dark:block" alt="Logo" />
+		<Image src="/logo-light.png" width={80} height={60} class="block dark:hidden" alt="Logo" loading='eager' />
+		<Image src="/logo-dark.png" width={80} height={60} class=" hidden dark:block" alt="Logo" loading='eager' />
 	</HeaderLink>
 	<nav class="flex items-center gap-2 ml-auto">
 		<HeaderLink href="/" title='Home'>Home</HeaderLink>

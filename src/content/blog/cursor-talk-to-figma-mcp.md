@@ -48,24 +48,22 @@ bun install
 ![image.png](https://blog-images.luckyabner.top/20250531002537307.webp)
 
 我们根据下面的提示，在终端执行这段命令
+![image.png](https://blog-images.luckyabner.top/20250601135032868.webp)
 
-![image.png](attachment:988ffda3-f6e4-4d6c-9ba2-3d72962a313d:image.png)
 
 然后再次点击 Connect，显示连接成功，将上面显示的 MCP Configuration 复制下来
 
-![image.png](attachment:a57c6f2a-3e3e-44e7-9033-0e93353d1ce6:image.png)
+![image.png](https://blog-images.luckyabner.top/20250601135130028.webp)
 
 ## Cursor 配置
 
 在项目的根目录创建一个.cursor 文件夹，在里面建一个 mcp.json
-
-![image.png](attachment:5ac85e0e-7c9a-440c-af77-efa621eb5bb9:image.png)
+![image.png](https://blog-images.luckyabner.top/20250601135144194.webp)
 
 ## 连接 MCP
 
 Ctrl+I 打开 cursor 代理模式，输入`talk to figma channel id:**f2u99k5f**` ，将这个 id 替换为你自己 figma 插件那里显示的 id，下图为成功的例子
-
-![image.png](attachment:bbc5a946-19b2-4811-9514-e90503927ab3:image.png)
+![image.png](https://blog-images.luckyabner.top/20250601135158225.webp)
 
 连接成功之后就可以让 AI 根据你的指令去完成对应的 figma 操作了。
 
@@ -74,7 +72,6 @@ Ctrl+I 打开 cursor 代理模式，输入`talk to figma channel id:**f2u99k5f**
 我在使用时，发现会有字体缺失的情况，要避免这种情况可以在 prompt 规定”使用安全且稳定的字体“。
 
 在生成过程中，每添加一个元素都会让你决定接受或取消，如果想让它默认一直接受的话，可以打开 cursor 的设置，在 Features→Chat 下勾选‘Enable auto-run mode’选项。
-
-![image.png](attachment:271acfc7-ba4e-41cd-9a36-47c0d797354e:image.png)
+![image.png](https://blog-images.luckyabner.top/20250601135207732.webp)
 
 具体效果取决于你的 prompt 和模型的选择，我使用下来并没有很惊艳，只能实现基本的一些功能，有时候生成元素的层级也有问题，还得自己调整，而且也用不了 UI 库，现在只能用来作为辅助。
