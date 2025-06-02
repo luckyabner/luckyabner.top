@@ -1,0 +1,70 @@
+---
+import { projects } from '../content/projects';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Projects"
+	description="My projects and toys."
+	image="/og/og-projects.png"
+>	<div class="space-y-8">
+		<div >
+			<h1 class="text-3xl font-bold text-text mb-3">Projects</h1>
+			<p class="text-subtext">
+				My projects and toys.
+			</p>
+		</div>
+		
+		<div class="grid gap-6 md:gap-8">
+			{projects.map((project) => (
+				<a 
+					href={project.url} 
+					target="_blank" 
+					rel="noopener noreferrer"
+					class="group block"
+				>
+					<article class="relative p-6 bg-surface border border-border rounded-xl hover:border-border-hover hover:bg-hover transition-all duration-200 ease-out hover:shadow-sm">
+						<div class="flex items-start gap-4">
+							<div class="flex-shrink-0 w-14 h-14 bg-surface-secondary rounded-lg flex items-center justify-center border border-border group-hover:border-border-hover transition-colors">
+								<img 
+									src={project.icon || `${project.url}/favicon.ico`} 
+									alt={project.title} 
+									class="w-8 h-8 object-contain" 
+									loading="lazy"
+									onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+								/>
+								<div class="hidden w-8 h-8 bg-accent/10 rounded items-center justify-center">
+									<span class="text-accent text-sm font-medium">
+										{project.title.charAt(0)}
+									</span>
+								</div>
+							</div>
+							
+							<div class="flex-1 min-w-0">
+								<div class="flex items-center gap-2 mb-2">
+									<h2 class="text-lg font-semibold text-text group-hover:text-accent transition-colors">
+										{project.title}
+									</h2>
+									<svg 
+										class="w-4 h-4 text-subtext group-hover:text-accent group-hover:translate-x-0.5 transition-all duration-200" 
+										fill="none" 
+										viewBox="0 0 24 24" 
+										stroke="currentColor"
+									>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+									</svg>
+								</div>
+								<p class="text-subtext leading-relaxed">
+									{project.description}
+								</p>
+							</div>
+						</div>
+						
+						<!-- 悬停效果装饰 -->
+						<div class="absolute inset-0 rounded-xl bg-gradient-to-r from-accent/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					</article>
+				</a>
+			))}
+		</div>
+	</div>
+</Layout>
