@@ -5,8 +5,8 @@ import ThemeIcon from './ThemeIcon.astro';
 import { Github, ImageIcon, Rss } from '@lucide/astro';
 ---
 
-<header class="my-4 flex items-center justify-between max-w-3xl mx-auto">
-	<HeaderLink href="/" title='Home' class="">
+<header class="my-4 flex items-center justify-between w-full max-w-3xl mx-auto">
+	<HeaderLink href="/" title='Home'>
 		<Image src="/logo-light.png" width={80} height={60} class="block dark:hidden" alt="Logo" loading='eager' />
 		<Image src="/logo-dark.png" width={80} height={60} class=" hidden dark:block" alt="Logo" loading='eager' />
 	</HeaderLink>
@@ -17,12 +17,6 @@ import { Github, ImageIcon, Rss } from '@lucide/astro';
 		<HeaderLink href="/photos" title='Photos' class="ml-2">
 			<ImageIcon />
 		</HeaderLink>
-		<a href="https://github.com/luckyabner" title='Github' target='blank' class="hover:text-text">
-			<Github />
-		</a>
-		<a href={new URL('/rss.xml', Astro.url)} title='Subscribe' target='blank' class="hover:text-text">
-			<Rss />
-		</a>
 		<ThemeIcon />
 	</nav>
 </header>

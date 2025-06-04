@@ -10,10 +10,10 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://luckyabner.top',
-	server: {
-		port: 3000,
-		host: true,
-	},
+	// server: {
+	// 	port: 3000,
+	// 	host: true,
+	// },
 	integrations: [mdx(), sitemap()],
 
 	markdown: {
