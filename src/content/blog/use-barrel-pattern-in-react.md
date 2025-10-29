@@ -1,6 +1,6 @@
 ---
 title: 在React/Typescript中使用Barrel Pattern
-date: 2025.04.21
+date: 2025-04-21
 ---
 
 ### 引言

@@ -1,6 +1,6 @@
 ---
 title: 'cursor-talk-to-figma-mcp使用方法(window版)'
-date: '2025.05.10'
+date: 2025-05-10
 ---
 
 ## 前言
