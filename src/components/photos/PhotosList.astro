@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../../images/*.{jpg,jpeg,png,webp}",
 );
