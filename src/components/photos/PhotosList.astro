@@ -13,10 +13,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             href={imageData.src}
             target="_blank"
           >
-            <Image
-              format="webp"
+            <img
               class="mb-4"
-              src={imageData}
+              src={imageData.src}
               alt={`photo ${index + 1}`}
               loading={index < 20 ? "eager" : "lazy"}
             />
