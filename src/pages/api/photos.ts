@@ -13,7 +13,7 @@ export const GET: APIRoute = async ({ url }) => {
 	try {
 		// 从查询参数中获取分页信息
 		const searchParams = new URLSearchParams(url.search);
-		const maxKeys = parseInt(searchParams.get('max-keys') || '1000');
+		const maxKeys = parseInt(searchParams.get('max-keys') || '20');
 		const continuationToken = searchParams.get('continuation-token');
 		const prefix = searchParams.get('prefix') || '';
 

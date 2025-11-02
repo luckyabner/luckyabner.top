@@ -1,5 +1,5 @@
-import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 
@@ -23,7 +23,7 @@ export default defineConfig({
 	},
 
 	image: {
-		domains: ['unsplash.com', 'photos.luckyabner.top'],
+		domains: ['unsplash.com', 'photos.luckyabner.top', 'astro.build', 'blog-images.luckyabner.top'],
 	},
 
 	vite: {
