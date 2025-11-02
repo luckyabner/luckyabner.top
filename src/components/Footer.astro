@@ -1,17 +1,27 @@
 ---
 import { Github, Rss } from "@lucide/astro";
-
-
 ---
 
-<footer class="mt-8 py-4 flex justify-between text-text-secondary border-t border-border w-full max-w-3xl mx-auto">
-	<p>© LuckyAbner</p>
+<footer
+  class="mt-8 py-4 flex justify-between text-text-secondary border-t border-border w-full max-w-3xl mx-auto"
+>
+  <p>© LuckyAbner</p>
   <div class="flex items-center gap-4">
-    <a href="https://github.com/luckyabner" title='Github' target='blank' class="hover:text-text">
-			<Github />
-		</a>
-		<a href={new URL('/rss.xml', Astro.url)} title='Subscribe' target='blank' class="hover:text-text">
-			<Rss />
-		</a>
+    <a
+      href="https://github.com/luckyabner"
+      title="Github"
+      target="blank"
+      class="hover:text-text"
+    >
+      <Github />
+    </a>
+    <a
+      href={new URL("/rss.xml", Astro.url)}
+      title="Subscribe"
+      target="blank"
+      class="hover:text-text"
+    >
+      <Rss />
+    </a>
   </div>
 </footer>

@@ -1,16 +1,18 @@
 ---
-import Layout from './Layout.astro';
+import Layout from "./Layout.astro";
 const data = Astro.props;
 ---
 
-<Layout 
+<Layout
   title={data.title}
-  description='Thanks for your visit.'
-  image='/og/og-blog.png'
-  >
+  description="Thanks for your visit."
+  image="/og/og-blog.png"
+>
   <h1 class="text-2xl mb-2">{data.title}</h1>
   <p class="text-subtext">
-    <time datetime={data.date.toISOString()}>{data.date.toLocaleDateString()}</time>
+    <time datetime={data.date.toISOString()}
+      >{data.date.toLocaleDateString()}</time
+    >
   </p>
   <article class="prose dark:prose-invert mt-4 max-w-none">
     <slot />

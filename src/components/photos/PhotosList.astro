@@ -1,26 +1,37 @@
 ---
 // 首次加载获取第一页数据
-const apiUrl = new URL('/api/photos', Astro.url);
+const apiUrl = new URL("/api/photos", Astro.url);
 const res = await fetch(apiUrl);
 const data = await res.json();
 const initialPhotos = data.photos; // 兼容新旧格式
 const initialNextToken = data.nextContinuationToken;
 ---
 
-<div id="photos-container" class="columns-1 sm:columns-2 md:columns-3 lg:columns-4">
-   {initialPhotos.map((photo) => (
+<div
+  id="photos-container"
+  class="columns-1 sm:columns-2 md:columns-3 lg:columns-4"
+>
+  {
+    initialPhotos.map((photo) => (
       <img src={photo.url} alt={photo.title} class="mb-4" loading="lazy" />
-  ))}
+    ))
+  }
 </div>
 
 <!-- 加载指示器 -->
 <div id="loading-indicator" class="text-center py-8 hidden">
-  <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 dark:border-gray-100"></div>
+  <div
+    class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 dark:border-gray-100"
+  >
+  </div>
   <p class="mt-2 text-gray-600 dark:text-gray-400">加载中...</p>
 </div>
 
 <!-- 加载完成提示 -->
-<div id="end-message" class="text-center py-8 text-gray-600 dark:text-gray-400 hidden">
+<div
+  id="end-message"
+  class="text-center py-8 text-gray-600 dark:text-gray-400 hidden"
+>
   没有更多照片了
 </div>
 
@@ -29,21 +40,21 @@ const initialNextToken = data.nextContinuationToken;
   let isLoading = false;
   let hasMore = !!nextToken;
 
-  const container = document.getElementById('photos-container');
-  const loadingIndicator = document.getElementById('loading-indicator');
-  const endMessage = document.getElementById('end-message');
+  const container = document.getElementById("photos-container");
+  const loadingIndicator = document.getElementById("loading-indicator");
+  const endMessage = document.getElementById("end-message");
 
   // 加载更多照片
   async function loadMorePhotos() {
     if (isLoading || !hasMore) return;
 
     isLoading = true;
-    loadingIndicator.classList.remove('hidden');
+    loadingIndicator.classList.remove("hidden");
 
     try {
-      const url = new URL('/api/photos', window.location.origin);
+      const url = new URL("/api/photos", window.location.origin);
       if (nextToken) {
-        url.searchParams.set('continuation-token', nextToken);
+        url.searchParams.set("continuation-token", nextToken);
       }
 
       const response = await fetch(url);
@@ -51,12 +62,12 @@ const initialNextToken = data.nextContinuationToken;
 
       if (data.photos && data.photos.length > 0) {
         // 添加新照片到容器
-        data.photos.forEach(photo => {
-          const img = document.createElement('img');
+        data.photos.forEach((photo) => {
+          const img = document.createElement("img");
           img.src = photo.url;
           img.alt = photo.title;
-          img.className = 'mb-4';
-          img.loading = 'lazy';
+          img.className = "mb-4";
+          img.loading = "lazy";
           container.appendChild(img);
         });
 
@@ -65,17 +76,17 @@ const initialNextToken = data.nextContinuationToken;
         hasMore = !!nextToken;
 
         if (!hasMore) {
-          endMessage.classList.remove('hidden');
+          endMessage.classList.remove("hidden");
         }
       } else {
         hasMore = false;
-        endMessage.classList.remove('hidden');
+        endMessage.classList.remove("hidden");
       }
     } catch (error) {
-      console.error('加载照片失败:', error);
+      console.error("加载照片失败:", error);
     } finally {
       isLoading = false;
-      loadingIndicator.classList.add('hidden');
+      loadingIndicator.classList.add("hidden");
     }
   }
 
@@ -93,7 +104,7 @@ const initialNextToken = data.nextContinuationToken;
 
   // 添加滚动事件监听
   let scrollTimeout;
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     if (scrollTimeout) {
       clearTimeout(scrollTimeout);
     }
@@ -102,7 +113,10 @@ const initialNextToken = data.nextContinuationToken;
 
   // 初始检查是否需要加载更多（如果首屏内容不足）
   setTimeout(() => {
-    if (document.documentElement.scrollHeight <= window.innerHeight && hasMore) {
+    if (
+      document.documentElement.scrollHeight <= window.innerHeight &&
+      hasMore
+    ) {
       loadMorePhotos();
     }
   }, 100);

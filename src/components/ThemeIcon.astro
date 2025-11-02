@@ -1,33 +1,32 @@
 ---
-import { Sun, Moon } from '@lucide/astro'
+import { Sun, Moon } from "@lucide/astro";
 ---
+
 <button id="themeToggle" class="cursor-pointer hover:text-text">
-  <Sun class="block dark:hidden"  />
-  <Moon class="hidden dark:block"  />
+  <Sun class="block dark:hidden" />
+  <Moon class="hidden dark:block" />
 </button>
-
-
 
 <script is:inline>
   const initTheme = () => {
     const theme = (() => {
-      const localStorageTheme = localStorage?.getItem("theme") ?? '';
-      if (['dark', 'light'].includes(localStorageTheme)) {
+      const localStorageTheme = localStorage?.getItem("theme") ?? "";
+      if (["dark", "light"].includes(localStorageTheme)) {
         return localStorageTheme;
       }
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
       }
-        return 'light';
+      return "light";
     })();
 
-    if (theme === 'light') {
-      document.documentElement.classList.remove('dark');
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
     } else {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     }
 
-    window.localStorage.setItem('theme', theme);
+    window.localStorage.setItem("theme", theme);
   };
 
   const bindThemeToggle = () => {
@@ -51,12 +50,12 @@ import { Sun, Moon } from '@lucide/astro'
 
   // 初始化主题
   initTheme();
-  
+
   // 绑定事件监听器
   bindThemeToggle();
 
   // 监听 astro:page-load 事件，在每次页面加载后重新绑定事件
-  document.addEventListener('astro:page-load', () => {
+  document.addEventListener("astro:page-load", () => {
     initTheme();
     bindThemeToggle();
   });

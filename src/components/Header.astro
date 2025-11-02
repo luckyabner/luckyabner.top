@@ -1,21 +1,35 @@
 ---
-import { Image } from 'astro:assets';
-import HeaderLink from './HeaderLink.astro';
-import ThemeIcon from './ThemeIcon.astro';
-import { ImageIcon } from '@lucide/astro';
+import { ImageIcon } from "@lucide/astro";
+import { Image } from "astro:assets";
+import HeaderLink from "./HeaderLink.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header class="my-4 flex items-center justify-between w-full max-w-3xl mx-auto">
-	<HeaderLink href="/" title='Home'>
-		<Image src="/logo-light.png" width={80} height={60} class="block dark:hidden" alt="Logo" loading='eager' />
-		<Image src="/logo-dark.png" width={80} height={60} class=" hidden dark:block" alt="Logo" loading='eager' />
-	</HeaderLink>
-	<nav class="flex items-center gap-2 ml-auto text-subtext ">
-		<HeaderLink href="/blog" title='Blog'>Blog</HeaderLink>
-		<HeaderLink href="/projects" title='Projects'>Projects</HeaderLink>
-		<HeaderLink href="/photos" title='Photos' class="ml-2">
-			<ImageIcon />
-		</HeaderLink>
-		<ThemeIcon />
-	</nav>
+  <HeaderLink href="/" title="Home">
+    <Image
+      src="/logo-light.png"
+      width={80}
+      height={60}
+      class="block dark:hidden"
+      alt="Logo"
+      loading="eager"
+    />
+    <Image
+      src="/logo-dark.png"
+      width={80}
+      height={60}
+      class="hidden dark:block"
+      alt="Logo"
+      loading="eager"
+    />
+  </HeaderLink>
+  <nav class="flex items-center gap-2 ml-auto text-subtext">
+    <HeaderLink href="/blog" title="Blog">Blog</HeaderLink>
+    <HeaderLink href="/projects" title="Projects">Projects</HeaderLink>
+    <HeaderLink href="/photos" title="Photos" class="ml-2">
+      <ImageIcon />
+    </HeaderLink>
+    <ThemeIcon />
+  </nav>
 </header>
