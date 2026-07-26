@@ -16,6 +16,11 @@
 	--accent-hover: oklch(44% 0.06 250);
 	--hover: oklch(95.5% 0.005 75);
 	--focus: oklch(60% 0.11 250);
+	--code-background: oklch(27% 0.025 285);
+	--code-surface: oklch(24% 0.022 285);
+	--code-border: oklch(39% 0.028 285);
+	--code-text: oklch(95% 0.012 100);
+	--code-muted: oklch(75% 0.02 285);
 	--page-width: 52rem;
 	--page-gutter: clamp(1.25rem, 4.5vw, 3rem);
 	--ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -565,13 +570,113 @@ button:focus-visible {
 	overflow-x: auto;
 	border: 1px solid var(--border);
 	border-radius: 0.35rem;
-	background: var(--surface);
+	background: var(--code-background);
 }
 
 .blog-prose pre code {
 	padding: 0;
 	background: transparent;
-	color: oklch(94% 0.012 285);
+	color: var(--code-text);
+}
+
+.code-block-shell {
+	position: relative;
+	margin: 2rem 0;
+	overflow: hidden;
+	border: 1px solid var(--code-border);
+	border-radius: 0.35rem;
+	background: var(--code-background);
+	color: var(--code-text);
+}
+
+.code-block-toolbar {
+	display: flex;
+	min-height: 2.75rem;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 1rem;
+	border-bottom: 1px solid var(--code-border);
+	background: var(--code-surface);
+	color: var(--code-muted);
+}
+
+.code-line-count {
+	font-size: 0.6875rem;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: 0.04em;
+	line-height: 1;
+}
+
+.code-copy-button,
+.code-toggle-button {
+	min-height: 2.75rem;
+	border: 0;
+	background: transparent;
+	color: var(--code-muted);
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.75rem;
+	line-height: 1;
+}
+
+.code-copy-button {
+	display: none;
+	min-width: 4.5rem;
+	padding-inline: 0.75rem;
+}
+
+.code-toggle-button {
+	display: none;
+	width: 100%;
+	border-top: 1px solid var(--code-border);
+	background: var(--code-surface);
+	letter-spacing: 0.01em;
+}
+
+.js .code-copy-button,
+.js .code-toggle-button {
+	display: block;
+}
+
+.code-copy-button:hover,
+.code-toggle-button:hover {
+	color: var(--code-text);
+}
+
+.code-copy-button:focus-visible,
+.code-toggle-button:focus-visible {
+	outline-offset: -3px;
+}
+
+.code-copy-button:active,
+.code-toggle-button:active {
+	transform: translateY(1px);
+}
+
+.code-block-viewport {
+	position: relative;
+}
+
+.code-block-shell pre {
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+}
+
+.js .code-block-shell.is-collapsed .code-block-viewport {
+	max-height: 30rem;
+	overflow: hidden;
+}
+
+.js .code-block-shell.is-collapsed .code-block-viewport::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 5rem;
+	background: linear-gradient(to bottom, transparent, var(--code-background));
+	content: "";
+	pointer-events: none;
 }
 
 .blog-prose img {

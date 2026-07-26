@@ -26,6 +26,23 @@ const {
 } = Astro.props;
 ---
 
+<script is:inline>
+  (() => {
+    document.documentElement.classList.add("js");
+
+    let storedTheme = null;
+    try {
+      storedTheme = localStorage.getItem("theme");
+    } catch {
+      // Keep the system preference when storage is unavailable.
+    }
+
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = storedTheme === "dark" || (!storedTheme && prefersDark);
+    document.documentElement.classList.toggle("dark", isDark);
+  })();
+</script>
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta

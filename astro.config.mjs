@@ -7,6 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import vercel from '@astrojs/vercel';
 
+import { rehypeCodeTools } from './src/plugins/rehype-code-tools.mjs';
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://luckyabner.top',
@@ -17,6 +19,7 @@ export default defineConfig({
 	integrations: [mdx(), sitemap()],
 
 	markdown: {
+		rehypePlugins: [[rehypeCodeTools, { collapseAfter: 24 }]],
 		shikiConfig: {
 			theme: 'dracula',
 		},
