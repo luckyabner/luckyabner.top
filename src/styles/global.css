@@ -571,6 +571,7 @@ button:focus-visible {
 .blog-prose pre code {
 	padding: 0;
 	background: transparent;
+	color: oklch(94% 0.012 285);
 }
 
 .blog-prose img {
