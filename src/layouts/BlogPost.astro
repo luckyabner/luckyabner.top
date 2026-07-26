@@ -1,13 +1,35 @@
 ---
 import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "./Layout.astro";
-const data = Astro.props;
+
+interface Props {
+  title: string;
+  date: Date;
+  language?: "en" | "zh";
+  alternateHref?: string;
+}
+
+const {
+  title,
+  date,
+  language = "zh",
+  alternateHref,
+} = Astro.props;
+
+const isEnglish = language === "en";
+const htmlLang = isEnglish ? "en" : "zh-CN";
+const alternateLang = isEnglish ? "zh-CN" : "en";
+const xDefaultHref = isEnglish ? Astro.url.pathname : alternateHref;
 ---
 
 <Layout
-  title={data.title}
+  title={title}
   description="Thanks for your visit."
   image="/og/og-blog.png"
+  lang={htmlLang}
+  alternateHref={alternateHref}
+  alternateLang={alternateLang}
+  xDefaultHref={alternateHref ? xDefaultHref : undefined}
 >
   <article class="article-page">
     <a class="back-link" href="/blog">
@@ -16,8 +38,27 @@ const data = Astro.props;
     </a>
 
     <header class="article-heading">
-      <h1>{data.title}</h1>
-      <p><FormattedDate date={data.date} /></p>
+      <h1>{title}</h1>
+      <div class="article-meta">
+        <p><FormattedDate date={date} /></p>
+        {
+          alternateHref && (
+            <nav class="language-switch" aria-label="Article language">
+              {isEnglish ? (
+                <>
+                  <span aria-current="page">English</span>
+                  <a href={alternateHref} lang="zh-CN">中文</a>
+                </>
+              ) : (
+                <>
+                  <a href={alternateHref} lang="en">English</a>
+                  <span aria-current="page">中文</span>
+                </>
+              )}
+            </nav>
+          )
+        }
+      </div>
     </header>
 
     <div class="article-divider"></div>

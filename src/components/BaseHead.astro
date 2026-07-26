@@ -9,11 +9,21 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  alternateHref?: string;
+  alternateLang?: string;
+  xDefaultHref?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/og/og.png" } = Astro.props;
+const {
+  title,
+  description,
+  image = "/og/og.png",
+  alternateHref,
+  alternateLang,
+  xDefaultHref,
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -31,6 +41,24 @@ const { title, description, image = "/og/og.png" } = Astro.props;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+{
+  alternateHref && alternateLang && (
+    <link
+      rel="alternate"
+      hreflang={alternateLang}
+      href={new URL(alternateHref, Astro.site)}
+    />
+  )
+}
+{
+  xDefaultHref && (
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(xDefaultHref, Astro.site)}
+    />
+  )
+}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

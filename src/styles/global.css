@@ -309,6 +309,20 @@ button:focus-visible {
 		transform 180ms var(--ease-out-quart);
 }
 
+.language-mark {
+	display: inline-block;
+	margin-left: 0.55rem;
+	padding: 0.16rem 0.32rem;
+	border: 1px solid var(--border-hover);
+	border-radius: 999px;
+	color: var(--text-secondary);
+	font-size: 0.5625rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	vertical-align: 0.18em;
+}
+
 .row-date {
 	color: var(--subtext);
 	font-size: 0.8125rem;
@@ -394,11 +408,58 @@ button:focus-visible {
 }
 
 .article-heading p {
-	margin: 1.25rem 0 0;
+	margin: 0;
 	color: var(--subtext);
 	font-size: 0.8125rem;
 	font-variant-numeric: tabular-nums;
 	line-height: 1.5;
+}
+
+.article-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.language-switch {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 0.75rem;
+	line-height: 1.5;
+}
+
+.language-switch::before {
+	width: 1px;
+	height: 0.75rem;
+	background: var(--border-hover);
+	content: "";
+}
+
+.language-switch a,
+.language-switch span {
+	color: var(--subtext);
+	text-decoration: none;
+}
+
+.language-switch [aria-current="page"] {
+	color: var(--text);
+}
+
+.language-switch a {
+	position: relative;
+}
+
+.language-switch a::before {
+	position: absolute;
+	inset: -0.75rem -0.35rem;
+	content: "";
+}
+
+.language-switch a:hover {
+	color: var(--text);
 }
 
 .article-divider {

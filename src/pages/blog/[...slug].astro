@@ -1,19 +1,43 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
+import {
+	getPreferredBlogPost,
+	groupBlogPosts,
+	type BlogLanguage,
+} from '../../lib/blog';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
-}
-type Props = CollectionEntry<'blog'>;
+	const groups = groupBlogPosts(await getCollection('blog'));
 
-const post = Astro.props;
+	return groups.flatMap((group) => {
+		const post = getPreferredBlogPost(group);
+		if (!post) return [];
+
+		const language: BlogLanguage = post === group.en ? 'en' : 'zh';
+		const alternateHref =
+			group.en && group.zh ? `/zh/blog/${group.slug}/` : undefined;
+
+		return [{
+			params: { slug: group.slug },
+			props: { post, language, alternateHref },
+		}];
+	});
+}
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+	language: BlogLanguage;
+	alternateHref?: string;
+}
+
+const { post, language, alternateHref } = Astro.props;
 const { Content } = await post.render();
 ---
-<BlogPost {...post.data}>
+<BlogPost
+	{...post.data}
+	language={language}
+	alternateHref={alternateHref}
+>
 	<Content />
 </BlogPost>

@@ -2,10 +2,21 @@
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Layout from '../../layouts/Layout.astro';
+import { getPreferredBlogPost, groupBlogPosts } from '../../lib/blog';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
+const posts = groupBlogPosts(await getCollection('blog'))
+	.map((group) => {
+		const post = getPreferredBlogPost(group);
+		if (!post) return null;
+
+		return {
+			post,
+			slug: group.slug,
+			isEnglish: post === group.en,
+		};
+	})
+	.filter((item) => item !== null)
+	.sort((a, b) => b.post.data.date.valueOf() - a.post.data.date.valueOf());
 ---
 
 <Layout
@@ -26,15 +37,22 @@ const posts = (await getCollection('blog')).sort(
 						<a
 							href={`/blog/${post.slug}/`}
 							class="post-row"
-							aria-label={`Read ${post.data.title}`}
+							aria-label={`Read ${post.post.data.title}`}
 						>
 							<span class="row-number" aria-hidden="true">
 								{String(index + 1).padStart(2, '0')}
 							</span>
 							<span class="post-row-copy">
-								<h2>{post.data.title}</h2>
+								<h2>
+									{post.post.data.title}
+									{post.isEnglish && (
+										<span class="language-mark" aria-label="English">
+											en
+										</span>
+									)}
+								</h2>
 								<span class="row-date">
-								<FormattedDate date={post.data.date} />
+									<FormattedDate date={post.post.data.date} />
 								</span>
 							</span>
 							<span class="row-arrow" aria-hidden="true">↗</span>
