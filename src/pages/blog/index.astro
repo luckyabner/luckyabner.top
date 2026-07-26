@@ -1,10 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Layout from '../../layouts/Layout.astro';
-import { getPreferredBlogPost, groupBlogPosts } from '../../lib/blog';
+import { ArrowUpRight } from "@lucide/astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getPreferredBlogPost, groupBlogPosts } from "../../lib/blog";
 
-const posts = groupBlogPosts(await getCollection('blog'))
+const posts = groupBlogPosts(await getCollection("blog"))
 	.map((group) => {
 		const post = getPreferredBlogPost(group);
 		if (!post) return null;
@@ -21,8 +22,8 @@ const posts = groupBlogPosts(await getCollection('blog'))
 
 <Layout
 	title="Blog"
-	description='My thoughts and experiences on everything.'
-	image='/og/og-blog.png'
+	description="My thoughts and experiences on everything."
+	image="/og/og-blog.png"
 >
 	<section class="content-page" aria-labelledby="blog-title">
 		<header class="page-heading">
@@ -40,13 +41,16 @@ const posts = groupBlogPosts(await getCollection('blog'))
 							aria-label={`Read ${post.post.data.title}`}
 						>
 							<span class="row-number" aria-hidden="true">
-								{String(index + 1).padStart(2, '0')}
+								{String(index + 1).padStart(2, "0")}
 							</span>
 							<span class="post-row-copy">
 								<h2>
 									{post.post.data.title}
 									{post.isEnglish && (
-										<span class="language-mark" aria-label="English">
+										<span
+											class="language-mark"
+											aria-label="English"
+										>
 											en
 										</span>
 									)}
@@ -55,7 +59,12 @@ const posts = groupBlogPosts(await getCollection('blog'))
 									<FormattedDate date={post.post.data.date} />
 								</span>
 							</span>
-							<span class="row-arrow" aria-hidden="true">↗</span>
+							<ArrowUpRight
+								size={17}
+								stroke-width={1.5}
+								class="row-arrow"
+								aria-hidden="true"
+							/>
 						</a>
 					</li>
 				))

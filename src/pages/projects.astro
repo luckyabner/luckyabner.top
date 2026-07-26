@@ -1,7 +1,7 @@
 ---
-import { ArrowUpRight } from '@lucide/astro';
-import { projects } from '../content/projects';
-import Layout from '../layouts/Layout.astro';
+import { ArrowUpRight } from "@lucide/astro";
+import { projects } from "../content/projects";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
@@ -16,31 +16,33 @@ import Layout from '../layouts/Layout.astro';
 		</header>
 
 		<ol class="project-list">
-			{projects.map((project, index) => (
-				<li class="project-list-item">
-					<a
-						href={project.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="project-row"
-						aria-label={`Visit ${project.title} (opens in a new tab)`}
-					>
-						<span class="row-number" aria-hidden="true">
-							{String(index + 1).padStart(2, '0')}
-						</span>
-						<span class="project-row-copy">
-							<h2>{project.title}</h2>
-							<p>{project.description}</p>
-						</span>
-						<ArrowUpRight
-							size={17}
-							strokeWidth={1.5}
-							class="row-arrow"
-							aria-hidden="true"
-						/>
-					</a>
-				</li>
-			))}
+			{
+				projects.map((project, index) => (
+					<li class="project-list-item">
+						<a
+							href={project.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="project-row"
+							aria-label={`Visit ${project.title} (opens in a new tab)`}
+						>
+							<span class="row-number" aria-hidden="true">
+								{String(index + 1).padStart(2, "0")}
+							</span>
+							<span class="project-row-copy">
+								<h2>{project.title}</h2>
+								<p>{project.description}</p>
+							</span>
+							<ArrowUpRight
+								size={17}
+								stroke-width={1.5}
+								class="row-arrow"
+								aria-hidden="true"
+							/>
+						</a>
+					</li>
+				))
+			}
 		</ol>
 	</section>
 </Layout>
