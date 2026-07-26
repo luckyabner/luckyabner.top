@@ -1,5 +1,4 @@
 ---
-import { ImageIcon } from "@lucide/astro";
 import { Image } from "astro:assets";
 import HeaderLink from "./HeaderLink.astro";
 import ThemeIcon from "./ThemeIcon.astro";
@@ -27,9 +26,6 @@ import ThemeIcon from "./ThemeIcon.astro";
   <nav class="flex items-center gap-2 ml-auto text-subtext">
     <HeaderLink href="/blog" title="Blog">Blog</HeaderLink>
     <HeaderLink href="/projects" title="Projects">Projects</HeaderLink>
-    <HeaderLink href="/photos" title="Photos" class="ml-2">
-      <ImageIcon />
-    </HeaderLink>
     <ThemeIcon />
   </nav>
 </header>

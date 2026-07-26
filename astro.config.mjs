@@ -23,7 +23,7 @@ export default defineConfig({
 	},
 
 	image: {
-		domains: ['unsplash.com', 'photos.luckyabner.top', 'astro.build', 'blog-images.luckyabner.top'],
+		domains: ['unsplash.com', 'astro.build', 'blog-images.luckyabner.top'],
 	},
 
 	vite: {
