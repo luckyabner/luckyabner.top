@@ -9,25 +9,39 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout
-	title={`Blog`}
+	title="Blog"
 	description='My thoughts and experiences on everything.'
 	image='/og/og-blog.png'
-	>
-	<main>
-		<h1 class="text-2xl font-bold">Blog</h1>
-		<ul class="mt-4 space-y-4">
+>
+	<section class="content-page" aria-labelledby="blog-title">
+		<header class="page-heading">
+			<h1 id="blog-title">Blog</h1>
+			<p>Notes on software, ideas, and things I’m learning.</p>
+		</header>
+
+		<ol class="post-list">
 			{
-				posts.map((post) => (
-					<li>
-						<a href={`/blog/${post.slug}/`}>
-							<h4 class="text-lg text-text-secondary hover:text-text">{post.data.title}</h4>
-							<p class="text-subtext">
+				posts.map((post, index) => (
+					<li class="post-list-item">
+						<a
+							href={`/blog/${post.slug}/`}
+							class="post-row"
+							aria-label={`Read ${post.data.title}`}
+						>
+							<span class="row-number" aria-hidden="true">
+								{String(index + 1).padStart(2, '0')}
+							</span>
+							<span class="post-row-copy">
+								<h2>{post.data.title}</h2>
+								<span class="row-date">
 								<FormattedDate date={post.data.date} />
-							</p>
+								</span>
+							</span>
+							<span class="row-arrow" aria-hidden="true">↗</span>
 						</a>
 					</li>
 				))
 			}
-		</ul>
-	</main>
+		</ol>
+	</section>
 </Layout>

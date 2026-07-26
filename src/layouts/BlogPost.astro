@@ -1,4 +1,5 @@
 ---
+import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "./Layout.astro";
 const data = Astro.props;
 ---
@@ -8,13 +9,21 @@ const data = Astro.props;
   description="Thanks for your visit."
   image="/og/og-blog.png"
 >
-  <h1 class="text-2xl mb-2">{data.title}</h1>
-  <p class="text-subtext">
-    <time datetime={data.date.toISOString()}
-      >{data.date.toLocaleDateString()}</time
-    >
-  </p>
-  <article class="prose dark:prose-invert mt-4 max-w-none">
-    <slot />
+  <article class="article-page">
+    <a class="back-link" href="/blog">
+      <span aria-hidden="true">←</span>
+      All posts
+    </a>
+
+    <header class="article-heading">
+      <h1>{data.title}</h1>
+      <p><FormattedDate date={data.date} /></p>
+    </header>
+
+    <div class="article-divider"></div>
+
+    <div class="blog-prose prose dark:prose-invert">
+      <slot />
+    </div>
   </article>
 </Layout>
