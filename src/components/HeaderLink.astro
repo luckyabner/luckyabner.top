@@ -12,7 +12,8 @@ const isActive = href === pathname || href === "/" + subpath?.[0];
 
 <a
   href={href}
-  class:list={[className, "hover:text-text", { "text-text": isActive }]}
+  class:list={[className, "nav-link", { "is-active": isActive }]}
+  aria-current={isActive ? "page" : undefined}
   {...props}
 >
   <slot />
