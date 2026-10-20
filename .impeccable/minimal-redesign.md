@@ -8,7 +8,7 @@ The user delegated direction selection to the main agent. This session uses code
 
 THESIS: A quiet personal book page. Hierarchy comes from proximity, text scale, and breathing room. Repeated horizontal rules, ornamental numbering, and table-like rows leave the interface.
 
-OWN-WORLD: Warm off-white and charcoal, existing signature and avatar, restrained system typography selected for bilingual legibility and zero font loading. Unboxed text entries; no card wall, shadow, gradient, or new illustration.
+OWN-WORLD: Warm off-white and charcoal, existing signature and avatar, self-hosted Maple Mono covering Latin and Simplified Chinese in one rounded mono voice. Unboxed text entries; no card wall, shadow, gradient, or new illustration.
 
 STORY: Meet Abner, scan recent writing, explore a project, and read without interruption. Existing copy, URLs, bilingual navigation, code controls, and themes remain functional.
 

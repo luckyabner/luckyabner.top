@@ -21,30 +21,30 @@ colors:
   code-ink-muted: "oklch(73% 0.006 75)"
 typography:
   display:
-    fontFamily: "Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, sans-serif"
+    fontFamily: "Maple Mono, Maple Mono CN, ui-monospace, monospace"
     fontSize: "clamp(2rem, 1.7rem + 1.2vw, 2.25rem)"
     fontWeight: 700
     lineHeight: 1.15
     letterSpacing: "-0.03em"
   headline:
-    fontFamily: "Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, sans-serif"
+    fontFamily: "Maple Mono, Maple Mono CN, ui-monospace, monospace"
     fontSize: "clamp(1.9rem, 1.6rem + 1.2vw, 2.35rem)"
     fontWeight: 700
     lineHeight: 1.15
     letterSpacing: "-0.035em"
   title:
-    fontFamily: "Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, sans-serif"
+    fontFamily: "Maple Mono, Maple Mono CN, ui-monospace, monospace"
     fontSize: "1.0625rem"
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: "-0.015em"
   body:
-    fontFamily: "Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, sans-serif"
+    fontFamily: "Maple Mono, Maple Mono CN, ui-monospace, monospace"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.82
   label:
-    fontFamily: "Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, sans-serif"
+    fontFamily: "Maple Mono, Maple Mono CN, ui-monospace, monospace"
     fontSize: "0.8125rem"
     fontWeight: 400
     lineHeight: 1.4
@@ -92,7 +92,7 @@ components:
 
 The site reads like a well-set personal book: a narrow page, generous margins, and almost no furniture. Hierarchy comes from proximity, scale, and weight alone — there is no card wall, no row numbering, no horizontal rule between entries, no trailing arrow on a post. The interface steps back so the writing and the work can be met without ceremony.
 
-The palette is warm off-white and charcoal in light, deep charcoal and warm gray in dark, with one restrained blue accent reserved for focus and link emphasis. Typography is the existing system stack, chosen for bilingual Latin/CJK legibility and zero font loading; character comes from tight tracking on headings and open leading in prose, not from a display face. Density is low by design: one column of text, one two-column project grid, and 44px touch targets on every control.
+The palette is warm off-white and charcoal in light, deep charcoal and warm gray in dark, with one restrained blue accent reserved for focus and link emphasis. Typography is Maple Mono, self-hosted: the Latin faces come from Fontsource and the Simplified Chinese glyphs from pre-split Maple Mono CN ranges, so one typeface covers both scripts at a fixed 2:1 rhythm. Character comes from that single rounded mono voice, tight tracking on headings, and open leading in prose. Density is low by design: one column of text, one two-column project grid, and 44px touch targets on every control.
 
 **Key Characteristics:**
 - A centered 45rem reading column with a single vertical rhythm.
@@ -125,11 +125,11 @@ A warm neutral paper/charcoal pairing with a single cool blue accent used sparin
 
 ## Typography
 
-**Display Font:** Helvetica Neue with Helvetica, PingFang SC, Hiragino Sans GB, sans-serif fallbacks.
-**Body Font:** the same stack, so Latin and CJK share one voice with no webfont cost.
-**Label/Mono Font:** monospace only inside code, never as a decorative "technical" voice.
+**Display Font:** Maple Mono (Latin, Fontsource) with Maple Mono CN for CJK, then ui-monospace, monospace.
+**Body Font:** the same stack; every text role shares one voice.
+**Label/Mono Font:** none separate — the site is monospaced by design, so code and prose share the face.
 
-**Character:** neutral, book-like, and bilingual-safe. Headings are tight and confident; body copy is open and unhurried. Chinese headings drop the negative tracking to `-0.01em` so CJK glyphs are not cramped.
+**Character:** rounded, bookish and bilingual-safe. Maple Mono gives Latin and CJK the same 2:1 mono rhythm; headings are tight and confident, body copy open and unhurried. Chinese headings keep a lighter tracking so CJK glyphs are not cramped. Weights resolve per script: Latin uses real 400/500/600/700 faces, Chinese uses real 400/500/700 faces (600 requests fall to 700), so bold text is never synthesized. The tagline uses the true Maple Mono Italic.
 
 ### Hierarchy
 - **Display** (700, `clamp(2rem, 1.7rem + 1.2vw, 2.25rem)`, 1.15): homepage greeting.
@@ -140,6 +140,8 @@ A warm neutral paper/charcoal pairing with a single cool blue accent used sparin
 - **Label** (400, 13px, 1.4, tabular numerals): dates, reading time, footer. The language mark is 10px/600 with `0.08em` tracking.
 
 ### Named Rules
+**The One Voice Rule.** Type comes from Maple Mono at every size, including code. Do not mix in a second family; use size, weight, and color for hierarchy.
+**The Self-Hosted Rule.** Fonts load from the site's own build: Fontsource Latin faces plus pre-split Maple Mono CN ranges. No external font CDN, no preloading of CN chunks (the browser fetches only the ranges a page needs).
 **The Metadata-Below Rule.** Date, reading time, and language mark always sit beneath the title as one quiet line, at every breakpoint.
 **The Sentence-Case Rule.** Section headings are written in natural case; no uppercase eyebrow or kicker introduces a section.
 
@@ -199,4 +201,4 @@ Dark canvas in both themes, 1px `code-rule`, `0.35rem` radius. A 44px toolbar sh
 - **Don't** add row numbers, trailing arrows on posts, or uppercase section kickers.
 - **Don't** introduce cards, shadows, gradients, or bordered list rows.
 - **Don't** set metadata above the title or shrink it below 13px (the 10px language mark is the only exception).
-- **Don't** add webfonts; the system stack is part of the design.
+- **Don't** add webfonts; Maple Mono, self-hosted from Fontsource and Maple Mono CN, is the site's only typeface.

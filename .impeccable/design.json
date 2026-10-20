@@ -166,7 +166,7 @@
       "refersTo": "nav-link",
       "description": "Quiet top navigation item with a 44px target.",
       "html": "<a class=\"ds-nav-link\" href=\"/blog\">Blog</a>",
-      "css": ".ds-nav-link { display: inline-flex; min-height: 2.75rem; align-items: center; padding: 0 0.5rem; color: var(--subtext); font-family: \"Helvetica Neue\", Helvetica, \"PingFang SC\", sans-serif; font-size: 0.875rem; line-height: 1; text-decoration: none; transition: color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-nav-link:hover, .ds-nav-link:focus-visible { color: var(--text); } .ds-nav-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
+      "css": ".ds-nav-link { display: inline-flex; min-height: 2.75rem; align-items: center; padding: 0 0.5rem; color: var(--subtext); font-family: \"Maple Mono\", \"Maple Mono CN\", ui-monospace, monospace; font-size: 0.875rem; line-height: 1; text-decoration: none; transition: color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-nav-link:hover, .ds-nav-link:focus-visible { color: var(--text); } .ds-nav-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
     },
     {
       "name": "Post Row",
@@ -174,7 +174,7 @@
       "refersTo": "post-row",
       "description": "Borderless writing index entry: title over one quiet metadata line.",
       "html": "<a class=\"ds-post-row\" href=\"/blog/example/\"><span class=\"ds-post-title\">Better Manage Your Playlists in Apple Music</span><span class=\"ds-post-meta\">Jul 26, 2026 <span aria-hidden=\"true\">·</span> 2 min <span aria-hidden=\"true\">·</span> EN</span></a>",
-      "css": ".ds-post-row { display: block; padding: 0.75rem 0; color: var(--text); text-decoration: none; } .ds-post-title { display: block; font-family: \"Helvetica Neue\", Helvetica, \"PingFang SC\", sans-serif; font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.015em; line-height: 1.4; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 0.18em; transition: text-decoration-color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-post-row:hover .ds-post-title, .ds-post-row:focus-visible .ds-post-title { text-decoration-color: var(--border-hover); } .ds-post-row:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; } .ds-post-meta { display: block; margin-top: 0.35rem; color: var(--subtext); font-size: 0.8125rem; line-height: 1.4; font-variant-numeric: tabular-nums; }"
+      "css": ".ds-post-row { display: block; padding: 0.75rem 0; color: var(--text); text-decoration: none; } .ds-post-title { display: block; font-family: \"Maple Mono\", \"Maple Mono CN\", ui-monospace, monospace; font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.015em; line-height: 1.4; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 0.18em; transition: text-decoration-color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-post-row:hover .ds-post-title, .ds-post-row:focus-visible .ds-post-title { text-decoration-color: var(--border-hover); } .ds-post-row:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; } .ds-post-meta { display: block; margin-top: 0.35rem; color: var(--subtext); font-size: 0.8125rem; line-height: 1.4; font-variant-numeric: tabular-nums; }"
     },
     {
       "name": "Project Row",
@@ -182,7 +182,7 @@
       "refersTo": "project-row",
       "description": "Unboxed project entry with a pinned external-link glyph, two per row on desktop.",
       "html": "<a class=\"ds-project-row\" href=\"https://example.com\" target=\"_blank\" rel=\"noreferrer\"><span><span class=\"ds-project-title\">MusicRoast</span><span class=\"ds-project-desc\">An AI playlist reviewer that gives your music taste a second opinion.</span></span><svg class=\"ds-project-icon\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M7 17 17 7M9 7h8v8\"/></svg></a>",
-      "css": ".ds-project-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; padding: 0.25rem 0; color: var(--text); text-decoration: none; } .ds-project-title { display: block; font-family: \"Helvetica Neue\", Helvetica, \"PingFang SC\", sans-serif; font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.015em; line-height: 1.4; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.18em; transition: text-decoration-color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-project-desc { display: block; margin-top: 0.4rem; color: var(--subtext); font-size: 0.9375rem; line-height: 1.55; } .ds-project-icon { flex: none; margin-top: 0.15rem; color: var(--muted); transition: color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-project-row:hover .ds-project-title { text-decoration-color: var(--border-hover); } .ds-project-row:hover .ds-project-icon { color: var(--text); } .ds-project-row:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
+      "css": ".ds-project-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; padding: 0.25rem 0; color: var(--text); text-decoration: none; } .ds-project-title { display: block; font-family: \"Maple Mono\", \"Maple Mono CN\", ui-monospace, monospace; font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.015em; line-height: 1.4; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.18em; transition: text-decoration-color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-project-desc { display: block; margin-top: 0.4rem; color: var(--subtext); font-size: 0.9375rem; line-height: 1.55; } .ds-project-icon { flex: none; margin-top: 0.15rem; color: var(--muted); transition: color 180ms var(--ease-out-quart, cubic-bezier(0.25,1,0.5,1)); } .ds-project-row:hover .ds-project-title { text-decoration-color: var(--border-hover); } .ds-project-row:hover .ds-project-icon { color: var(--text); } .ds-project-row:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }"
     },
     {
       "name": "Theme Toggle",
@@ -206,12 +206,12 @@
       "refersTo": "post-row",
       "description": "One quiet line aligned to the reading column, 44px links, no rule above.",
       "html": "<footer class=\"ds-footer\"><a href=\"https://github.com/luckyabner\">github.com/luckyabner</a><span aria-hidden=\"true\" class=\"ds-footer-sep\">·</span><a href=\"/rss.xml\">RSS</a></footer>",
-      "css": ".ds-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1rem; padding-block: 0.75rem 0; color: var(--subtext); font-family: \"Helvetica Neue\", Helvetica, \"PingFang SC\", sans-serif; font-size: 0.8125rem; line-height: 1.5; } .ds-footer a { display: inline-flex; min-height: 2.75rem; align-items: center; color: inherit; text-decoration: none; } .ds-footer a:hover { color: var(--text); } .ds-footer a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; } .ds-footer-sep { color: var(--border-hover); }"
+      "css": ".ds-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1rem; padding-block: 0.75rem 0; color: var(--subtext); font-family: \"Maple Mono\", \"Maple Mono CN\", ui-monospace, monospace; font-size: 0.8125rem; line-height: 1.5; } .ds-footer a { display: inline-flex; min-height: 2.75rem; align-items: center; color: inherit; text-decoration: none; } .ds-footer a:hover { color: var(--text); } .ds-footer a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; } .ds-footer-sep { color: var(--border-hover); }"
     }
   ],
   "narrative": {
     "northStar": "The Quiet Personal Book",
-    "overview": "The site reads like a well-set personal book: a narrow page, generous margins, and almost no furniture. Hierarchy comes from proximity, scale, and weight alone — no card wall, no row numbering, no horizontal rule between entries, no trailing arrow on a post. The palette is warm off-white and charcoal in light, deep charcoal and warm gray in dark, with one restrained blue accent reserved for focus and link emphasis. Typography is the existing system stack, chosen for bilingual Latin/CJK legibility and zero font loading.",
+    "overview": "The site reads like a well-set personal book: a narrow page, generous margins, and almost no furniture. Hierarchy comes from proximity, scale, and weight alone — no card wall, no row numbering, no horizontal rule between entries, no trailing arrow on a post. The palette is warm off-white and charcoal in light, deep charcoal and warm gray in dark, with one restrained blue accent reserved for focus and link emphasis. Typography is Maple Mono, self-hosted: Fontsource Latin faces plus pre-split Maple Mono CN ranges, so both scripts share one rounded mono voice at a 2:1 rhythm.",
     "keyCharacteristics": [
       "A centered 45rem reading column with a single vertical rhythm.",
       "Separation by whitespace; rules survive only where they carry meaning.",
@@ -236,7 +236,7 @@
       "Don't add row numbers, trailing arrows on posts, or uppercase section kickers.",
       "Don't introduce cards, shadows, gradients, or bordered list rows.",
       "Don't set metadata above the title or shrink it below 13px.",
-      "Don't add webfonts; the system stack is part of the design."
+      "Don't swap in another typeface or a font CDN; self-hosted Maple Mono is the site's only voice."
     ]
   }
 }

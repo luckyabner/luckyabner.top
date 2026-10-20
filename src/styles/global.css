@@ -1,4 +1,12 @@
 @import 'tailwindcss';
+@import '@fontsource/maple-mono/400.css';
+@import '@fontsource/maple-mono/500.css';
+@import '@fontsource/maple-mono/600.css';
+@import '@fontsource/maple-mono/700.css';
+@import '@fontsource/maple-mono/400-italic.css';
+@import '@chinese-fonts/maple-mono-cn/dist/MapleMono-CN-Regular/result.css';
+@import '@chinese-fonts/maple-mono-cn/dist/MapleMono-CN-Medium/result.css';
+@import '@chinese-fonts/maple-mono-cn/dist/MapleMono-CN-Bold/result.css';
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -55,6 +63,12 @@
 }
 
 @theme inline {
+	--font-sans:
+		"Maple Mono", "Maple Mono CN", ui-monospace, "PingFang SC",
+		"Hiragino Sans GB", monospace;
+	--font-mono:
+		"Maple Mono", "Maple Mono CN", ui-monospace, "PingFang SC",
+		"Hiragino Sans GB", monospace;
 	--color-background: var(--background);
 	--color-surface: var(--surface);
 	--color-surface-secondary: var(--surface-secondary);
@@ -77,12 +91,20 @@ html {
 	background: var(--background);
 	color: var(--text);
 	font-family:
-		"Helvetica Neue",
-		Helvetica,
+		"Maple Mono",
+		"Maple Mono CN",
+		ui-monospace,
 		"PingFang SC",
 		"Hiragino Sans GB",
-		sans-serif;
+		monospace;
 	font-kerning: normal;
+}
+
+code,
+pre,
+kbd,
+samp {
+	font-family: inherit;
 }
 
 body {
