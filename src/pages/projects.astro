@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-	title="Projects"
+	title="Projects — Abner"
 	description="My projects and toys."
 	image="/og/og-projects.png"
 >
@@ -17,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
 
 		<ol class="project-list">
 			{
-				projects.map((project, index) => (
+				projects.map((project) => (
 					<li class="project-list-item">
 						<a
 							href={project.url}
@@ -26,9 +26,6 @@ import Layout from "../layouts/Layout.astro";
 							class="project-row"
 							aria-label={`Visit ${project.title} (opens in a new tab)`}
 						>
-							<span class="row-number" aria-hidden="true">
-								{String(index + 1).padStart(2, "0")}
-							</span>
 							<span class="project-row-copy">
 								<h2>{project.title}</h2>
 								<p>{project.description}</p>
@@ -36,7 +33,7 @@ import Layout from "../layouts/Layout.astro";
 							<ArrowUpRight
 								size={17}
 								stroke-width={1.5}
-								class="row-arrow"
+								class="project-link-icon"
 								aria-hidden="true"
 							/>
 						</a>

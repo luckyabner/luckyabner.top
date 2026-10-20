@@ -1,7 +1,13 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../../layouts/BlogPost.astro';
-import { groupBlogPosts } from '../../../lib/blog';
+import {
+	getPostDescription,
+	getReadingTime,
+	groupBlogPosts,
+	type BlogEntry,
+	type BlogGroup,
+} from '../../../lib/blog';
 
 export async function getStaticPaths() {
 	const groups = groupBlogPosts(await getCollection('blog'));
@@ -14,6 +20,7 @@ export async function getStaticPaths() {
 			props: {
 				post: group.zh,
 				alternateHref: `/blog/${group.slug}/`,
+				groupSlug: group.slug,
 			},
 		}];
 	});
@@ -22,16 +29,51 @@ export async function getStaticPaths() {
 interface Props {
 	post: CollectionEntry<'blog'>;
 	alternateHref: string;
+	groupSlug: string;
 }
 
-const { post, alternateHref } = Astro.props;
+const { post, alternateHref, groupSlug } = Astro.props;
 const { Content } = await post.render();
+
+const orderedPosts = groupBlogPosts(await getCollection('blog'))
+	.filter((group): group is BlogGroup & { zh: BlogEntry } => Boolean(group.zh))
+	.map((group) => ({ group, post: group.zh }))
+	.sort((a, b) => b.post.data.date.valueOf() - a.post.data.date.valueOf());
+
+const index = orderedPosts.findIndex((entry) => entry.group.slug === groupSlug);
+
+function toPostLink(entry?: { group: BlogGroup; post: BlogEntry }) {
+	if (!entry) return null;
+
+	return {
+		title: entry.post.data.title,
+		href: entry.group.en
+			? `/zh/blog/${entry.group.slug}/`
+			: `/blog/${entry.group.slug}/`,
+		lang: 'zh-CN' as const,
+	};
+}
+
+const newer = toPostLink(
+	index > 0 ? orderedPosts[index - 1] : undefined,
+);
+const older = toPostLink(
+	index >= 0 && index < orderedPosts.length - 1
+		? orderedPosts[index + 1]
+		: undefined,
+);
+const description = getPostDescription(post.body, post.data.title);
+const readingTime = getReadingTime(post.body);
 ---
 
 <BlogPost
 	{...post.data}
 	language="zh"
 	alternateHref={alternateHref}
+	description={description}
+	readingTime={readingTime}
+	newer={newer}
+	older={older}
 >
 	<Content />
 </BlogPost>

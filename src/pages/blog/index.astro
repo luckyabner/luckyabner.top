@@ -1,9 +1,8 @@
 ---
-import { ArrowUpRight } from "@lucide/astro";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import Layout from "../../layouts/Layout.astro";
-import { getPreferredBlogPost, groupBlogPosts } from "../../lib/blog";
+import { getPreferredBlogPost, getReadingTime, groupBlogPosts } from "../../lib/blog";
 
 const posts = groupBlogPosts(await getCollection("blog"))
 	.map((group) => {
@@ -14,6 +13,7 @@ const posts = groupBlogPosts(await getCollection("blog"))
 			post,
 			slug: group.slug,
 			isEnglish: post === group.en,
+			readingTime: getReadingTime(post.body),
 		};
 	})
 	.filter((item) => item !== null)
@@ -21,14 +21,20 @@ const posts = groupBlogPosts(await getCollection("blog"))
 ---
 
 <Layout
-	title="Blog"
-	description="My thoughts and experiences on everything."
+	title="Blog — Abner"
+	description="Notes on software, ideas, and things I’m learning."
 	image="/og/og-blog.png"
+	alternateHref="/zh/blog/"
+	alternateLang="zh-CN"
+	xDefaultHref="/blog/"
 >
 	<section class="content-page" aria-labelledby="blog-title">
 		<header class="page-heading">
 			<h1 id="blog-title">Blog</h1>
 			<p>Notes on software, ideas, and things I’m learning.</p>
+			<a class="page-language-link" href="/zh/blog/" lang="zh-CN">
+				中文文章 <span aria-hidden="true">→</span>
+			</a>
 		</header>
 
 		<ol class="post-list">
@@ -38,33 +44,30 @@ const posts = groupBlogPosts(await getCollection("blog"))
 						<a
 							href={`/blog/${post.slug}/`}
 							class="post-row"
-							aria-label={`Read ${post.post.data.title}`}
+							aria-labelledby={`post-title-${index}${post.isEnglish ? ` post-lang-${index}` : ""}`}
 						>
-							<span class="row-number" aria-hidden="true">
-								{String(index + 1).padStart(2, "0")}
-							</span>
 							<span class="post-row-copy">
-								<h2>
+								<h2 id={`post-title-${index}`} lang={post.isEnglish ? "en" : "zh-CN"}>
 									{post.post.data.title}
-									{post.isEnglish && (
-										<span
-											class="language-mark"
-											aria-label="English"
-										>
-											en
-										</span>
-									)}
 								</h2>
 								<span class="row-date">
-									<FormattedDate date={post.post.data.date} />
+									<FormattedDate date={post.post.data.date} locale="en-US" />
+									<span aria-hidden="true"> · </span>{post.readingTime} min
+									{post.isEnglish && (
+										<>
+											<span aria-hidden="true"> · </span>
+											<span
+												id={`post-lang-${index}`}
+												class="language-mark"
+												lang="en"
+												aria-label="English"
+											>
+												EN
+											</span>
+										</>
+									)}
 								</span>
 							</span>
-							<ArrowUpRight
-								size={17}
-								stroke-width={1.5}
-								class="row-arrow"
-								aria-hidden="true"
-							/>
 						</a>
 					</li>
 				))

@@ -9,26 +9,26 @@ export const projects: Project[] = [
   {
     title: "Hexagram",
     description:
-      "AI Divination PWA app",
+      "An AI-assisted I Ching reading, packaged as a PWA.",
     url: "https://yao.luckyabner.top/",
   },
   {
     title: "MusicRoast",
     description:
-      "An AI-powered application that provides different reviews of users' playlists.",
+      "An AI playlist reviewer that gives your music taste a second opinion.",
     url: "https://music.luckyabner.top/",
     icon: "/icons/musicroast.ico",
   },
   {
     title: "HexVerse",
-    description: "An AI-powered fortune-telling application.",
+    description: "A playful AI fortune-telling app.",
     url: "https://hexverse.luckyabner.top/",
     icon: "/icons/hexverse.ico",
   },
   {
     title: "EchoMemo",
     description:
-      "An AI-enhanced thought capturing platform that provides intelligent feedback on your ideas.",
+      "An AI thought-capture app that gives feedback on your ideas.",
     url: "https://echo.luckyabner.top/",
     icon: "/icons/echomemo.ico",
   },

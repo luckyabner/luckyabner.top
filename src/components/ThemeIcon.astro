@@ -6,11 +6,12 @@ import { Moon, Sun } from "@lucide/astro";
   id="themeToggle"
   class="theme-toggle"
   type="button"
-  aria-label="Switch color theme"
-  title="Switch color theme"
+  aria-label="Switch to dark theme"
+  aria-pressed="false"
+  title="Switch to dark theme"
 >
-  <Sun size={16} strokeWidth={1.5} class="block dark:hidden" />
-  <Moon size={15} strokeWidth={1.5} class="hidden dark:block" />
+  <Sun size={16} stroke-width={1.5} aria-hidden="true" class="block dark:hidden" />
+  <Moon size={15} stroke-width={1.5} aria-hidden="true" class="hidden dark:block" />
 </button>
 
 <script src="../scripts/theme.ts"></script>

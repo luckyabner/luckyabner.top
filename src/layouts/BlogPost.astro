@@ -2,71 +2,117 @@
 import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "./Layout.astro";
 
+interface PostLink {
+	title: string;
+	href: string;
+	lang: "en" | "zh-CN";
+}
+
 interface Props {
-  title: string;
-  date: Date;
-  language?: "en" | "zh";
-  alternateHref?: string;
+	title: string;
+	date: Date;
+	language?: "en" | "zh";
+	alternateHref?: string;
+	description?: string;
+	readingTime?: number;
+	newer?: PostLink | null;
+	older?: PostLink | null;
 }
 
 const {
-  title,
-  date,
-  language = "zh",
-  alternateHref,
+	title,
+	date,
+	language = "zh",
+	alternateHref,
+	description = "Notes on software, ideas, and things I’m learning.",
+	readingTime,
+	newer,
+	older,
 } = Astro.props;
 
 const isEnglish = language === "en";
 const htmlLang = isEnglish ? "en" : "zh-CN";
 const alternateLang = isEnglish ? "zh-CN" : "en";
 const xDefaultHref = isEnglish ? Astro.url.pathname : alternateHref;
+const backHref = isEnglish ? "/blog/" : "/zh/blog/";
+const tocLabel = isEnglish ? "On this page" : "目录";
 ---
 
 <Layout
-  title={title}
-  description="Thanks for your visit."
-  image="/og/og-blog.png"
-  lang={htmlLang}
-  alternateHref={alternateHref}
-  alternateLang={alternateLang}
-  xDefaultHref={alternateHref ? xDefaultHref : undefined}
+	title={`${title} — Abner`}
+	description={description}
+	image="/og/og-blog.png"
+	lang={htmlLang}
+	type="article"
+	publishedTime={date.toISOString()}
+	alternateHref={alternateHref}
+	alternateLang={alternateLang}
+	xDefaultHref={alternateHref ? xDefaultHref : undefined}
 >
-  <article class="article-page">
-    <a class="back-link" href="/blog">
-      <span aria-hidden="true">←</span>
-      All posts
-    </a>
+	<article class="article-page">
+		<a class="back-link" href={backHref} lang="en">
+			<span aria-hidden="true">←</span>
+			All posts
+		</a>
 
-    <header class="article-heading">
-      <h1>{title}</h1>
-      <div class="article-meta">
-        <p><FormattedDate date={date} /></p>
-        {
-          alternateHref && (
-            <nav class="language-switch" aria-label="Article language">
-              {isEnglish ? (
-                <>
-                  <span aria-current="page">English</span>
-                  <a href={alternateHref} lang="zh-CN">中文</a>
-                </>
-              ) : (
-                <>
-                  <a href={alternateHref} lang="en">English</a>
-                  <span aria-current="page">中文</span>
-                </>
-              )}
-            </nav>
-          )
-        }
-      </div>
-    </header>
+		<header class="article-heading">
+			<h1>{title}</h1>
+			<div class="article-meta">
+				<p>
+					<FormattedDate date={date} locale={isEnglish ? "en-US" : "zh-CN"} />
+					{readingTime && (
+						<span> · {readingTime} {isEnglish ? "min read" : "分钟阅读"}</span>
+					)}
+				</p>
+				{
+					alternateHref && (
+						<nav class="language-switch" aria-label="Article language">
+							{isEnglish ? (
+								<>
+									<span aria-current="page" lang="en">English</span>
+									<a href={alternateHref} lang="zh-CN">中文</a>
+								</>
+							) : (
+								<>
+									<a href={alternateHref} lang="en">English</a>
+									<span aria-current="page" lang="zh-CN">中文</span>
+								</>
+							)}
+						</nav>
+					)
+				}
+			</div>
+		</header>
 
-    <div class="article-divider"></div>
+		<details class="post-toc" data-toc hidden>
+			<summary>{tocLabel}</summary>
+			<ol class="post-toc-list" data-toc-list></ol>
+		</details>
 
-    <div class="blog-prose prose dark:prose-invert">
-      <slot />
-    </div>
-  </article>
+		<div class="blog-prose prose dark:prose-invert">
+			<slot />
+		</div>
+
+		<nav class="post-nav" aria-label="More posts">
+			{
+				newer && (
+					<a class="post-nav-link post-nav-newer" href={newer.href}>
+						<span class="post-nav-kicker" lang="en">← Newer</span>
+						<strong lang={newer.lang}>{newer.title}</strong>
+					</a>
+				)
+			}
+			{
+				older && (
+					<a class="post-nav-link post-nav-older" href={older.href}>
+						<span class="post-nav-kicker" lang="en">Older →</span>
+						<strong lang={older.lang}>{older.title}</strong>
+					</a>
+				)
+			}
+		</nav>
+	</article>
 </Layout>
 
 <script src="../scripts/code-block-tools.ts"></script>
+<script src="../scripts/toc.ts"></script>

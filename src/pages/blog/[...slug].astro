@@ -2,8 +2,12 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 import {
+	getPostDescription,
 	getPreferredBlogPost,
+	getReadingTime,
 	groupBlogPosts,
+	type BlogEntry,
+	type BlogGroup,
 	type BlogLanguage,
 } from '../../lib/blog';
 
@@ -20,7 +24,12 @@ export async function getStaticPaths() {
 
 		return [{
 			params: { slug: group.slug },
-			props: { post, language, alternateHref },
+			props: {
+				post,
+				language,
+				alternateHref,
+				groupSlug: group.slug,
+			},
 		}];
 	});
 }
@@ -29,15 +38,54 @@ interface Props {
 	post: CollectionEntry<'blog'>;
 	language: BlogLanguage;
 	alternateHref?: string;
+	groupSlug: string;
 }
 
-const { post, language, alternateHref } = Astro.props;
+const { post, language, alternateHref, groupSlug } = Astro.props;
 const { Content } = await post.render();
+
+const orderedPosts = groupBlogPosts(await getCollection('blog'))
+	.map((group) => {
+		const preferred = getPreferredBlogPost(group);
+		return preferred ? { group, post: preferred } : null;
+	})
+	.filter((entry): entry is { group: BlogGroup; post: BlogEntry } =>
+		Boolean(entry),
+	)
+	.sort((a, b) => b.post.data.date.valueOf() - a.post.data.date.valueOf());
+
+const index = orderedPosts.findIndex((entry) => entry.group.slug === groupSlug);
+
+function toPostLink(entry?: { group: BlogGroup; post: BlogEntry }) {
+	if (!entry) return null;
+
+	return {
+		title: entry.post.data.title,
+		href: `/blog/${entry.group.slug}/`,
+		lang: entry.post === entry.group.en ? ('en' as const) : ('zh-CN' as const),
+	};
+}
+
+const newer = toPostLink(
+	index > 0 ? orderedPosts[index - 1] : undefined,
+);
+const older = toPostLink(
+	index >= 0 && index < orderedPosts.length - 1
+		? orderedPosts[index + 1]
+		: undefined,
+);
+const description = getPostDescription(post.body, post.data.title);
+const readingTime = getReadingTime(post.body);
 ---
+
 <BlogPost
 	{...post.data}
 	language={language}
 	alternateHref={alternateHref}
+	description={description}
+	readingTime={readingTime}
+	newer={newer}
+	older={older}
 >
 	<Content />
 </BlogPost>

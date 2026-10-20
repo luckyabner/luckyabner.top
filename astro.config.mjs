@@ -8,25 +8,26 @@ import tailwindcss from '@tailwindcss/vite';
 import vercel from '@astrojs/vercel';
 
 import { rehypeCodeTools } from './src/plugins/rehype-code-tools.mjs';
+import { rehypeNormalizeHeadings } from './src/plugins/rehype-normalize-headings.mjs';
+import responsiveImages from './src/integrations/responsive-images.mjs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://luckyabner.top',
-	// server: {
-	// 	port: 3000,
-	// 	host: true,
-	// },
-	integrations: [mdx(), sitemap()],
+	integrations: [mdx(), sitemap(), responsiveImages()],
 
 	markdown: {
-		rehypePlugins: [[rehypeCodeTools, { collapseAfter: 24 }]],
+		rehypePlugins: [
+			rehypeNormalizeHeadings,
+			[rehypeCodeTools, { collapseAfter: 24 }],
+		],
 		shikiConfig: {
-			theme: 'dracula',
+			theme: 'vitesse-dark',
 		},
 	},
 
 	image: {
-		domains: ['unsplash.com', 'astro.build', 'blog-images.luckyabner.top'],
+		domains: ['blog-images.luckyabner.top'],
 	},
 
 	vite: {

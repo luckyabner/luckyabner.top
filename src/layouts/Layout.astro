@@ -8,6 +8,8 @@ interface Props {
   description: string;
   image?: string;
   lang?: string;
+  type?: "website" | "article";
+  publishedTime?: string;
   alternateHref?: string;
   alternateLang?: string;
   xDefaultHref?: string;
@@ -18,6 +20,8 @@ const {
   description,
   image,
   lang = "en",
+  type = "website",
+  publishedTime,
   alternateHref,
   alternateLang,
   xDefaultHref,
@@ -30,6 +34,9 @@ const {
       title={title}
       description={description}
       image={image}
+      lang={lang}
+      type={type}
+      publishedTime={publishedTime}
       alternateHref={alternateHref}
       alternateLang={alternateLang}
       xDefaultHref={xDefaultHref}
@@ -37,7 +44,7 @@ const {
   </head>
 
   <body class="site-shell">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content" lang="en">Skip to content</a>
     <Header />
     <main id="main-content" class="site-main">
       <slot />

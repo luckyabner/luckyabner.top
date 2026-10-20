@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+	title="404 — Page not found"
+	description="This page doesn’t exist."
+	image="/og/og.png"
+>
+	<section class="content-page" aria-labelledby="not-found-title">
+		<header class="page-heading">
+			<h1 id="not-found-title">404</h1>
+			<p>
+				This page doesn’t exist. It may have moved, or the link is wrong.
+			</p>
+		</header>
+		<nav class="not-found-links" aria-label="Recovery links">
+			<a href="/">Home</a>
+			<a href="/blog/">Blog</a>
+			<a href="/projects/">Projects</a>
+			<a href="/zh/blog/" lang="zh-CN">中文文章</a>
+		</nav>
+	</section>
+</Layout>

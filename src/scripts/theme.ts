@@ -16,9 +16,49 @@ function getStoredTheme() {
 		: "light";
 }
 
+function syncThemeControls() {
+	const isDark = document.documentElement.classList.contains("dark");
+	const label = isDark ? "Switch to light theme" : "Switch to dark theme";
+	const toggle =
+		document.querySelector<HTMLButtonElement>("#themeToggle");
+
+	if (toggle) {
+		toggle.setAttribute("aria-pressed", String(isDark));
+		toggle.setAttribute("aria-label", label);
+		toggle.setAttribute("title", label);
+	}
+
+	const themeColor = document.querySelector<HTMLMetaElement>(
+		'meta[name="theme-color"]',
+	);
+
+	if (themeColor) {
+		themeColor.content = isDark ? "#111111" : "#fcfaf8";
+	}
+}
+
 function applyPagePreferences() {
 	document.documentElement.classList.add("js");
 	document.documentElement.classList.toggle("dark", getStoredTheme() === "dark");
+	syncThemeControls();
+}
+
+function setThemeTransitionOrigin() {
+	const toggle = document.querySelector<HTMLElement>("#themeToggle");
+
+	if (!toggle) {
+		return;
+	}
+
+	const rect = toggle.getBoundingClientRect();
+	document.documentElement.style.setProperty(
+		"--theme-x",
+		`${rect.left + rect.width / 2}px`,
+	);
+	document.documentElement.style.setProperty(
+		"--theme-y",
+		`${rect.top + rect.height / 2}px`,
+	);
 }
 
 function toggleTheme() {
@@ -34,6 +74,8 @@ function toggleTheme() {
 		} catch {
 			// The visual toggle still works when storage is unavailable.
 		}
+
+		syncThemeControls();
 	};
 
 	const prefersReducedMotion = window.matchMedia(
@@ -48,11 +90,13 @@ function toggleTheme() {
 		return;
 	}
 
+	setThemeTransitionOrigin();
 	element.dataset.themeTransition = "active";
 	const transition = document.startViewTransition(applyTheme);
 
 	transition.finished.finally(() => {
 		delete element.dataset.themeTransition;
+		syncThemeControls();
 	});
 }
 
@@ -65,3 +109,5 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("astro:after-swap", applyPagePreferences);
+
+applyPagePreferences();

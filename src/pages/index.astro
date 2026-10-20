@@ -1,0 +1,150 @@
+---
+import { ArrowUpRight } from "@lucide/astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import { projects } from "../content/projects";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import Layout from "../layouts/Layout.astro";
+import { getPreferredBlogPost, getReadingTime, groupBlogPosts } from "../lib/blog";
+
+const latestPosts = groupBlogPosts(await getCollection("blog"))
+	.map((group) => {
+		const post = getPreferredBlogPost(group);
+		if (!post) return null;
+
+		return {
+			post,
+			slug: group.slug,
+			isEnglish: post === group.en,
+			readingTime: getReadingTime(post.body),
+		};
+	})
+	.filter((item) => item !== null)
+	.sort((a, b) => b.post.data.date.valueOf() - a.post.data.date.valueOf())
+	.slice(0, 3);
+
+const featuredProjects = projects.slice(0, 2);
+---
+
+<Layout
+	title={`${SITE_TITLE} — AI graduate student & developer`}
+	description={SITE_DESCRIPTION}
+	image="/og/og.png"
+>
+	<section class="home-hero" aria-labelledby="home-title">
+		<img
+			class="home-avatar"
+			src="/avatar-224.webp"
+			width="112"
+			height="112"
+			alt="Abner’s avatar"
+			loading="eager"
+			decoding="async"
+		/>
+		<div class="home-hero-copy">
+			<h1 id="home-title">
+				Hello, I’m Abner <span aria-hidden="true">👋</span>
+			</h1>
+			<p class="home-role">
+				AI graduate student · Frontend &amp; AI full-stack developer
+			</p>
+			<p class="home-tagline">
+				Where the heart leads, I ask not of east or west.
+			</p>
+			<nav class="home-links" aria-label="Elsewhere">
+				<a
+					href="https://github.com/luckyabner"
+					target="_blank"
+					rel="noreferrer"
+				>
+					GitHub <span aria-hidden="true">↗</span>
+					<span class="sr-only"> (opens in a new tab)</span>
+				</a>
+				<a href="/rss.xml">RSS</a>
+			</nav>
+		</div>
+	</section>
+
+	<section class="home-section" aria-labelledby="latest-writing">
+		<div class="home-section-head">
+			<h2 id="latest-writing">Latest writing</h2>
+			<a href="/blog/">
+				All posts <span aria-hidden="true">→</span>
+			</a>
+		</div>
+		<ol class="post-list">
+			{
+				latestPosts.map((post, index) => (
+					<li class="post-list-item">
+						<a
+							href={`/blog/${post.slug}/`}
+							class="post-row"
+							aria-labelledby={`home-post-title-${index}${post.isEnglish ? ` home-post-lang-${index}` : ""}`}
+						>
+							<span class="post-row-copy">
+								<h3
+									id={`home-post-title-${index}`}
+									lang={post.isEnglish ? "en" : "zh-CN"}
+								>
+									{post.post.data.title}
+								</h3>
+								<span class="row-date">
+									<FormattedDate date={post.post.data.date} locale="en-US" />
+									<span aria-hidden="true"> · </span>{post.readingTime} min
+									{post.isEnglish && (
+										<>
+											<span aria-hidden="true"> · </span>
+											<span
+												id={`home-post-lang-${index}`}
+												class="language-mark"
+												lang="en"
+												aria-label="English"
+											>
+												EN
+											</span>
+										</>
+									)}
+								</span>
+							</span>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+
+	<section class="home-section" aria-labelledby="selected-projects">
+		<div class="home-section-head">
+			<h2 id="selected-projects">Selected projects</h2>
+			<a href="/projects/">
+				All projects <span aria-hidden="true">→</span>
+			</a>
+		</div>
+		<ol class="project-list">
+			{
+				featuredProjects.map((project) => (
+					<li class="project-list-item">
+						<a
+							href={project.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="project-row"
+							aria-label={`Visit ${project.title} (opens in a new tab)`}
+						>
+							<span class="project-row-copy">
+								<h3>{project.title}</h3>
+								<p>{project.description}</p>
+							</span>
+							<ArrowUpRight
+								size={17}
+								stroke-width={1.5}
+								class="project-link-icon"
+								aria-hidden="true"
+							/>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+</Layout>

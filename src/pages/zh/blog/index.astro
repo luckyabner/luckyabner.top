@@ -1,0 +1,78 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { getReadingTime, groupBlogPosts } from "../../../lib/blog";
+
+const posts = groupBlogPosts(await getCollection("blog"))
+	.filter((group) => group.zh)
+	.map((group) => {
+		const post = group.zh!;
+
+		return {
+			post,
+			slug: group.slug,
+			href: group.en ? `/zh/blog/${group.slug}/` : `/blog/${group.slug}/`,
+			hasEnglish: Boolean(group.en),
+			readingTime: getReadingTime(post.body),
+		};
+	})
+	.sort((a, b) => b.post.data.date.valueOf() - a.post.data.date.valueOf());
+---
+
+<Layout
+	title="中文文章 — Abner"
+	description="用中文写的笔记、读书和随想。"
+	image="/og/og-blog.png"
+	lang="zh-CN"
+	alternateHref="/blog/"
+	alternateLang="en"
+	xDefaultHref="/blog/"
+>
+	<section class="content-page" aria-labelledby="zh-blog-title">
+		<header class="page-heading">
+			<h1 id="zh-blog-title">中文文章</h1>
+			<p>用中文写的笔记、读书和随想，共 {posts.length} 篇。</p>
+			<a class="page-language-link" href="/blog/" lang="en">
+				English posts <span aria-hidden="true">→</span>
+			</a>
+		</header>
+
+		<ol class="post-list">
+			{
+				posts.map((post, index) => (
+					<li class="post-list-item">
+						<a
+							href={post.href}
+							class="post-row"
+							aria-labelledby={`zh-post-title-${index}${post.hasEnglish ? ` zh-post-lang-${index}` : ""}`}
+						>
+							<span class="post-row-copy">
+								<h2 id={`zh-post-title-${index}`} lang="zh-CN">
+									{post.post.data.title}
+								</h2>
+								<span class="row-date">
+									<FormattedDate date={post.post.data.date} locale="zh-CN" />
+									<span aria-hidden="true"> · </span>{post.readingTime} 分钟
+									{post.hasEnglish && (
+										<>
+											<span aria-hidden="true"> · </span>
+											<span
+												id={`zh-post-lang-${index}`}
+												class="language-mark"
+												lang="en"
+												aria-label="English version available"
+											>
+												EN
+											</span>
+										</>
+									)}
+								</span>
+							</span>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+</Layout>
