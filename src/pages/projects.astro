@@ -2,6 +2,17 @@
 import { ArrowUpRight } from "@lucide/astro";
 import { projects } from "../content/projects";
 import Layout from "../layouts/Layout.astro";
+
+const projectGroups = [
+	{
+		status: "active",
+		projects: projects.filter((project) => project.status === "active"),
+	},
+	{
+		status: "archived",
+		projects: projects.filter((project) => project.status === "archived"),
+	},
+].filter((group) => group.projects.length > 0);
 ---
 
 <Layout
@@ -15,31 +26,78 @@ import Layout from "../layouts/Layout.astro";
 			<p>A small collection of products, experiments, and useful toys.</p>
 		</header>
 
-		<ol class="project-list">
-			{
-				projects.map((project) => (
-					<li class="project-list-item">
-						<a
-							href={project.url}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="project-row"
-							aria-label={`Visit ${project.title} (opens in a new tab)`}
-						>
-							<span class="project-row-copy">
-								<h2>{project.title}</h2>
-								<p>{project.description}</p>
-							</span>
-							<ArrowUpRight
-								size={17}
-								stroke-width={1.5}
-								class="project-link-icon"
-								aria-hidden="true"
-							/>
-						</a>
-					</li>
-				))
-			}
-		</ol>
+		{
+			projectGroups.map((group) => {
+				const isHistory = group.status === "archived";
+				const Heading = isHistory ? "h3" : "h2";
+				return (
+					<section
+						class:list={{ "project-history": isHistory }}
+						aria-label={isHistory ? undefined : "Current projects"}
+						aria-labelledby={isHistory ? "project-history-title" : undefined}
+					>
+						{isHistory && (
+							<header class="project-history-heading">
+								<h2 id="project-history-title">History</h2>
+								<p id="project-history-note">
+									These projects are no longer maintained. Some features may no longer work.
+								</p>
+							</header>
+						)}
+						<ol class="project-list">
+							{group.projects.map((project) => (
+								<li class="project-list-item">
+									<a
+										href={project.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="project-row"
+										aria-label={`Visit ${project.title} (opens in a new tab)`}
+										aria-describedby={isHistory ? "project-history-note" : undefined}
+									>
+										<span class="project-row-copy">
+											<Heading>{project.title}</Heading>
+											<p>{project.description}</p>
+										</span>
+										<ArrowUpRight
+											size={17}
+											stroke-width={1.5}
+											class="project-link-icon"
+											aria-hidden="true"
+										/>
+									</a>
+								</li>
+							))}
+						</ol>
+					</section>
+				);
+			})
+		}
 	</section>
 </Layout>
+
+<style>
+	.project-history {
+		margin-top: clamp(3rem, 7vh, 4rem);
+	}
+
+	.project-history-heading h2 {
+		margin: 0;
+		font-size: 1.125rem;
+		font-weight: 600;
+		line-height: 1.4;
+		letter-spacing: -0.01em;
+	}
+
+	.project-history-heading p {
+		max-width: 34rem;
+		margin: 0.75rem 0 0;
+		color: var(--subtext);
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+
+	.project-history .project-list {
+		margin-top: 1.75rem;
+	}
+</style>

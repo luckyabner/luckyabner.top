@@ -23,7 +23,9 @@ const latestPosts = groupBlogPosts(await getCollection("blog"))
 	.sort((a, b) => b.post.data.date.valueOf() - a.post.data.date.valueOf())
 	.slice(0, 3);
 
-const featuredProjects = projects.slice(0, 2);
+const featuredProjects = projects
+	.filter((project) => project.status === "active")
+	.slice(0, 2);
 ---
 
 <Layout
