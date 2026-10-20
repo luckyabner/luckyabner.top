@@ -2,6 +2,719 @@
   "version": 1,
   "photos": [
     {
+      "id": "f42ebd8c092d4df8",
+      "source": "DSC_0930.jpg",
+      "fingerprint": "b3a5ab0f9930739575c29fceb199a0d9dcb5be77f1778c6447d93b234219995a",
+      "sequence": 22,
+      "importedAt": "2026-10-20T14:24:20.918Z",
+      "capturedAt": "2026-09-13T09:43:43.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.01,
+        "aperture": 8,
+        "iso": 100,
+        "focalLength": 50,
+        "focalLength35mm": 75,
+        "dateTimeOriginal": "2026:09:13 17:43:43"
+      },
+      "sourceBytes": 13429857,
+      "width": 3712,
+      "height": 5568,
+      "placeholder": "#b8d8f8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-09-13_17-43-43_0022-b3a5ab0f-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 201362
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-09-13_17-43-43_0022-b3a5ab0f-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 864284
+      },
+      "takenAt": "2026-09-13T09:43:43.000Z",
+      "title": "",
+      "alt": "Photo 22, 2026-09-13",
+      "published": true
+    },
+    {
+      "id": "2b3a28ec78f33cd4",
+      "source": "DSC_0836.jpg",
+      "fingerprint": "e13dd81ef92bd2c70212bc3e444f23e5bc0491c18bca5c5814daaaffb5f0e321",
+      "sequence": 21,
+      "importedAt": "2026-10-20T14:24:19.982Z",
+      "capturedAt": "2026-09-12T09:07:50.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 5.6,
+        "iso": 200,
+        "focalLength": 50,
+        "focalLength35mm": 75,
+        "dateTimeOriginal": "2026:09:12 17:07:50"
+      },
+      "sourceBytes": 16541795,
+      "width": 5568,
+      "height": 3712,
+      "placeholder": "#484848",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-09-12_17-07-50_0021-e13dd81e-thumb.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 155242
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-09-12_17-07-50_0021-e13dd81e-large.webp",
+        "width": 2560,
+        "height": 1707,
+        "bytes": 1552382
+      },
+      "takenAt": "2026-09-12T09:07:50.000Z",
+      "title": "",
+      "alt": "Photo 21, 2026-09-12",
+      "published": true
+    },
+    {
+      "id": "3f8dfb45fe1cb923",
+      "source": "DSC_0542.jpg",
+      "fingerprint": "9638fc9e02a5f8e39ab3077623ca76d25bce62cdb1a42658282b019e50ca4500",
+      "sequence": 20,
+      "importedAt": "2026-10-20T14:24:19.116Z",
+      "capturedAt": "2026-06-28T08:57:33.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 5.6,
+        "iso": 125,
+        "focalLength": 20.5,
+        "focalLength35mm": 30,
+        "dateTimeOriginal": "2026:06:28 16:57:33"
+      },
+      "sourceBytes": 11072326,
+      "width": 3704,
+      "height": 5556,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_16-57-33_0020-9638fc9e-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 176776
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_16-57-33_0020-9638fc9e-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 658128
+      },
+      "takenAt": "2026-06-28T08:57:33.000Z",
+      "title": "",
+      "alt": "Photo 20, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "590450aa8cf9b011",
+      "source": "DSC_0539.jpg",
+      "fingerprint": "9e19ac21315a12719e5cd0ef90a0d640c563e70a339ec42e30da38811b1a0867",
+      "sequence": 19,
+      "importedAt": "2026-10-20T14:24:18.209Z",
+      "capturedAt": "2026-06-28T08:56:42.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.003125,
+        "aperture": 6.3,
+        "iso": 100,
+        "focalLength": 16,
+        "focalLength35mm": 24,
+        "dateTimeOriginal": "2026:06:28 16:56:42"
+      },
+      "sourceBytes": 11646056,
+      "width": 3605,
+      "height": 5408,
+      "placeholder": "#585858",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_16-56-42_0019-9e19ac21-thumb.webp",
+          "width": 960,
+          "height": 1441,
+          "bytes": 215550
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_16-56-42_0019-9e19ac21-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 900932
+      },
+      "takenAt": "2026-06-28T08:56:42.000Z",
+      "title": "",
+      "alt": "Photo 19, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "dfb0c901df1403c8",
+      "source": "DSC_0536.jpg",
+      "fingerprint": "571978fd4b1d47f702e673ad687ac2ff3be0ad185bf8ad73128b23c63c761ff0",
+      "sequence": 18,
+      "importedAt": "2026-10-20T14:24:17.359Z",
+      "capturedAt": "2026-06-28T08:44:26.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 6.3,
+        "iso": 100,
+        "focalLength": 29,
+        "focalLength35mm": 43,
+        "dateTimeOriginal": "2026:06:28 16:44:26"
+      },
+      "sourceBytes": 11151304,
+      "width": 3466,
+      "height": 5199,
+      "placeholder": "#485858",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_16-44-26_0018-571978fd-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 230742
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_16-44-26_0018-571978fd-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 903726
+      },
+      "takenAt": "2026-06-28T08:44:26.000Z",
+      "title": "",
+      "alt": "Photo 18, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "b684c9885dfc2efd",
+      "source": "DSC_0533.jpg",
+      "fingerprint": "a2542a6af61b2d5ca380c32838bf2e5c2724361bdcc51401562f172b6e8d704b",
+      "sequence": 17,
+      "importedAt": "2026-10-20T14:24:16.496Z",
+      "capturedAt": "2026-06-28T08:43:12.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 5.6,
+        "iso": 100,
+        "focalLength": 28,
+        "focalLength35mm": 42,
+        "dateTimeOriginal": "2026:06:28 16:43:12"
+      },
+      "sourceBytes": 10790136,
+      "width": 3601,
+      "height": 5402,
+      "placeholder": "#88b8c8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_16-43-12_0017-a2542a6a-thumb.webp",
+          "width": 960,
+          "height": 1441,
+          "bytes": 222196
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_16-43-12_0017-a2542a6a-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 829020
+      },
+      "takenAt": "2026-06-28T08:43:12.000Z",
+      "title": "",
+      "alt": "Photo 17, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "c219d447ded7b1e9",
+      "source": "DSC_0532.jpg",
+      "fingerprint": "610c16ff4e50b008a1791002f143f34834000315fced596fc8482c1a4f714ba5",
+      "sequence": 16,
+      "importedAt": "2026-10-20T14:24:15.664Z",
+      "capturedAt": "2026-06-28T08:43:02.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 4,
+        "iso": 220,
+        "focalLength": 16,
+        "focalLength35mm": 24,
+        "dateTimeOriginal": "2026:06:28 16:43:02"
+      },
+      "sourceBytes": 12251580,
+      "width": 5545,
+      "height": 3697,
+      "placeholder": "#f8f8f8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_16-43-02_0016-610c16ff-thumb.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 123518
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_16-43-02_0016-610c16ff-large.webp",
+        "width": 2560,
+        "height": 1707,
+        "bytes": 853680
+      },
+      "takenAt": "2026-06-28T08:43:02.000Z",
+      "title": "",
+      "alt": "Photo 16, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "11ef7928303836a3",
+      "source": "DSC_0526.jpg",
+      "fingerprint": "e166f2bcad1b62bb05a857c76875608137ce3de5f11650742e5ea251aca0352b",
+      "sequence": 15,
+      "importedAt": "2026-10-20T14:24:14.859Z",
+      "capturedAt": "2026-06-28T08:35:24.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 6.3,
+        "iso": 140,
+        "focalLength": 50,
+        "focalLength35mm": 75,
+        "dateTimeOriginal": "2026:06:28 16:35:24"
+      },
+      "sourceBytes": 11797186,
+      "width": 3659,
+      "height": 5488,
+      "placeholder": "#f8f8f8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_16-35-24_0015-e166f2bc-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 206386
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_16-35-24_0015-e166f2bc-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 809072
+      },
+      "takenAt": "2026-06-28T08:35:24.000Z",
+      "title": "",
+      "alt": "Photo 15, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "c7a75057342dd927",
+      "source": "DSC_0514.jpg",
+      "fingerprint": "ad72f74a062d7bdb49b37f6754472630650345a523c8b2495a2fd0f3735704df",
+      "sequence": 14,
+      "importedAt": "2026-10-20T14:24:14.076Z",
+      "capturedAt": "2026-06-28T07:08:56.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.003125,
+        "aperture": 9,
+        "iso": 100,
+        "focalLength": 26.5,
+        "focalLength35mm": 39,
+        "dateTimeOriginal": "2026:06:28 15:08:56"
+      },
+      "sourceBytes": 10284412,
+      "width": 3679,
+      "height": 5519,
+      "placeholder": "#68a8b8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_15-08-56_0014-ad72f74a-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 182832
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_15-08-56_0014-ad72f74a-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 659096
+      },
+      "takenAt": "2026-06-28T07:08:56.000Z",
+      "title": "",
+      "alt": "Photo 14, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "ddcf7552855197ed",
+      "source": "DSC_0512.jpg",
+      "fingerprint": "6ba18ca3f9b69c5d1be2344eacec29f61d7495da10b9b9f656ee1f99cba6abc8",
+      "sequence": 13,
+      "importedAt": "2026-10-20T14:24:13.336Z",
+      "capturedAt": "2026-06-28T06:45:24.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.03333333333333333,
+        "aperture": 3.5,
+        "iso": 180,
+        "focalLength": 16,
+        "focalLength35mm": 24,
+        "dateTimeOriginal": "2026:06:28 14:45:24"
+      },
+      "sourceBytes": 11920514,
+      "width": 5568,
+      "height": 3712,
+      "placeholder": "#b8c8c8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_14-45-24_0013-6ba18ca3-thumb.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 83044
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_14-45-24_0013-6ba18ca3-large.webp",
+        "width": 2560,
+        "height": 1707,
+        "bytes": 716854
+      },
+      "takenAt": "2026-06-28T06:45:24.000Z",
+      "title": "",
+      "alt": "Photo 13, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "dacf1b8296e168ba",
+      "source": "DSC_05111.jpg",
+      "fingerprint": "02c188d80665bb63452d9f4a27eca8ce2d967d6389dee5672493d2975b4e9bdc",
+      "sequence": 12,
+      "importedAt": "2026-10-20T14:24:12.682Z",
+      "capturedAt": "2026-06-28T06:35:52.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.00625,
+        "aperture": 6.3,
+        "iso": 100,
+        "focalLength": 24.5,
+        "focalLength35mm": 36,
+        "dateTimeOriginal": "2026:06:28 14:35:52"
+      },
+      "sourceBytes": 5151942,
+      "width": 2219,
+      "height": 3329,
+      "placeholder": "#a87858",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_14-35-52_0012-02c188d8-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 278020
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_14-35-52_0012-02c188d8-large.webp",
+        "width": 1706,
+        "height": 2560,
+        "bytes": 963580
+      },
+      "takenAt": "2026-06-28T06:35:52.000Z",
+      "title": "",
+      "alt": "Photo 12, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "71ba068da8e0768e",
+      "source": "DSC_0510.jpg",
+      "fingerprint": "e331883f02beea70bbd2c2edb410e44547863bb492b51086a1483fdb36a00a1a",
+      "sequence": 11,
+      "importedAt": "2026-10-20T14:24:11.776Z",
+      "capturedAt": "2026-06-28T06:07:23.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 8,
+        "iso": 100,
+        "focalLength": 23,
+        "focalLength35mm": 34,
+        "dateTimeOriginal": "2026:06:28 14:07:23"
+      },
+      "sourceBytes": 11836458,
+      "width": 3712,
+      "height": 5568,
+      "placeholder": "#989888",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_14-07-23_0011-e331883f-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 196848
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_14-07-23_0011-e331883f-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 858768
+      },
+      "takenAt": "2026-06-28T06:07:23.000Z",
+      "title": "",
+      "alt": "Photo 11, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "7c4fc9305b76a0d7",
+      "source": "DSC_0509.jpg",
+      "fingerprint": "d7b857fb9af8897d7e3a8dcb05352f4d6a55c5f087cf7fef1fe9837bafa8e0d7",
+      "sequence": 10,
+      "importedAt": "2026-10-20T14:24:10.918Z",
+      "capturedAt": "2026-06-28T06:07:15.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.003125,
+        "aperture": 9,
+        "iso": 100,
+        "focalLength": 16,
+        "focalLength35mm": 24,
+        "dateTimeOriginal": "2026:06:28 14:07:15"
+      },
+      "sourceBytes": 12979330,
+      "width": 3712,
+      "height": 5568,
+      "placeholder": "#787878",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_14-07-15_0010-d7b857fb-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 242994
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_14-07-15_0010-d7b857fb-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 1032536
+      },
+      "takenAt": "2026-06-28T06:07:15.000Z",
+      "title": "",
+      "alt": "Photo 10, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "663763608452e9a2",
+      "source": "DSC_0508.jpg",
+      "fingerprint": "2a012e77dfe2ef47e4d5ca79aeb35b56471cbcaf4e3527f50208be7f92351b79",
+      "sequence": 9,
+      "importedAt": "2026-10-20T14:24:10.355Z",
+      "capturedAt": "2026-06-28T06:07:03.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 8,
+        "iso": 100,
+        "focalLength": 16,
+        "focalLength35mm": 24,
+        "dateTimeOriginal": "2026:06:28 14:07:03"
+      },
+      "sourceBytes": 3899392,
+      "width": 2020,
+      "height": 3030,
+      "placeholder": "#88b8c8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_14-07-03_0009-2a012e77-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 215592
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_14-07-03_0009-2a012e77-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 773710
+      },
+      "takenAt": "2026-06-28T06:07:03.000Z",
+      "title": "",
+      "alt": "Photo 9, 2026-06-28",
+      "published": true
+    },
+    {
+      "id": "026fd3df890ac84d",
+      "source": "毕业/DSC_0311.jpg",
+      "fingerprint": "9729c8c7052cc2ecb6ded702c071d3cd717390d1daf38eb573d3909092247682",
+      "sequence": 24,
+      "importedAt": "2026-10-20T14:26:30.513Z",
+      "capturedAt": "2026-06-13T13:04:59.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.004,
+        "aperture": 8,
+        "iso": 100,
+        "focalLength": 21,
+        "focalLength35mm": 31,
+        "dateTimeOriginal": "2026:06:13 21:04:59"
+      },
+      "sourceBytes": 6250753,
+      "width": 5000,
+      "height": 3333,
+      "placeholder": "#8898a8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-13_21-04-59_0024-9729c8c7-thumb.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 54244
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-13_21-04-59_0024-9729c8c7-large.webp",
+        "width": 2560,
+        "height": 1706,
+        "bytes": 381300
+      },
+      "takenAt": "2026-06-13T13:04:59.000Z",
+      "title": "",
+      "alt": "Photo 24, 2026-06-13",
+      "published": true
+    },
+    {
+      "id": "8e3abe2663461733",
+      "source": "20260204-DSC_0104.jpg",
+      "fingerprint": "00b3749db05911049a480976f200e5f95dbe078a83f04c8c460af0080fdcf568",
+      "sequence": 8,
+      "importedAt": "2026-10-20T14:24:09.673Z",
+      "capturedAt": "2026-02-04T06:59:05.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensModel": "Viltrox AF 35/1.7 Z",
+        "exposureTime": 0.01,
+        "aperture": 5,
+        "iso": 100,
+        "focalLength": 35,
+        "focalLength35mm": 52,
+        "dateTimeOriginal": "2026:02:04 14:59:05"
+      },
+      "sourceBytes": 3108769,
+      "width": 3712,
+      "height": 5568,
+      "placeholder": "#585858",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-02-04_14-59-05_0008-00b3749d-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 201348
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-02-04_14-59-05_0008-00b3749d-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 660278
+      },
+      "takenAt": "2026-02-04T06:59:05.000Z",
+      "title": "",
+      "alt": "Photo 8, 2026-02-04",
+      "published": true
+    },
+    {
+      "id": "35b8ae51c1f7c2ce",
+      "source": "北海的树.jpg",
+      "fingerprint": "d2927e4e341d13bb37f8b239e022e085679ab27c1d8d9db8589dcb6b51523387",
+      "sequence": 23,
+      "importedAt": "2026-10-20T14:24:21.896Z",
+      "capturedAt": "2026-01-25T08:03:31.000Z",
+      "exif": {
+        "make": "NIKON CORPORATION",
+        "model": "NIKON Z 30",
+        "lensMake": "NIKON",
+        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+        "exposureTime": 0.005,
+        "aperture": 7.1,
+        "iso": 100,
+        "focalLength": 16,
+        "focalLength35mm": 24,
+        "dateTimeOriginal": "2026:01:25 16:03:31"
+      },
+      "sourceBytes": 2356478,
+      "width": 3224,
+      "height": 5449,
+      "placeholder": "#a8a8a8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-01-25_16-03-31_0023-d2927e4e-thumb.webp",
+          "width": 960,
+          "height": 1622,
+          "bytes": 189076
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-01-25_16-03-31_0023-d2927e4e-large.webp",
+        "width": 1515,
+        "height": 2560,
+        "bytes": 506006
+      },
+      "takenAt": "2026-01-25T08:03:31.000Z",
+      "title": "",
+      "alt": "Photo 23, 2026-01-25",
+      "published": true
+    },
+    {
       "id": "0eba1371f71cbebf",
       "source": "P1001971.jpg",
       "fingerprint": "ba5f93b2cc2c5e046916bb76ef39211c99998cc25a392018a97bf3030e20e2a8",
