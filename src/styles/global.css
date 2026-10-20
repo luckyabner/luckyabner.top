@@ -213,6 +213,26 @@ button:focus-visible {
 	flex: 1;
 }
 
+@media (max-width: 24rem) {
+	.site-header .brand-link {
+		width: 2.75rem;
+		margin-left: 0;
+	}
+
+	.site-header .brand-mark {
+		width: 2.75rem;
+		height: 2.75rem;
+	}
+
+	.site-nav {
+		gap: 0;
+	}
+
+	.site-nav .nav-link {
+		padding-inline: 0.375rem;
+	}
+}
+
 .home-hero {
 	display: grid;
 	grid-template-columns: auto minmax(0, 1fr);

@@ -13,6 +13,7 @@ interface Props {
   alternateHref?: string;
   alternateLang?: string;
   xDefaultHref?: string;
+  wide?: boolean;
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   alternateHref,
   alternateLang,
   xDefaultHref,
+  wide = false,
 } = Astro.props;
 ---
 
@@ -46,7 +48,7 @@ const {
   <body class="site-shell">
     <a class="skip-link" href="#main-content" lang="en">Skip to content</a>
     <Header />
-    <main id="main-content" class="site-main">
+    <main id="main-content" class:list={["site-main", { "site-main-wide": wide }]}>
       <slot />
     </main>
     <Footer />

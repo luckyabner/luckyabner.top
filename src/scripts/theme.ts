@@ -1,5 +1,5 @@
 function getStoredTheme() {
-	let storedTheme = null;
+	let storedTheme: string | null = null;
 
 	try {
 		storedTheme = localStorage.getItem("theme");

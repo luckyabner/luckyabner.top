@@ -1,0 +1,307 @@
+---
+import catalog from "../data/photos.json";
+import { photoSrcset, type Photo } from "../lib/photos";
+import { formatPhotoEquipment, formatPhotoSettings } from "../lib/photo-exif.mjs";
+import Layout from "../layouts/Layout.astro";
+
+const photos = (catalog.photos as Photo[])
+  .filter((photo) => photo.published)
+  .sort((a, b) => b.takenAt.localeCompare(a.takenAt) || a.id.localeCompare(b.id));
+---
+
+<Layout title="Photos — Abner" description="Photographs by Abner." wide>
+  <section class="photos-page" aria-labelledby="photos-title" data-photos data-view="cover">
+    <header class="photos-heading">
+      <h1 id="photos-title">Photos</h1>
+      {
+        photos.length > 0 && (
+          <button
+            type="button"
+            class="photos-view-toggle"
+            aria-pressed="false"
+            aria-controls="photo-grid"
+            title="Show each photo's full composition"
+            data-photo-toggle
+            hidden
+          >
+            <svg class="photos-view-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 3H4a1 1 0 0 0-1 1v4m13-5h4a1 1 0 0 1 1 1v4M3 16v4a1 1 0 0 0 1 1h4m8 0h4a1 1 0 0 0 1-1v-4" />
+              <rect class="photos-view-composition" x="6" y="6" width="12" height="12" rx="1" />
+            </svg>
+            <span>Full frame</span>
+          </button>
+        )
+      }
+    </header>
+
+    {
+      photos.length > 0 ? (
+        <ol id="photo-grid" class="photo-grid" aria-label="Photographs, newest first">
+          {photos.map((photo, index) => (
+            <li>
+              <a
+                class="photo-link"
+                href={photo.large.src}
+                data-astro-reload
+                data-astro-prefetch="false"
+                data-pswp-width={photo.large.width}
+                data-pswp-height={photo.large.height}
+                data-pswp-srcset={photoSrcset([...photo.thumbnails, photo.large])}
+                data-cropped="true"
+                data-photo-title={photo.title}
+                data-photo-settings={formatPhotoSettings(photo.exif)}
+                data-photo-equipment={formatPhotoEquipment(photo.exif)}
+                style={{ "--photo-color": photo.placeholder }}
+              >
+                <img
+                  src={photo.thumbnails[0].src}
+                  width={photo.thumbnails[0].width}
+                  height={photo.thumbnails[0].height}
+                  alt={photo.alt}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchpriority={index === 0 ? "high" : "auto"}
+                  decoding="async"
+                />
+                <span class="photo-error" hidden>Photo unavailable. Open image.</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p class="photos-empty">No photos published yet.</p>
+      )
+    }
+  </section>
+</Layout>
+
+<script>
+  import "../scripts/photos";
+</script>
+
+<style is:global>
+  .site-main.site-main-wide {
+    width: min(100%, 90rem);
+  }
+
+  .photos-page {
+    padding-block: clamp(2.5rem, 5vh, 3.5rem) 4rem;
+  }
+
+  .photos-heading {
+    display: flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .photos-heading h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(1.65rem, 1.4rem + 1vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.2;
+  }
+
+  .photos-view-toggle {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    color: var(--subtext);
+    font: inherit;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 180ms var(--ease-out-quart);
+  }
+
+  .photos-view-toggle[hidden] {
+    display: none;
+  }
+
+  .photos-view-toggle:hover {
+    color: var(--text);
+  }
+
+  .photos-view-toggle:hover span {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  .photos-view-toggle:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 4px;
+  }
+
+  .photos-view-icon {
+    flex: none;
+  }
+
+  .photos-view-composition {
+    fill: currentColor;
+    fill-opacity: 0.06;
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 220ms var(--ease-out-quart), fill-opacity 180ms var(--ease-out-quart);
+  }
+
+  .photos-view-toggle[aria-pressed="true"] {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .photos-view-toggle[aria-pressed="true"] .photos-view-composition {
+    transform: scale(1.15, 0.75);
+    fill-opacity: 0.35;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .photos-view-toggle,
+    .photos-view-composition {
+      transition: none;
+    }
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .photo-grid li {
+    min-width: 0;
+  }
+
+  .photo-link {
+    position: relative;
+    display: grid;
+    aspect-ratio: 1;
+    background: var(--photo-color, var(--surface));
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .photo-link img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+  }
+
+  .photo-link img[hidden] {
+    display: none;
+  }
+
+  [data-view="contain"] .photo-link {
+    background: var(--surface);
+  }
+
+  [data-view="contain"] .photo-link img {
+    object-fit: contain;
+  }
+
+  .photo-link[data-failed] {
+    background: var(--surface);
+  }
+
+  .photo-error {
+    place-self: center;
+    padding: 1rem;
+    font-size: 0.8125rem;
+    text-align: center;
+  }
+
+  .photos-empty {
+    margin: 0;
+    color: var(--subtext);
+    font-size: 1rem;
+  }
+
+  .pswp {
+    --pswp-bg: #111111;
+    --pswp-icon-color: #f5f3f0;
+    --pswp-icon-color-secondary: #111111;
+    --pswp-error-text-color: #f5f3f0;
+    font-family: inherit;
+  }
+
+  .pswp__button:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: -4px;
+  }
+
+  .pswp__photo-caption {
+    position: absolute;
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    left: 50%;
+    width: min(48rem, calc(100% - 2rem));
+    max-width: calc(100% - 3rem);
+    padding: 0.5rem 0.75rem;
+    background: #111111;
+    color: #f5f3f0;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    text-align: center;
+    transform: translateX(-50%);
+    pointer-events: none;
+    overflow-wrap: anywhere;
+  }
+
+  .pswp__photo-caption[hidden],
+  .pswp__photo-caption p[hidden] {
+    display: none;
+  }
+
+  .pswp__photo-caption p {
+    margin: 0;
+  }
+
+  .pswp__photo-caption p + p:not([hidden]) {
+    margin-top: 0.25rem;
+  }
+
+  .pswp__photo-equipment {
+    color: #c8c5c1;
+  }
+
+  .pswp__photo-title,
+  .pswp__photo-equipment {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  @media (min-width: 40rem) {
+    .photo-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+  }
+
+  @media (min-width: 60rem) {
+    .photo-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .photo-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>

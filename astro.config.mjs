@@ -32,6 +32,8 @@ export default defineConfig({
 
 	vite: {
 		plugins: [tailwindcss()],
+		// PhotoSwipe is already ESM; avoid stale dev pre-bundle URLs on first click.
+		optimizeDeps: { exclude: ['photoswipe'] },
 	},
 
 	adapter: vercel(),

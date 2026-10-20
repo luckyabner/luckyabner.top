@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "photos": [
+    {
+      "id": "0eba1371f71cbebf",
+      "source": "P1001971.jpg",
+      "fingerprint": "ba5f93b2cc2c5e046916bb76ef39211c99998cc25a392018a97bf3030e20e2a8",
+      "sequence": 7,
+      "importedAt": "2026-10-20T13:29:12.639Z",
+      "capturedAt": "2025-06-01T08:43:15.000Z",
+      "exif": {
+        "make": "Panasonic",
+        "model": "DC-GX9",
+        "lensModel": "LUMIX G VARIO 12-60/F3.5-5.6",
+        "exposureTime": 0.000625,
+        "aperture": 5.6,
+        "iso": 200,
+        "focalLength": 35,
+        "focalLength35mm": 70,
+        "dateTimeOriginal": "2025:06:01 16:43:15"
+      },
+      "sourceBytes": 9349805,
+      "width": 4495,
+      "height": 3371,
+      "placeholder": "#d87858",
+      "thumbnails": [
+        {
+          "src": "/photos/2025-06-01_16-43-15_0007-ba5f93b2-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 87216
+        }
+      ],
+      "large": {
+        "src": "/photos/2025-06-01_16-43-15_0007-ba5f93b2-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 765574
+      },
+      "takenAt": "2025-06-01T08:43:15.000Z",
+      "title": "",
+      "alt": "Photo 7, 2025-06-01",
+      "published": true
+    },
+    {
+      "id": "9e7eb0dfb722068c",
+      "source": "P1001964.jpg",
+      "fingerprint": "96d0eab7cf7df765d33f9102a799a52f9a0ea8f3bca2f22d1297380befc9bec1",
+      "sequence": 6,
+      "importedAt": "2026-10-20T13:29:11.712Z",
+      "capturedAt": "2025-05-30T13:17:08.000Z",
+      "exif": {
+        "make": "Panasonic",
+        "model": "DC-GX9",
+        "exposureTime": 0.002,
+        "iso": 200,
+        "dateTimeOriginal": "2025:05:30 21:17:08"
+      },
+      "sourceBytes": 13509995,
+      "width": 3888,
+      "height": 5184,
+      "placeholder": "#c8c8c8",
+      "thumbnails": [
+        {
+          "src": "/photos/2025-05-30_21-17-08_0006-96d0eab7-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 137726
+        }
+      ],
+      "large": {
+        "src": "/photos/2025-05-30_21-17-08_0006-96d0eab7-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 751500
+      },
+      "takenAt": "2025-05-30T13:17:08.000Z",
+      "title": "",
+      "alt": "Photo 6, 2025-05-30",
+      "published": true
+    },
+    {
+      "id": "595cd837e7634914",
+      "source": "P1001935.jpg",
+      "fingerprint": "2f2b9825ea3c9c5e21ab98d2c88decef91bbf6a3df63fca3acb924a6fb26c7ac",
+      "sequence": 5,
+      "importedAt": "2026-10-20T13:29:10.374Z",
+      "capturedAt": "2025-05-23T13:38:49.000Z",
+      "exif": {
+        "make": "Panasonic",
+        "model": "DC-GX9",
+        "lensModel": "LUMIX G VARIO 12-60/F3.5-5.6",
+        "exposureTime": 0.01,
+        "aperture": 5.6,
+        "iso": 800,
+        "focalLength": 46,
+        "focalLength35mm": 92,
+        "dateTimeOriginal": "2025:05:23 21:38:49"
+      },
+      "sourceBytes": 14728317,
+      "width": 5184,
+      "height": 3888,
+      "placeholder": "#484848",
+      "thumbnails": [
+        {
+          "src": "/photos/2025-05-23_21-38-49_0005-2f2b9825-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 31536
+        }
+      ],
+      "large": {
+        "src": "/photos/2025-05-23_21-38-49_0005-2f2b9825-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 1033790
+      },
+      "takenAt": "2025-05-23T13:38:49.000Z",
+      "title": "",
+      "alt": "Photo 5, 2025-05-23",
+      "published": true
+    },
+    {
+      "id": "4ce80962b8e2b615",
+      "source": "P1001918.jpg",
+      "fingerprint": "a78ca783918ee403b9ee081f6f5ab6bfa14a7d0eb1de8b262fd7c6976a0a9a83",
+      "sequence": 4,
+      "importedAt": "2026-10-20T13:29:09.230Z",
+      "capturedAt": "2025-05-23T11:18:23.000Z",
+      "exif": {
+        "make": "Panasonic",
+        "model": "DC-GX9",
+        "lensModel": "LUMIX G VARIO 12-60/F3.5-5.6",
+        "exposureTime": 0.002,
+        "aperture": 9,
+        "iso": 200,
+        "focalLength": 32,
+        "focalLength35mm": 64,
+        "dateTimeOriginal": "2025:05:23 19:18:23"
+      },
+      "sourceBytes": 9420337,
+      "width": 5184,
+      "height": 3888,
+      "placeholder": "#98a8b8",
+      "thumbnails": [
+        {
+          "src": "/photos/2025-05-23_19-18-23_0004-a78ca783-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 47028
+        }
+      ],
+      "large": {
+        "src": "/photos/2025-05-23_19-18-23_0004-a78ca783-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 314606
+      },
+      "takenAt": "2025-05-23T11:18:23.000Z",
+      "title": "",
+      "alt": "Photo 4, 2025-05-23",
+      "published": true
+    },
+    {
+      "id": "b4f90bb872bac2c2",
+      "source": "P1001851.jpg",
+      "fingerprint": "0e231cfb997e3023e792ca4f921b9bf7a5b881a111d3c694b578df233501379d",
+      "sequence": 3,
+      "importedAt": "2026-10-20T13:29:08.334Z",
+      "capturedAt": "2025-05-15T12:47:28.000Z",
+      "exif": {
+        "make": "Panasonic",
+        "model": "DC-GX9",
+        "exposureTime": 0.002,
+        "iso": 200,
+        "dateTimeOriginal": "2025:05:15 20:47:28"
+      },
+      "sourceBytes": 11415439,
+      "width": 5184,
+      "height": 3888,
+      "placeholder": "#282828",
+      "thumbnails": [
+        {
+          "src": "/photos/2025-05-15_20-47-28_0003-0e231cfb-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 44084
+        }
+      ],
+      "large": {
+        "src": "/photos/2025-05-15_20-47-28_0003-0e231cfb-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 598832
+      },
+      "takenAt": "2025-05-15T12:47:28.000Z",
+      "title": "",
+      "alt": "Photo 3, 2025-05-15",
+      "published": true
+    },
+    {
+      "id": "ed9cd20217942b3e",
+      "source": "P1001841.jpg",
+      "fingerprint": "73f84843b8de56a25237a9a792f837c47e77676ed03c312d3ac7579927541222",
+      "sequence": 2,
+      "importedAt": "2026-10-20T13:29:07.281Z",
+      "capturedAt": "2025-05-11T12:21:10.000Z",
+      "exif": {
+        "make": "Panasonic",
+        "model": "DC-GX9",
+        "lensModel": "LUMIX G VARIO 12-32/F3.5-5.6",
+        "exposureTime": 0.005,
+        "aperture": 7.1,
+        "iso": 200,
+        "focalLength": 32,
+        "focalLength35mm": 64,
+        "dateTimeOriginal": "2025:05:11 20:21:10"
+      },
+      "sourceBytes": 13636207,
+      "width": 5184,
+      "height": 3888,
+      "placeholder": "#181808",
+      "thumbnails": [
+        {
+          "src": "/photos/2025-05-11_20-21-10_0002-73f84843-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 114116
+        }
+      ],
+      "large": {
+        "src": "/photos/2025-05-11_20-21-10_0002-73f84843-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 900644
+      },
+      "takenAt": "2025-05-11T12:21:10.000Z",
+      "title": "",
+      "alt": "Photo 2, 2025-05-11",
+      "published": true
+    },
+    {
+      "id": "3bfd329d1089d317",
+      "source": "P1001736.jpg",
+      "fingerprint": "d89fd804f1e653ddb1970f7079f968b4eb19531fae1d9861c6b99f018e10ee16",
+      "sequence": 1,
+      "importedAt": "2026-10-20T13:29:06.118Z",
+      "capturedAt": "2025-05-11T11:24:12.000Z",
+      "exif": {
+        "make": "Panasonic",
+        "model": "DC-GX9",
+        "lensModel": "LUMIX G VARIO 12-32/F3.5-5.6",
+        "exposureTime": 0.0025,
+        "aperture": 9,
+        "iso": 200,
+        "focalLength": 32,
+        "focalLength35mm": 64,
+        "dateTimeOriginal": "2025:05:11 19:24:12"
+      },
+      "sourceBytes": 12388787,
+      "width": 5141,
+      "height": 3856,
+      "placeholder": "#485868",
+      "thumbnails": [
+        {
+          "src": "/photos/2025-05-11_19-24-12_0001-d89fd804-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 68270
+        }
+      ],
+      "large": {
+        "src": "/photos/2025-05-11_19-24-12_0001-d89fd804-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 818850
+      },
+      "takenAt": "2025-05-11T11:24:12.000Z",
+      "title": "",
+      "alt": "Photo 1, 2025-05-11",
+      "published": true
+    }
+  ]
+}

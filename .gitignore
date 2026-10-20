@@ -26,3 +26,6 @@ pnpm-debug.log*
 
 # obsidian
 .obsidian/
+
+# Local photo exports, processing cache, and temporary files
+.photos-local/
