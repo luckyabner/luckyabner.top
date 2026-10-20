@@ -124,4 +124,27 @@ const imageURL = new URL(image, Astro.url);
   href={new URL("/rss.xml", Astro.url)}
 />
 
+<!-- Analytics: self-hosted Umami (cookieless) -->
+<script
+  is:inline
+  defer
+  src="https://umami.luckyabner.top/script.js"
+  data-website-id="1d08d3f9-bf67-4e91-8e55-83b9a79181b9"
+></script>
+<script is:inline>
+  // Astro caches history.pushState before the deferred Umami script can wrap
+  // it, so client-side navigations need an explicit pageview. The script
+  // already tracks the first load; skip that one to avoid double counting.
+  (() => {
+    let firstLoad = true;
+    document.addEventListener("astro:page-load", () => {
+      if (firstLoad) {
+        firstLoad = false;
+        return;
+      }
+      window.umami?.track();
+    });
+  })();
+</script>
+
 <ClientRouter />
