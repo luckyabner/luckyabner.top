@@ -1929,53 +1929,6 @@
       }
     },
     {
-      "id": "259ec0f639184c13",
-      "source": "Seoul/DSC_0526.jpg",
-      "fingerprint": "e166f2bcad1b62bb05a857c76875608137ce3de5f11650742e5ea251aca0352b",
-      "sequence": 31,
-      "importedAt": "2026-10-21T11:21:27.386Z",
-      "capturedAt": "2026-06-28T08:35:24.000Z",
-      "exif": {
-        "make": "NIKON CORPORATION",
-        "model": "NIKON Z 30",
-        "lensMake": "NIKON",
-        "lensModel": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
-        "exposureTime": 0.004,
-        "aperture": 6.3,
-        "iso": 140,
-        "focalLength": 50,
-        "focalLength35mm": 75,
-        "dateTimeOriginal": "2026:06:28 16:35:24"
-      },
-      "sourceBytes": 11797186,
-      "width": 3659,
-      "height": 5488,
-      "placeholder": "#f8f8f8",
-      "thumbnails": [
-        {
-          "src": "/photos/2026-06-28_16-35-24_0031-e166f2bc-thumb.webp",
-          "width": 960,
-          "height": 1440,
-          "bytes": 206386
-        }
-      ],
-      "large": {
-        "src": "/photos/2026-06-28_16-35-24_0031-e166f2bc-large.webp",
-        "width": 1707,
-        "height": 2560,
-        "bytes": 809072
-      },
-      "takenAt": "2026-06-28T08:35:24.000Z",
-      "title": "",
-      "alt": "Photo 31, 2026-06-28",
-      "published": true,
-      "location": {
-        "lat": 37.5613,
-        "lng": 126.9851,
-        "name": "Myeong-dong, Seoul"
-      }
-    },
-    {
       "id": "1d61727e5cdde2d1",
       "source": "Seoul/DSC_0514.jpg",
       "fingerprint": "ad72f74a062d7bdb49b37f6754472630650345a523c8b2495a2fd0f3735704df",
