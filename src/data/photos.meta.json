@@ -69,88 +69,340 @@
       "name": "中国石油大学（北京）（克拉玛依校区）"
     }
   },
-  "DSC_0512.jpg": {
+  "Seoul/DSC_0542.jpg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/DSC_0539.jpg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/DSC_0536.jpg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/DSC_0533.jpg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/DSC_0532.jpg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/DSC_0526.jpg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/DSC_0514.jpg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/DSC_0512.jpg": {
     "location": {
       "lat": 37.5719,
       "lng": 127.0115,
       "name": "Dongdaemun, Seoul"
     }
   },
-  "DSC_0514.jpg": {
-    "location": {
-      "lat": 37.5613,
-      "lng": 126.9851,
-      "name": "Myeong-dong, Seoul"
-    }
-  },
-  "DSC_0526.jpg": {
-    "location": {
-      "lat": 37.5613,
-      "lng": 126.9851,
-      "name": "Myeong-dong, Seoul"
-    }
-  },
-  "DSC_0532.jpg": {
-    "location": {
-      "lat": 37.5613,
-      "lng": 126.9851,
-      "name": "Myeong-dong, Seoul"
-    }
-  },
-  "DSC_0533.jpg": {
-    "location": {
-      "lat": 37.5613,
-      "lng": 126.9851,
-      "name": "Myeong-dong, Seoul"
-    }
-  },
-  "DSC_0536.jpg": {
-    "location": {
-      "lat": 37.5613,
-      "lng": 126.9851,
-      "name": "Myeong-dong, Seoul"
-    }
-  },
-  "DSC_0539.jpg": {
-    "location": {
-      "lat": 37.5613,
-      "lng": 126.9851,
-      "name": "Myeong-dong, Seoul"
-    }
-  },
-  "DSC_0542.jpg": {
-    "location": {
-      "lat": 37.5613,
-      "lng": 126.9851,
-      "name": "Myeong-dong, Seoul"
-    }
-  },
-  "DSC_05111.jpg": {
+  "Seoul/DSC_05111.jpg": {
     "location": {
       "lat": 37.5821,
       "lng": 127.002,
       "name": "Hyehwa, Seoul"
     }
   },
-  "DSC_0510.jpg": {
+  "Seoul/DSC_0510.jpg": {
     "location": {
       "lat": 37.5821,
       "lng": 127.002,
       "name": "Hyehwa, Seoul"
     }
   },
-  "DSC_0509.jpg": {
+  "Seoul/DSC_0509.jpg": {
     "location": {
       "lat": 37.5821,
       "lng": 127.002,
       "name": "Hyehwa, Seoul"
     }
   },
-  "DSC_0508.jpg": {
+  "Seoul/DSC_0508.jpg": {
     "location": {
       "lat": 37.5821,
       "lng": 127.002,
       "name": "Hyehwa, Seoul"
+    }
+  },
+  "P1001971.jpg": {
+    "location": {
+      "lat": 45.5778,
+      "lng": 84.8867,
+      "name": "克拉玛依"
+    }
+  },
+  "P1001964.jpg": {
+    "location": {
+      "lat": 45.5778,
+      "lng": 84.8867,
+      "name": "克拉玛依"
+    }
+  },
+  "Seoul/IMG_2989.jpeg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-07-03 0752235595C3BD671C.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-07-01 185917D7038F641660.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/IMG_9980.jpeg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-07-01 013129901BD0341554.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-30 12580847B225B15C46.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-30 01064162437A7027B8.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 132034DCAA8884AE95.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-30 1826349DB7D2DEBFB8.jpg": {
+    "location": {
+      "lat": 37.5115,
+      "lng": 127.0982,
+      "name": "Lotte World, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-30 180224A1E66993192E.jpg": {
+    "location": {
+      "lat": 37.5115,
+      "lng": 127.0982,
+      "name": "Lotte World, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-30 17514258F7B057B507.jpg": {
+    "location": {
+      "lat": 37.5115,
+      "lng": 127.0982,
+      "name": "Lotte World, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-30 1747063F2F79523448.jpg": {
+    "location": {
+      "lat": 37.5115,
+      "lng": 127.0982,
+      "name": "Lotte World, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-30 142735079B40A9AEC4.jpg": {
+    "location": {
+      "lat": 37.5115,
+      "lng": 127.0982,
+      "name": "Lotte World, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 185447CDD3C0EBD22E.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 1910597697F9DB24EC.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 19210136586324F80D.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 18480288E9C6E397A1.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 1839014BE7C7299B63.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 1739362FB85CC29A39.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 17193752DB2D25F5EB.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 17142219BB7B064890.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 1706321AE7A91ABFE3.jpg": {
+    "location": {
+      "lat": 37.5513,
+      "lng": 126.9883,
+      "name": "Namsan Seoul Tower, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 2223365273ED3296E3.jpg": {
+    "location": {
+      "lat": 37.5257,
+      "lng": 126.9252,
+      "name": "Yeouido"
+    }
+  },
+  "Seoul/IDG_20260629_212133_011.jpg": {
+    "location": {
+      "lat": 37.5257,
+      "lng": 126.9252,
+      "name": "Yeouido"
+    }
+  },
+  "Seoul/IDG_20260629_211112_214.jpg": {
+    "location": {
+      "lat": 37.5257,
+      "lng": 126.9252,
+      "name": "Yeouido"
+    }
+  },
+  "Seoul/IMG_9841.jpeg": {
+    "location": {
+      "lat": 37.5723,
+      "lng": 127.0367,
+      "name": "Cheonggyecheon (Stream), Seoul"
+    }
+  },
+  "Seoul/dclassic 2026-06-29 2010575A965A6B53F8.jpg": {
+    "location": {
+      "lat": 37.5666,
+      "lng": 126.9015,
+      "name": "Mapo-gu, Seoul"
+    }
+  },
+  "Seoul/IMG_9384.jpeg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/IMG_5606.jpeg": {
+    "location": {
+      "lat": 37.5613,
+      "lng": 126.9851,
+      "name": "Myeong-dong, Seoul"
+    }
+  },
+  "Seoul/IMG_9401.jpeg": {
+    "location": {
+      "lat": 37.5345,
+      "lng": 126.9944,
+      "name": "Itaewon, Seoul"
+    }
+  },
+  "Seoul/IMG_0043.jpeg": {
+    "location": {
+      "lat": 37.5666,
+      "lng": 126.9015,
+      "name": "Mapo-gu, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 1616564561B1B2768A.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 1626541D4CFCEBE958.jpg": {
+    "location": {
+      "lat": 37.5821,
+      "lng": 127.002,
+      "name": "Hyehwa, Seoul"
+    }
+  },
+  "Seoul/fxn 2026-06-29 164812ADA7DAEF43CB.jpg": {
+    "location": {
+      "lat": 37.5612,
+      "lng": 126.9941,
+      "name": "Chungmuro, Seoul"
     }
   }
 }

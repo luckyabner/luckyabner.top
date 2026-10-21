@@ -96,11 +96,1609 @@
       }
     },
     {
-      "id": "3f8dfb45fe1cb923",
-      "source": "DSC_0542.jpg",
+      "id": "5278fa6dbe9a5955",
+      "source": "Seoul/fxn 2026-07-03 0752235595C3BD671C.jpg",
+      "fingerprint": "84c70722ef1406d14d0d70c84a1b4f9f1922adac1a5375bafeeed4a65389155d",
+      "sequence": 71,
+      "importedAt": "2026-10-21T11:41:46.491Z",
+      "capturedAt": "2026-07-02T23:52:23.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.02040816326530612,
+        "aperture": 1.6,
+        "iso": 500,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:07:03 07:52:23"
+      },
+      "sourceBytes": 3847834,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#181818",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-07-03_07-52-23_0071-84c70722-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 80568
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-07-03_07-52-23_0071-84c70722-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 828348
+      },
+      "takenAt": "2026-07-02T23:52:23.000Z",
+      "title": "",
+      "alt": "Photo 71, 2026-07-02",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "417e90435765398b",
+      "source": "Seoul/IMG_2989.jpeg",
+      "fingerprint": "46cdd7aa4649e3173309ddc4fe7a46b9866a8a0eaa8df6195369da7538034480",
+      "sequence": 49,
+      "importedAt": "2026-10-21T11:41:35.656Z",
+      "capturedAt": "2026-07-01T16:49:18.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 17",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 17 back dual wide camera 5.96mm f/1.6",
+        "exposureTime": 0.03333333333333333,
+        "aperture": 1.6,
+        "iso": 640,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:07:02 00:49:18"
+      },
+      "sourceBytes": 4798747,
+      "width": 4284,
+      "height": 5712,
+      "placeholder": "#080818",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-07-02_00-49-18_0049-46cdd7aa-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 175146
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-07-02_00-49-18_0049-46cdd7aa-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 793812
+      },
+      "takenAt": "2026-07-01T16:49:18.000Z",
+      "title": "",
+      "alt": "Photo 49, 2026-07-01",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "cf4358e31d00d8c6",
+      "source": "Seoul/IMG_0043.jpeg",
+      "fingerprint": "093f5a9a8f18d01d65d8d730e9a77c3330689cf73246fb70efa81c32b735d35d",
+      "sequence": 48,
+      "importedAt": "2026-10-21T11:41:34.787Z",
+      "capturedAt": "2026-07-01T14:07:03.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back dual wide camera 5.96mm f/1.6",
+        "exposureTime": 0.016666666666666666,
+        "aperture": 1.6,
+        "iso": 500,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:07:01 22:07:03"
+      },
+      "sourceBytes": 6868985,
+      "width": 4284,
+      "height": 5712,
+      "placeholder": "#887868",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-07-01_22-07-03_0048-093f5a9a-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 258232
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-07-01_22-07-03_0048-093f5a9a-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 1225518
+      },
+      "takenAt": "2026-07-01T14:07:03.000Z",
+      "title": "",
+      "alt": "Photo 48, 2026-07-01",
+      "published": true,
+      "location": {
+        "lat": 37.5666,
+        "lng": 126.9015,
+        "name": "Mapo-gu, Seoul"
+      }
+    },
+    {
+      "id": "2ea95641ae204a8e",
+      "source": "Seoul/fxn 2026-07-01 185917D7038F641660.jpg",
+      "fingerprint": "109ac57bbe6f9810bb98c3aa00f5d00584c2ae3da547ee447766e25876e23eef",
+      "sequence": 70,
+      "importedAt": "2026-10-21T11:41:46.085Z",
+      "capturedAt": "2026-07-01T10:59:17.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.0012048192771084338,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 35.00000023841858,
+        "focalLength35mm": 35,
+        "dateTimeOriginal": "2026:07:01 18:59:17"
+      },
+      "sourceBytes": 2410501,
+      "width": 3023,
+      "height": 4032,
+      "placeholder": "#181818",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-07-01_18-59-17_0070-109ac57b-thumb.webp",
+          "width": 960,
+          "height": 1281,
+          "bytes": 80464
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-07-01_18-59-17_0070-109ac57b-large.webp",
+        "width": 1919,
+        "height": 2560,
+        "bytes": 434162
+      },
+      "takenAt": "2026-07-01T10:59:17.000Z",
+      "title": "",
+      "alt": "Photo 70, 2026-07-01",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "7decec913abbec9c",
+      "source": "Seoul/IMG_9980.jpeg",
+      "fingerprint": "e9693125fc33a93260d4b26e96e0426e9f31819ec672146a1dfa1b121075c0af",
+      "sequence": 51,
+      "importedAt": "2026-10-21T11:41:37.060Z",
+      "capturedAt": "2026-06-30T20:59:05.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back dual wide camera 5.96mm f/1.6",
+        "exposureTime": 0.03333333333333333,
+        "aperture": 1.6,
+        "iso": 640,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:07:01 04:59:05"
+      },
+      "sourceBytes": 4371929,
+      "width": 4284,
+      "height": 5712,
+      "placeholder": "#88b8f8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-07-01_04-59-05_0051-e9693125-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 108076
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-07-01_04-59-05_0051-e9693125-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 479066
+      },
+      "takenAt": "2026-06-30T20:59:05.000Z",
+      "title": "",
+      "alt": "Photo 51, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "0929a4a8e15dde08",
+      "source": "Seoul/fxn 2026-07-01 013129901BD0341554.jpg",
+      "fingerprint": "7d4aafc528295d82e4741d060a22c312800e9a6fa8d2dd4b71a996c05f57fccb",
+      "sequence": 69,
+      "importedAt": "2026-10-21T11:41:45.587Z",
+      "capturedAt": "2026-06-30T17:31:29.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.008333333333333333,
+        "aperture": 1.6,
+        "iso": 125,
+        "focalLength": 35.00000023841858,
+        "focalLength35mm": 35,
+        "dateTimeOriginal": "2026:07:01 01:31:29"
+      },
+      "sourceBytes": 2611078,
+      "width": 3023,
+      "height": 4032,
+      "placeholder": "#988878",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-07-01_01-31-29_0069-7d4aafc5-thumb.webp",
+          "width": 960,
+          "height": 1281,
+          "bytes": 75088
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-07-01_01-31-29_0069-7d4aafc5-large.webp",
+        "width": 1919,
+        "height": 2560,
+        "bytes": 469708
+      },
+      "takenAt": "2026-06-30T17:31:29.000Z",
+      "title": "",
+      "alt": "Photo 69, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "35b76a7200fe1c6f",
+      "source": "Seoul/IMG_9841.jpeg",
+      "fingerprint": "4fc975eec00d18cff515101a353a6f8952d2595a693403a0ededc0beefafa4f4",
+      "sequence": 50,
+      "importedAt": "2026-10-21T11:41:36.471Z",
+      "capturedAt": "2026-06-30T15:31:36.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back dual wide camera 5.96mm f/1.6",
+        "exposureTime": 0.1111111111111111,
+        "aperture": 1.6,
+        "iso": 800,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 34,
+        "dateTimeOriginal": "2026:06:30 23:31:36"
+      },
+      "sourceBytes": 3115434,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#383838",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_23-31-36_0050-4fc975ee-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 246110
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_23-31-36_0050-4fc975ee-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 969106
+      },
+      "takenAt": "2026-06-30T15:31:36.000Z",
+      "title": "",
+      "alt": "Photo 50, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5723,
+        "lng": 127.0367,
+        "name": "Cheonggyecheon (Stream), Seoul"
+      }
+    },
+    {
+      "id": "89cf0cbc30f786b4",
+      "source": "Seoul/fxn 2026-06-30 1826349DB7D2DEBFB8.jpg",
+      "fingerprint": "2c87aa8e797846d504aca20700222958da0120ae22d733984f12555d72965f7c",
+      "sequence": 68,
+      "importedAt": "2026-10-21T11:41:45.116Z",
+      "capturedAt": "2026-06-30T10:26:34.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 2.22mm f/2.2",
+        "exposureTime": 0.00546448087431694,
+        "aperture": 2.2,
+        "iso": 40,
+        "focalLength": 2.220000028611935,
+        "focalLength35mm": 14,
+        "dateTimeOriginal": "2026:06:30 18:26:34"
+      },
+      "sourceBytes": 3393072,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#d8d8d8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_18-26-34_0068-2c87aa8e-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 166132
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_18-26-34_0068-2c87aa8e-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 717262
+      },
+      "takenAt": "2026-06-30T10:26:34.000Z",
+      "title": "",
+      "alt": "Photo 68, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5115,
+        "lng": 127.0982,
+        "name": "Lotte World, Seoul"
+      }
+    },
+    {
+      "id": "516b7ca857046283",
+      "source": "Seoul/fxn 2026-06-30 180224A1E66993192E.jpg",
+      "fingerprint": "e15754329c06bb8536b344325d4de4c227126a727731379f5dd807c65c34a605",
+      "sequence": 67,
+      "importedAt": "2026-10-21T11:41:44.621Z",
+      "capturedAt": "2026-06-30T10:02:24.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 2.22mm f/2.2",
+        "exposureTime": 0.007518796992481203,
+        "aperture": 2.2,
+        "iso": 32,
+        "focalLength": 2.220000028611935,
+        "focalLength35mm": 14,
+        "dateTimeOriginal": "2026:06:30 18:02:24"
+      },
+      "sourceBytes": 3869893,
+      "width": 4032,
+      "height": 3024,
+      "placeholder": "#484848",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_18-02-24_0067-e1575432-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 140260
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_18-02-24_0067-e1575432-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 938098
+      },
+      "takenAt": "2026-06-30T10:02:24.000Z",
+      "title": "",
+      "alt": "Photo 67, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5115,
+        "lng": 127.0982,
+        "name": "Lotte World, Seoul"
+      }
+    },
+    {
+      "id": "4b186a6a9ac8c9c5",
+      "source": "Seoul/fxn 2026-06-30 17514258F7B057B507.jpg",
+      "fingerprint": "3a12b08fc322cb5c54cce7c8f744f58ca574c3d9bd033ece691c7f2cd2793805",
+      "sequence": 66,
+      "importedAt": "2026-10-21T11:41:44.069Z",
+      "capturedAt": "2026-06-30T09:51:42.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 front camera 2.69mm f/1.9",
+        "exposureTime": 0.016666666666666666,
+        "aperture": 1.9,
+        "iso": 250,
+        "focalLength": 2.690000057250488,
+        "focalLength35mm": 23,
+        "dateTimeOriginal": "2026:06:30 17:51:42"
+      },
+      "sourceBytes": 3901229,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#b8a8a8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_17-51-42_0066-3a12b08f-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 104452
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_17-51-42_0066-3a12b08f-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 880600
+      },
+      "takenAt": "2026-06-30T09:51:42.000Z",
+      "title": "",
+      "alt": "Photo 66, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5115,
+        "lng": 127.0982,
+        "name": "Lotte World, Seoul"
+      }
+    },
+    {
+      "id": "d8b95dff38ea4bcf",
+      "source": "Seoul/fxn 2026-06-30 1747063F2F79523448.jpg",
+      "fingerprint": "24272ec84ca5dfd549182c3602b22683b71ce6b62d36031a840fbdc3bf5df733",
+      "sequence": 65,
+      "importedAt": "2026-10-21T11:41:43.651Z",
+      "capturedAt": "2026-06-30T09:47:06.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.008333333333333333,
+        "aperture": 1.6,
+        "iso": 40,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:30 17:47:06"
+      },
+      "sourceBytes": 3169055,
+      "width": 4032,
+      "height": 3024,
+      "placeholder": "#484838",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_17-47-06_0065-24272ec8-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 68470
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_17-47-06_0065-24272ec8-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 543112
+      },
+      "takenAt": "2026-06-30T09:47:06.000Z",
+      "title": "",
+      "alt": "Photo 65, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5115,
+        "lng": 127.0982,
+        "name": "Lotte World, Seoul"
+      }
+    },
+    {
+      "id": "0fcbee752b2a4a8b",
+      "source": "Seoul/fxn 2026-06-30 142735079B40A9AEC4.jpg",
+      "fingerprint": "ff9b7a50daa36e56be0bea4d960a33f88d08b2adfbc4383c0624204b0dc2b9ec",
+      "sequence": 64,
+      "importedAt": "2026-10-21T11:41:43.155Z",
+      "capturedAt": "2026-06-30T06:27:35.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.009615384615384616,
+        "aperture": 1.6,
+        "iso": 80,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:30 14:27:35"
+      },
+      "sourceBytes": 3215936,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_14-27-35_0064-ff9b7a50-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 134712
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_14-27-35_0064-ff9b7a50-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 583384
+      },
+      "takenAt": "2026-06-30T06:27:35.000Z",
+      "title": "",
+      "alt": "Photo 64, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5115,
+        "lng": 127.0982,
+        "name": "Lotte World, Seoul"
+      }
+    },
+    {
+      "id": "49111c79d768aa2a",
+      "source": "Seoul/fxn 2026-06-30 12580847B225B15C46.jpg",
+      "fingerprint": "b66847d6d2992e3724dd5824d6647d078cc8676fe38a4abaec0768814afa8068",
+      "sequence": 63,
+      "importedAt": "2026-10-21T11:41:42.672Z",
+      "capturedAt": "2026-06-30T04:58:08.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.000231000231000231,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:30 12:58:08"
+      },
+      "sourceBytes": 3649951,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#282828",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_12-58-08_0063-b66847d6-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 160756
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_12-58-08_0063-b66847d6-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 817544
+      },
+      "takenAt": "2026-06-30T04:58:08.000Z",
+      "title": "",
+      "alt": "Photo 63, 2026-06-30",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "017fc5b6dc1ad3fc",
+      "source": "Seoul/fxn 2026-06-30 01064162437A7027B8.jpg",
+      "fingerprint": "e87f778e69bbd38a67607045ba47d32ffdb4f6861f34c1abc896b086ee729e30",
+      "sequence": 62,
+      "importedAt": "2026-10-21T11:41:42.084Z",
+      "capturedAt": "2026-06-29T17:06:41.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.016666666666666666,
+        "aperture": 1.6,
+        "iso": 320,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:30 01:06:41"
+      },
+      "sourceBytes": 4390991,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-30_01-06-41_0062-e87f778e-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 207040
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-30_01-06-41_0062-e87f778e-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 1080374
+      },
+      "takenAt": "2026-06-29T17:06:41.000Z",
+      "title": "",
+      "alt": "Photo 62, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "2442019a052d3631",
+      "source": "Seoul/fxn 2026-06-29 2223365273ED3296E3.jpg",
+      "fingerprint": "f00873ddb6808f1ff5421e0f9186b14d04ddadd7aa76b51c6e8516084797d9ca",
+      "sequence": 61,
+      "importedAt": "2026-10-21T11:41:41.631Z",
+      "capturedAt": "2026-06-29T14:23:36.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.023809523809523808,
+        "aperture": 1.6,
+        "iso": 200,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 22:23:36"
+      },
+      "sourceBytes": 3353971,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#180808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_22-23-36_0061-f00873dd-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 85790
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_22-23-36_0061-f00873dd-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 652922
+      },
+      "takenAt": "2026-06-29T14:23:36.000Z",
+      "title": "",
+      "alt": "Photo 61, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5257,
+        "lng": 126.9252,
+        "name": "Yeouido"
+      }
+    },
+    {
+      "id": "871786fb1cfe95e6",
+      "source": "Seoul/IDG_20260629_212133_011.jpg",
+      "fingerprint": "5f742893170020c21cb0bef5fe5a294610c47c908db5faf57f98e012f7af1c59",
+      "sequence": 47,
+      "importedAt": "2026-10-21T11:41:34.332Z",
+      "capturedAt": "2026-06-29T13:21:33.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.0038314172998070717,
+        "aperture": 1.600000023841858,
+        "iso": 160,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 21:21:33"
+      },
+      "sourceBytes": 2837300,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_21-21-33_0047-5f742893-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 98532
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_21-21-33_0047-5f742893-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 383502
+      },
+      "takenAt": "2026-06-29T13:21:33.000Z",
+      "title": "",
+      "alt": "Photo 47, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5257,
+        "lng": 126.9252,
+        "name": "Yeouido"
+      }
+    },
+    {
+      "id": "19f7251ba7cfbd1d",
+      "source": "Seoul/IDG_20260629_211112_214.jpg",
+      "fingerprint": "2e4cffd586e1f6ecf11f05ccb7f8544f38aac275aca9264bb81566e3beb66b7c",
+      "sequence": 46,
+      "importedAt": "2026-10-21T11:41:33.876Z",
+      "capturedAt": "2026-06-29T13:11:12.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.021276596002280712,
+        "aperture": 1.600000023841858,
+        "iso": 800,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 21:11:12"
+      },
+      "sourceBytes": 2577699,
+      "width": 3016,
+      "height": 4024,
+      "placeholder": "#383838",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_21-11-12_0046-2e4cffd5-thumb.webp",
+          "width": 960,
+          "height": 1281,
+          "bytes": 59868
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_21-11-12_0046-2e4cffd5-large.webp",
+        "width": 1919,
+        "height": 2560,
+        "bytes": 288126
+      },
+      "takenAt": "2026-06-29T13:11:12.000Z",
+      "title": "",
+      "alt": "Photo 46, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5257,
+        "lng": 126.9252,
+        "name": "Yeouido"
+      }
+    },
+    {
+      "id": "a6031b76ad085849",
+      "source": "Seoul/dclassic 2026-06-29 2010575A965A6B53F8.jpg",
+      "fingerprint": "9dc5a1952a3167ae75b8a142135a18b3d59142baf7344827319a078f47bb5dfb",
+      "sequence": 52,
+      "importedAt": "2026-10-21T11:41:37.776Z",
+      "capturedAt": "2026-06-29T12:10:56.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.008333333333333333,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 35,
+        "dateTimeOriginal": "2026:06:29 20:10:56"
+      },
+      "sourceBytes": 1761273,
+      "width": 2688,
+      "height": 4032,
+      "placeholder": "#c8c8b8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_20-10-56_0052-9dc5a195-thumb.webp",
+          "width": 960,
+          "height": 1440,
+          "bytes": 81550
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_20-10-56_0052-9dc5a195-large.webp",
+        "width": 1707,
+        "height": 2560,
+        "bytes": 279298
+      },
+      "takenAt": "2026-06-29T12:10:56.000Z",
+      "title": "",
+      "alt": "Photo 52, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5666,
+        "lng": 126.9015,
+        "name": "Mapo-gu, Seoul"
+      }
+    },
+    {
+      "id": "eb1783fd83d58b74",
+      "source": "Seoul/fxn 2026-06-29 19210136586324F80D.jpg",
+      "fingerprint": "7dd896d56fe541c6d463a9861cf49177bc7f063c484d50bfb37d82d886c6a8eb",
+      "sequence": 60,
+      "importedAt": "2026-10-21T11:41:41.223Z",
+      "capturedAt": "2026-06-29T11:21:01.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.000099000099000099,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 19:21:01"
+      },
+      "sourceBytes": 2166939,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_19-21-01_0060-7dd896d5-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 30352
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_19-21-01_0060-7dd896d5-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 256636
+      },
+      "takenAt": "2026-06-29T11:21:01.000Z",
+      "title": "",
+      "alt": "Photo 60, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "b45a8f5b6aac7bc8",
+      "source": "Seoul/fxn 2026-06-29 1910597697F9DB24EC.jpg",
+      "fingerprint": "727a8632393d201b46b71b3a8632cb134f132e0203de015e9626c77c4ae0d4e3",
+      "sequence": 59,
+      "importedAt": "2026-10-21T11:41:40.785Z",
+      "capturedAt": "2026-06-29T11:10:59.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.008333333333333333,
+        "aperture": 1.6,
+        "iso": 100,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 19:10:59"
+      },
+      "sourceBytes": 3106253,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#b8b8b8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_19-10-59_0059-727a8632-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 123222
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_19-10-59_0059-727a8632-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 559072
+      },
+      "takenAt": "2026-06-29T11:10:59.000Z",
+      "title": "",
+      "alt": "Photo 59, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "b2d99412a44a42e9",
+      "source": "Seoul/fxn 2026-06-29 185447CDD3C0EBD22E.jpg",
+      "fingerprint": "38639b6b8da338029ec78531f6e526183b1b0afb148d88842cd5dab8d8fd3d8b",
+      "sequence": 58,
+      "importedAt": "2026-10-21T11:41:40.345Z",
+      "capturedAt": "2026-06-29T10:54:47.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 2.22mm f/2.2",
+        "exposureTime": 0.0005851375073142189,
+        "aperture": 2.2,
+        "iso": 40,
+        "focalLength": 2.220000028611935,
+        "focalLength35mm": 14,
+        "dateTimeOriginal": "2026:06:29 18:54:47"
+      },
+      "sourceBytes": 2531831,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#181818",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_18-54-47_0058-38639b6b-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 60532
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_18-54-47_0058-38639b6b-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 382880
+      },
+      "takenAt": "2026-06-29T10:54:47.000Z",
+      "title": "",
+      "alt": "Photo 58, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "66adb2889b53b20b",
+      "source": "Seoul/fxn 2026-06-29 18480288E9C6E397A1.jpg",
+      "fingerprint": "91312657f0ba1bf8ea361621cb59c4a8ee27e14a1c38014b400d06919d76feae",
+      "sequence": 57,
+      "importedAt": "2026-10-21T11:41:39.893Z",
+      "capturedAt": "2026-06-29T10:48:02.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.0004079967329744071,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 18:48:02"
+      },
+      "sourceBytes": 2976661,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#383838",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_18-48-02_0057-91312657-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 99730
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_18-48-02_0057-91312657-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 475538
+      },
+      "takenAt": "2026-06-29T10:48:02.000Z",
+      "title": "",
+      "alt": "Photo 57, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "96a65c8a4ad2bb86",
+      "source": "Seoul/fxn 2026-06-29 1839014BE7C7299B63.jpg",
+      "fingerprint": "56a0ef0dbd398b756ebcea022e0f8de65fce701a8ca3cb2ba028457f5b076c94",
+      "sequence": 56,
+      "importedAt": "2026-10-21T11:41:39.484Z",
+      "capturedAt": "2026-06-29T10:39:00.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.00819672131147541,
+        "aperture": 1.6,
+        "iso": 32,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 18:39:00"
+      },
+      "sourceBytes": 2623451,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#c87848",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_18-39-00_0056-56a0ef0d-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 80018
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_18-39-00_0056-56a0ef0d-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 377462
+      },
+      "takenAt": "2026-06-29T10:39:00.000Z",
+      "title": "",
+      "alt": "Photo 56, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "fbab351664227c1a",
+      "source": "Seoul/fxn 2026-06-29 1739362FB85CC29A39.jpg",
+      "fingerprint": "ee2bf759021ad928db1b3bc484e0791703170c7ab166c93a39a69e9d3358a159",
+      "sequence": 55,
+      "importedAt": "2026-10-21T11:41:39.020Z",
+      "capturedAt": "2026-06-29T09:39:36.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.0002460024552413874,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 50,
+        "focalLength35mm": 49,
+        "dateTimeOriginal": "2026:06:29 17:39:36"
+      },
+      "sourceBytes": 2632799,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#c8d8d8",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_17-39-36_0055-ee2bf759-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 135672
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_17-39-36_0055-ee2bf759-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 553248
+      },
+      "takenAt": "2026-06-29T09:39:36.000Z",
+      "title": "",
+      "alt": "Photo 55, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "0d09f7eaadb27d58",
+      "source": "Seoul/fxn 2026-06-29 17193752DB2D25F5EB.jpg",
+      "fingerprint": "a87f6a91ebf16271eb4931b68453c365e5746e0cd1eda78fbd96e7e83d9fcc26",
+      "sequence": 54,
+      "importedAt": "2026-10-21T11:41:38.510Z",
+      "capturedAt": "2026-06-29T09:19:37.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.0005558643606484922,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 50,
+        "focalLength35mm": 49,
+        "dateTimeOriginal": "2026:06:29 17:19:37"
+      },
+      "sourceBytes": 2960827,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#283838",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_17-19-37_0054-a87f6a91-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 165452
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_17-19-37_0054-a87f6a91-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 688448
+      },
+      "takenAt": "2026-06-29T09:19:37.000Z",
+      "title": "",
+      "alt": "Photo 54, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "1b3275dfa2c336b7",
+      "source": "Seoul/fxn 2026-06-29 17142219BB7B064890.jpg",
+      "fingerprint": "86c18e3f9bf41517fe8aca8e4cbdb81f326205655df8c426e71452538bf349b5",
+      "sequence": 53,
+      "importedAt": "2026-10-21T11:41:38.151Z",
+      "capturedAt": "2026-06-29T09:14:22.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.00002499999936804855,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 35.00000023841858,
+        "focalLength35mm": 35,
+        "dateTimeOriginal": "2026:06:29 17:14:22"
+      },
+      "sourceBytes": 2134094,
+      "width": 3023,
+      "height": 4032,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_17-14-22_0053-86c18e3f-thumb.webp",
+          "width": 960,
+          "height": 1281,
+          "bytes": 62974
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_17-14-22_0053-86c18e3f-large.webp",
+        "width": 1919,
+        "height": 2560,
+        "bytes": 346682
+      },
+      "takenAt": "2026-06-29T09:14:22.000Z",
+      "title": "",
+      "alt": "Photo 53, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "e9785ec620f3efb1",
+      "source": "Seoul/fxn 2026-06-29 1706321AE7A91ABFE3.jpg",
+      "fingerprint": "bf1bd0bafa056f28c6cf7b9cf7105cedaa5a7e53bcdd0d1ca75ce9dc6094ce1f",
+      "sequence": 45,
+      "importedAt": "2026-10-21T11:26:01.003Z",
+      "capturedAt": "2026-06-29T09:06:31.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 2.22mm f/2.2",
+        "exposureTime": 0.00020300446609825416,
+        "aperture": 2.2,
+        "iso": 40,
+        "focalLength": 2.220000028611935,
+        "focalLength35mm": 14,
+        "dateTimeOriginal": "2026:06:29 17:06:31"
+      },
+      "sourceBytes": 2610840,
+      "width": 4032,
+      "height": 3024,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_17-06-31_0045-bf1bd0ba-thumb.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 55814
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_17-06-31_0045-bf1bd0ba-large.webp",
+        "width": 2560,
+        "height": 1920,
+        "bytes": 448804
+      },
+      "takenAt": "2026-06-29T09:06:31.000Z",
+      "title": "",
+      "alt": "Photo 45, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5513,
+        "lng": 126.9883,
+        "name": "Namsan Seoul Tower, Seoul"
+      }
+    },
+    {
+      "id": "0ffac21a85fc3a54",
+      "source": "Seoul/fxn 2026-06-29 164812ADA7DAEF43CB.jpg",
+      "fingerprint": "5c1dbc902ffed70af94beb73f24f345cf0c9067e67a187fbe80703a495c9acd1",
+      "sequence": 44,
+      "importedAt": "2026-10-21T11:26:00.558Z",
+      "capturedAt": "2026-06-29T08:48:12.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 2.22mm f/2.2",
+        "exposureTime": 0.00019000569591267,
+        "aperture": 2.2,
+        "iso": 50,
+        "focalLength": 2.220000028611935,
+        "focalLength35mm": 14,
+        "dateTimeOriginal": "2026:06:29 16:48:12"
+      },
+      "sourceBytes": 3192026,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#786858",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_16-48-12_0044-5c1dbc90-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 141052
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_16-48-12_0044-5c1dbc90-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 670546
+      },
+      "takenAt": "2026-06-29T08:48:12.000Z",
+      "title": "",
+      "alt": "Photo 44, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5612,
+        "lng": 126.9941,
+        "name": "Chungmuro, Seoul"
+      }
+    },
+    {
+      "id": "5f325e1407b89c60",
+      "source": "Seoul/fxn 2026-06-29 1626541D4CFCEBE958.jpg",
+      "fingerprint": "41eae4564cbb67b3261c0691288476b42db099b684a5a84926370ba61aa9b1f3",
+      "sequence": 43,
+      "importedAt": "2026-10-21T11:25:59.988Z",
+      "capturedAt": "2026-06-29T08:26:53.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.00011299434845539329,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 16:26:53"
+      },
+      "sourceBytes": 1731969,
+      "width": 2693,
+      "height": 3591,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_16-26-53_0043-41eae456-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 129426
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_16-26-53_0043-41eae456-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 555820
+      },
+      "takenAt": "2026-06-29T08:26:53.000Z",
+      "title": "",
+      "alt": "Photo 43, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "609c38c9dbab16a2",
+      "source": "Seoul/fxn 2026-06-29 1616564561B1B2768A.jpg",
+      "fingerprint": "e3f4cf51c4ab28cafecd5ace64cdc29ef960f7511994478a3d4e3e760b92da4f",
+      "sequence": 42,
+      "importedAt": "2026-10-21T11:25:59.589Z",
+      "capturedAt": "2026-06-29T08:16:56.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.0027247956403269754,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 16:16:56"
+      },
+      "sourceBytes": 2532381,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_16-16-56_0042-e3f4cf51-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 64008
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_16-16-56_0042-e3f4cf51-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 334946
+      },
+      "takenAt": "2026-06-29T08:16:56.000Z",
+      "title": "",
+      "alt": "Photo 42, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "3b1540f0801c4e1d",
+      "source": "Seoul/fxn 2026-06-29 132034DCAA8884AE95.jpg",
+      "fingerprint": "afff8ab31ed94392a66c646fac10261cc0d49d783fabb5dd6b2688531f8a1094",
+      "sequence": 41,
+      "importedAt": "2026-10-21T11:25:59.159Z",
+      "capturedAt": "2026-06-29T05:20:33.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back camera 5.96mm f/1.6",
+        "exposureTime": 0.00029002319206412815,
+        "aperture": 1.6,
+        "iso": 50,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:29 13:20:33"
+      },
+      "sourceBytes": 2639768,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-29_13-20-33_0041-afff8ab3-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 74056
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-29_13-20-33_0041-afff8ab3-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 410108
+      },
+      "takenAt": "2026-06-29T05:20:33.000Z",
+      "title": "",
+      "alt": "Photo 41, 2026-06-29",
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
+    },
+    {
+      "id": "a20efac92f1dcd0d",
+      "source": "Seoul/IMG_9401.jpeg",
+      "fingerprint": "1c2f34fdf7ffbd941bd5515ec29f6547d3a68a5e0623f9c58df07996274f214e",
+      "sequence": 39,
+      "importedAt": "2026-10-21T11:25:58.089Z",
+      "capturedAt": "2026-06-28T15:53:50.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back dual wide camera 5.96mm f/1.6",
+        "exposureTime": 0.02040816326530612,
+        "aperture": 1.6,
+        "iso": 160,
+        "focalLength": 5.960000038146973,
+        "focalLength35mm": 26,
+        "dateTimeOriginal": "2026:06:28 23:53:50"
+      },
+      "sourceBytes": 4554617,
+      "width": 4284,
+      "height": 5712,
+      "placeholder": "#080808",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_23-53-50_0039-1c2f34fd-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 145236
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_23-53-50_0039-1c2f34fd-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 602248
+      },
+      "takenAt": "2026-06-28T15:53:50.000Z",
+      "title": "",
+      "alt": "Photo 39, 2026-06-28",
+      "published": true,
+      "location": {
+        "lat": 37.5345,
+        "lng": 126.9944,
+        "name": "Itaewon, Seoul"
+      }
+    },
+    {
+      "id": "834969ce5f1f718e",
+      "source": "Seoul/IMG_5606.jpeg",
+      "fingerprint": "4ba00a3fd546a3ce313279922d528308da2a05c704939acfcb6c148ff7522a4d",
+      "sequence": 37,
+      "importedAt": "2026-10-21T11:25:56.840Z",
+      "capturedAt": "2026-06-28T09:35:53.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 15 Pro",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 15 Pro back triple camera 6.765mm f/1.78",
+        "exposureTime": 0.002079002079002079,
+        "aperture": 1.7799999713880652,
+        "iso": 80,
+        "focalLength": 6.764999865652793,
+        "focalLength35mm": 24,
+        "dateTimeOriginal": "2026:06:28 17:35:53"
+      },
+      "sourceBytes": 3407475,
+      "width": 4284,
+      "height": 5712,
+      "placeholder": "#686868",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_17-35-53_0037-4ba00a3f-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 106298
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_17-35-53_0037-4ba00a3f-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 402072
+      },
+      "takenAt": "2026-06-28T09:35:53.000Z",
+      "title": "",
+      "alt": "Photo 37, 2026-06-28",
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
+    },
+    {
+      "id": "00823a8f9e480590",
+      "source": "Seoul/IMG_9384.jpeg",
+      "fingerprint": "0bb9a3263df9049c0faeea4747ed14b68cee5aa8fe35d71d70c8b043279c66f8",
+      "sequence": 38,
+      "importedAt": "2026-10-21T11:25:57.499Z",
+      "capturedAt": "2026-06-28T09:22:32.000Z",
+      "exif": {
+        "make": "Apple",
+        "model": "iPhone 16",
+        "lensMake": "Apple",
+        "lensModel": "iPhone 16 back dual wide camera 2.22mm f/2.2",
+        "exposureTime": 0.0005980861244019139,
+        "aperture": 2.2,
+        "iso": 40,
+        "focalLength": 2.220000028611935,
+        "focalLength35mm": 15,
+        "dateTimeOriginal": "2026:06:28 17:22:32"
+      },
+      "sourceBytes": 2733211,
+      "width": 3024,
+      "height": 4032,
+      "placeholder": "#d85818",
+      "thumbnails": [
+        {
+          "src": "/photos/2026-06-28_17-22-32_0038-0bb9a326-thumb.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 137752
+        }
+      ],
+      "large": {
+        "src": "/photos/2026-06-28_17-22-32_0038-0bb9a326-large.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 712136
+      },
+      "takenAt": "2026-06-28T09:22:32.000Z",
+      "title": "",
+      "alt": "Photo 38, 2026-06-28",
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
+    },
+    {
+      "id": "583ac1574e398299",
+      "source": "Seoul/DSC_0542.jpg",
       "fingerprint": "9638fc9e02a5f8e39ab3077623ca76d25bce62cdb1a42658282b019e50ca4500",
-      "sequence": 20,
-      "importedAt": "2026-10-20T14:24:19.116Z",
+      "sequence": 36,
+      "importedAt": "2026-10-21T11:21:31.999Z",
       "capturedAt": "2026-06-28T08:57:33.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -120,21 +1718,21 @@
       "placeholder": "#080808",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_16-57-33_0020-9638fc9e-thumb.webp",
+          "src": "/photos/2026-06-28_16-57-33_0036-9638fc9e-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 176776
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_16-57-33_0020-9638fc9e-large.webp",
+        "src": "/photos/2026-06-28_16-57-33_0036-9638fc9e-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 658128
       },
       "takenAt": "2026-06-28T08:57:33.000Z",
       "title": "",
-      "alt": "Photo 20, 2026-06-28",
+      "alt": "Photo 36, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5613,
@@ -143,11 +1741,11 @@
       }
     },
     {
-      "id": "590450aa8cf9b011",
-      "source": "DSC_0539.jpg",
+      "id": "ed647147fb3461b7",
+      "source": "Seoul/DSC_0539.jpg",
       "fingerprint": "9e19ac21315a12719e5cd0ef90a0d640c563e70a339ec42e30da38811b1a0867",
-      "sequence": 19,
-      "importedAt": "2026-10-20T14:24:18.209Z",
+      "sequence": 35,
+      "importedAt": "2026-10-21T11:21:31.174Z",
       "capturedAt": "2026-06-28T08:56:42.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -167,21 +1765,21 @@
       "placeholder": "#585858",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_16-56-42_0019-9e19ac21-thumb.webp",
+          "src": "/photos/2026-06-28_16-56-42_0035-9e19ac21-thumb.webp",
           "width": 960,
           "height": 1441,
           "bytes": 215550
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_16-56-42_0019-9e19ac21-large.webp",
+        "src": "/photos/2026-06-28_16-56-42_0035-9e19ac21-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 900932
       },
       "takenAt": "2026-06-28T08:56:42.000Z",
       "title": "",
-      "alt": "Photo 19, 2026-06-28",
+      "alt": "Photo 35, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5613,
@@ -190,11 +1788,11 @@
       }
     },
     {
-      "id": "dfb0c901df1403c8",
-      "source": "DSC_0536.jpg",
+      "id": "77065746e40dc938",
+      "source": "Seoul/DSC_0536.jpg",
       "fingerprint": "571978fd4b1d47f702e673ad687ac2ff3be0ad185bf8ad73128b23c63c761ff0",
-      "sequence": 18,
-      "importedAt": "2026-10-20T14:24:17.359Z",
+      "sequence": 34,
+      "importedAt": "2026-10-21T11:21:30.391Z",
       "capturedAt": "2026-06-28T08:44:26.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -214,21 +1812,21 @@
       "placeholder": "#485858",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_16-44-26_0018-571978fd-thumb.webp",
+          "src": "/photos/2026-06-28_16-44-26_0034-571978fd-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 230742
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_16-44-26_0018-571978fd-large.webp",
+        "src": "/photos/2026-06-28_16-44-26_0034-571978fd-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 903726
       },
       "takenAt": "2026-06-28T08:44:26.000Z",
       "title": "",
-      "alt": "Photo 18, 2026-06-28",
+      "alt": "Photo 34, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5613,
@@ -237,11 +1835,11 @@
       }
     },
     {
-      "id": "b684c9885dfc2efd",
-      "source": "DSC_0533.jpg",
+      "id": "cd3c844b6bd5e4f5",
+      "source": "Seoul/DSC_0533.jpg",
       "fingerprint": "a2542a6af61b2d5ca380c32838bf2e5c2724361bdcc51401562f172b6e8d704b",
-      "sequence": 17,
-      "importedAt": "2026-10-20T14:24:16.496Z",
+      "sequence": 33,
+      "importedAt": "2026-10-21T11:21:29.455Z",
       "capturedAt": "2026-06-28T08:43:12.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -261,21 +1859,21 @@
       "placeholder": "#88b8c8",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_16-43-12_0017-a2542a6a-thumb.webp",
+          "src": "/photos/2026-06-28_16-43-12_0033-a2542a6a-thumb.webp",
           "width": 960,
           "height": 1441,
           "bytes": 222196
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_16-43-12_0017-a2542a6a-large.webp",
+        "src": "/photos/2026-06-28_16-43-12_0033-a2542a6a-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 829020
       },
       "takenAt": "2026-06-28T08:43:12.000Z",
       "title": "",
-      "alt": "Photo 17, 2026-06-28",
+      "alt": "Photo 33, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5613,
@@ -284,11 +1882,11 @@
       }
     },
     {
-      "id": "c219d447ded7b1e9",
-      "source": "DSC_0532.jpg",
+      "id": "c30757c7456a1897",
+      "source": "Seoul/DSC_0532.jpg",
       "fingerprint": "610c16ff4e50b008a1791002f143f34834000315fced596fc8482c1a4f714ba5",
-      "sequence": 16,
-      "importedAt": "2026-10-20T14:24:15.664Z",
+      "sequence": 32,
+      "importedAt": "2026-10-21T11:21:28.606Z",
       "capturedAt": "2026-06-28T08:43:02.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -308,21 +1906,21 @@
       "placeholder": "#f8f8f8",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_16-43-02_0016-610c16ff-thumb.webp",
+          "src": "/photos/2026-06-28_16-43-02_0032-610c16ff-thumb.webp",
           "width": 960,
           "height": 640,
           "bytes": 123518
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_16-43-02_0016-610c16ff-large.webp",
+        "src": "/photos/2026-06-28_16-43-02_0032-610c16ff-large.webp",
         "width": 2560,
         "height": 1707,
         "bytes": 853680
       },
       "takenAt": "2026-06-28T08:43:02.000Z",
       "title": "",
-      "alt": "Photo 16, 2026-06-28",
+      "alt": "Photo 32, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5613,
@@ -331,11 +1929,11 @@
       }
     },
     {
-      "id": "11ef7928303836a3",
-      "source": "DSC_0526.jpg",
+      "id": "259ec0f639184c13",
+      "source": "Seoul/DSC_0526.jpg",
       "fingerprint": "e166f2bcad1b62bb05a857c76875608137ce3de5f11650742e5ea251aca0352b",
-      "sequence": 15,
-      "importedAt": "2026-10-20T14:24:14.859Z",
+      "sequence": 31,
+      "importedAt": "2026-10-21T11:21:27.386Z",
       "capturedAt": "2026-06-28T08:35:24.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -355,21 +1953,21 @@
       "placeholder": "#f8f8f8",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_16-35-24_0015-e166f2bc-thumb.webp",
+          "src": "/photos/2026-06-28_16-35-24_0031-e166f2bc-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 206386
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_16-35-24_0015-e166f2bc-large.webp",
+        "src": "/photos/2026-06-28_16-35-24_0031-e166f2bc-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 809072
       },
       "takenAt": "2026-06-28T08:35:24.000Z",
       "title": "",
-      "alt": "Photo 15, 2026-06-28",
+      "alt": "Photo 31, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5613,
@@ -378,11 +1976,11 @@
       }
     },
     {
-      "id": "c7a75057342dd927",
-      "source": "DSC_0514.jpg",
+      "id": "1d61727e5cdde2d1",
+      "source": "Seoul/DSC_0514.jpg",
       "fingerprint": "ad72f74a062d7bdb49b37f6754472630650345a523c8b2495a2fd0f3735704df",
-      "sequence": 14,
-      "importedAt": "2026-10-20T14:24:14.076Z",
+      "sequence": 30,
+      "importedAt": "2026-10-21T11:21:26.632Z",
       "capturedAt": "2026-06-28T07:08:56.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -402,21 +2000,21 @@
       "placeholder": "#68a8b8",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_15-08-56_0014-ad72f74a-thumb.webp",
+          "src": "/photos/2026-06-28_15-08-56_0030-ad72f74a-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 182832
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_15-08-56_0014-ad72f74a-large.webp",
+        "src": "/photos/2026-06-28_15-08-56_0030-ad72f74a-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 659096
       },
       "takenAt": "2026-06-28T07:08:56.000Z",
       "title": "",
-      "alt": "Photo 14, 2026-06-28",
+      "alt": "Photo 30, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5613,
@@ -425,11 +2023,11 @@
       }
     },
     {
-      "id": "ddcf7552855197ed",
-      "source": "DSC_0512.jpg",
+      "id": "c5cdc97306e3e5b3",
+      "source": "Seoul/DSC_0512.jpg",
       "fingerprint": "6ba18ca3f9b69c5d1be2344eacec29f61d7495da10b9b9f656ee1f99cba6abc8",
-      "sequence": 13,
-      "importedAt": "2026-10-20T14:24:13.336Z",
+      "sequence": 29,
+      "importedAt": "2026-10-21T11:21:25.906Z",
       "capturedAt": "2026-06-28T06:45:24.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -449,21 +2047,21 @@
       "placeholder": "#b8c8c8",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_14-45-24_0013-6ba18ca3-thumb.webp",
+          "src": "/photos/2026-06-28_14-45-24_0029-6ba18ca3-thumb.webp",
           "width": 960,
           "height": 640,
           "bytes": 83044
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_14-45-24_0013-6ba18ca3-large.webp",
+        "src": "/photos/2026-06-28_14-45-24_0029-6ba18ca3-large.webp",
         "width": 2560,
         "height": 1707,
         "bytes": 716854
       },
       "takenAt": "2026-06-28T06:45:24.000Z",
       "title": "",
-      "alt": "Photo 13, 2026-06-28",
+      "alt": "Photo 29, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5719,
@@ -472,11 +2070,11 @@
       }
     },
     {
-      "id": "dacf1b8296e168ba",
-      "source": "DSC_05111.jpg",
+      "id": "872b7e846cea498f",
+      "source": "Seoul/DSC_05111.jpg",
       "fingerprint": "02c188d80665bb63452d9f4a27eca8ce2d967d6389dee5672493d2975b4e9bdc",
-      "sequence": 12,
-      "importedAt": "2026-10-20T14:24:12.682Z",
+      "sequence": 28,
+      "importedAt": "2026-10-21T11:21:25.278Z",
       "capturedAt": "2026-06-28T06:35:52.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -496,21 +2094,21 @@
       "placeholder": "#a87858",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_14-35-52_0012-02c188d8-thumb.webp",
+          "src": "/photos/2026-06-28_14-35-52_0028-02c188d8-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 278020
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_14-35-52_0012-02c188d8-large.webp",
+        "src": "/photos/2026-06-28_14-35-52_0028-02c188d8-large.webp",
         "width": 1706,
         "height": 2560,
         "bytes": 963580
       },
       "takenAt": "2026-06-28T06:35:52.000Z",
       "title": "",
-      "alt": "Photo 12, 2026-06-28",
+      "alt": "Photo 28, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5821,
@@ -519,11 +2117,11 @@
       }
     },
     {
-      "id": "71ba068da8e0768e",
-      "source": "DSC_0510.jpg",
+      "id": "e72542edf9a53334",
+      "source": "Seoul/DSC_0510.jpg",
       "fingerprint": "e331883f02beea70bbd2c2edb410e44547863bb492b51086a1483fdb36a00a1a",
-      "sequence": 11,
-      "importedAt": "2026-10-20T14:24:11.776Z",
+      "sequence": 27,
+      "importedAt": "2026-10-21T11:21:24.484Z",
       "capturedAt": "2026-06-28T06:07:23.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -543,21 +2141,21 @@
       "placeholder": "#989888",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_14-07-23_0011-e331883f-thumb.webp",
+          "src": "/photos/2026-06-28_14-07-23_0027-e331883f-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 196848
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_14-07-23_0011-e331883f-large.webp",
+        "src": "/photos/2026-06-28_14-07-23_0027-e331883f-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 858768
       },
       "takenAt": "2026-06-28T06:07:23.000Z",
       "title": "",
-      "alt": "Photo 11, 2026-06-28",
+      "alt": "Photo 27, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5821,
@@ -566,11 +2164,11 @@
       }
     },
     {
-      "id": "7c4fc9305b76a0d7",
-      "source": "DSC_0509.jpg",
+      "id": "272397706d313de9",
+      "source": "Seoul/DSC_0509.jpg",
       "fingerprint": "d7b857fb9af8897d7e3a8dcb05352f4d6a55c5f087cf7fef1fe9837bafa8e0d7",
-      "sequence": 10,
-      "importedAt": "2026-10-20T14:24:10.918Z",
+      "sequence": 26,
+      "importedAt": "2026-10-21T11:21:23.635Z",
       "capturedAt": "2026-06-28T06:07:15.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -590,21 +2188,21 @@
       "placeholder": "#787878",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_14-07-15_0010-d7b857fb-thumb.webp",
+          "src": "/photos/2026-06-28_14-07-15_0026-d7b857fb-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 242994
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_14-07-15_0010-d7b857fb-large.webp",
+        "src": "/photos/2026-06-28_14-07-15_0026-d7b857fb-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 1032536
       },
       "takenAt": "2026-06-28T06:07:15.000Z",
       "title": "",
-      "alt": "Photo 10, 2026-06-28",
+      "alt": "Photo 26, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5821,
@@ -613,11 +2211,11 @@
       }
     },
     {
-      "id": "663763608452e9a2",
-      "source": "DSC_0508.jpg",
+      "id": "77828ac13b2b5a77",
+      "source": "Seoul/DSC_0508.jpg",
       "fingerprint": "2a012e77dfe2ef47e4d5ca79aeb35b56471cbcaf4e3527f50208be7f92351b79",
-      "sequence": 9,
-      "importedAt": "2026-10-20T14:24:10.355Z",
+      "sequence": 25,
+      "importedAt": "2026-10-21T11:21:23.092Z",
       "capturedAt": "2026-06-28T06:07:03.000Z",
       "exif": {
         "make": "NIKON CORPORATION",
@@ -637,21 +2235,21 @@
       "placeholder": "#88b8c8",
       "thumbnails": [
         {
-          "src": "/photos/2026-06-28_14-07-03_0009-2a012e77-thumb.webp",
+          "src": "/photos/2026-06-28_14-07-03_0025-2a012e77-thumb.webp",
           "width": 960,
           "height": 1440,
           "bytes": 215592
         }
       ],
       "large": {
-        "src": "/photos/2026-06-28_14-07-03_0009-2a012e77-large.webp",
+        "src": "/photos/2026-06-28_14-07-03_0025-2a012e77-large.webp",
         "width": 1707,
         "height": 2560,
         "bytes": 773710
       },
       "takenAt": "2026-06-28T06:07:03.000Z",
       "title": "",
-      "alt": "Photo 9, 2026-06-28",
+      "alt": "Photo 25, 2026-06-28",
       "published": true,
       "location": {
         "lat": 37.5821,
@@ -838,7 +2436,12 @@
       "takenAt": "2025-06-01T08:43:15.000Z",
       "title": "",
       "alt": "Photo 7, 2025-06-01",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5778,
+        "lng": 84.8867,
+        "name": "克拉玛依"
+      }
     },
     {
       "id": "9e7eb0dfb722068c",
@@ -875,7 +2478,12 @@
       "takenAt": "2025-05-30T13:17:08.000Z",
       "title": "",
       "alt": "Photo 6, 2025-05-30",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5778,
+        "lng": 84.8867,
+        "name": "克拉玛依"
+      }
     },
     {
       "id": "595cd837e7634914",

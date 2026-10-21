@@ -38,6 +38,26 @@
 
 编辑后运行 `pnpm photos:prepare` 更新清单。原片已归档时，也可以只修改元数据并运行此命令。
 
+### 删除照片
+
+在开发环境的定位编辑器里删：`pnpm dev` → 打开 <http://localhost:4321/photos/locate> → 在左侧勾选照片（可多选）→ **Delete photos** → 确认。删除会：
+
+- 从 `src/data/photos.json` 移除该照片的条目；
+- 删掉 `src/data/photos.meta.json` 里对应的元数据；
+- 把 `.photos-local/inbox/` 里的原片、`public/photos/` 里的 `…-thumb.webp` 和 `…-large.webp` 移到 `.photos-local/deleted/<时间戳>/`——不会真的抹掉文件，也不会留在 inbox 里让下次 `photos:prepare` 重新发布。
+
+删完运行 `pnpm photos:check`（或 `pnpm build`）确认没有悬空引用，再提交。误删时把原片从 `.photos-local/deleted/…` 移回 `.photos-local/inbox/` 再跑 `pnpm photos:prepare` 就能重新发布（会分配新的 id 和序号，标题、地点需要重新填）。
+
+不用编辑器时，也可以手动完成同样的事：
+
+1. 从 `.photos-local/inbox/` 删掉原片，否则下次 `photos:prepare` 会把它重新加回来。
+2. 在 `src/data/photos.json` 里删掉这条照片的整个对象（按 `source` 字段定位）。
+3. 删掉 `public/photos/` 下它的一对文件：条目的 `thumbnails[0].src` 和 `large.src` 指向的 `…-thumb.webp`、`…-large.webp`。
+4. 如果 `src/data/photos.meta.json` 里有它的条目，一并删掉（否则 `photos:prepare` 会提示元数据没有对应的照片）。
+5. 运行 `pnpm photos:check`（或 `pnpm build`）确认没有悬空引用；有漏删的文件时检查会直接列出文件名和对应的原片。
+
+只想从照片墙撤下但保留已公开的图片链接时，改用元数据里的 `"published": false` 即可，不必删文件。
+
 ### 拍摄地点与地图
 
 照片页右上角的 **Map** 可切换到地图视图（链接 `/photos#map`）。地图上每个点是照片的圆形缩略图，相近的照片按屏幕距离合并并显示数量；点击合并点会放大到能分开为止，同一地点的照片直接在灯箱中浏览，灯箱底部显示地点名称。没有坐标的照片只出现在网格中；一张都没有时不显示 Map 按钮。地图和瓦片只在第一次切换到地图时加载。
@@ -63,7 +83,7 @@
 - 编辑器会识别顺序填反的 `经度, 纬度`（高德、百度复制出来就是这个顺序）并自动交换，状态栏会提示。有一个数值超过 90 时可以确定顺序；两个数值都在 ±90 以内时（如新疆、西藏、欧洲），地图放大后按离当前视野更近的解读，否则保持原样，粘贴后请核对标记位置。
 - 地点搜索使用 OpenStreetMap 的 Nominatim，无需 key，通过开发服务器转发，按回车才搜索，每秒最多一次。结果优先显示英文名称（选择后也以英文填入地点名称），没有英文名时显示中文；中英文都可以搜索。知名景点和城市基本都能找到；国内小店、新地点的数据较少，搜不到时可改用“地点, 城市”的写法（如 `West Lake, Hangzhou` 或 `西湖 杭州`），或直接在地图上点选。
 - `name` 可选，最多 80 个字符。
-- 保存后页面不会整页刷新：`astro.config.mjs` 里把 `src/data/photos.json` 和 `src/data/photos.meta.json` 排除在开发服务器的文件监听之外（否则每次保存都会触发全页重载、丢掉列表滚动位置）。代价是手动改这两个文件后要自己刷新浏览器。
+- 保存时不会整页刷新：编辑器在写入这两个文件的瞬间把它们临时移出开发服务器的文件监听（否则每次保存都会触发全页重载、丢掉列表滚动位置），写入完成后立刻恢复监听。所以 `pnpm photos:prepare` 或手动修改这两个文件时，打开的页面依然会自动刷新。
 - 坐标会公开发布。住处等私人地点建议只标到城市级别，或不标记。
 
 底图使用 CARTO Positron（浅色主题）和 Dark Matter（深色主题），自 2026 年 9 月起需要 API Key：在 <https://carto.com/basemaps/apikey> 免费申请（非商业用途每月 500 万次请求），然后在本地 `.env` 和 Vercel 项目环境变量中设置：

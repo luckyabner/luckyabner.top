@@ -44,6 +44,7 @@ import Layout from "../layouts/Layout.astro";
             <button type="submit" data-locate-save>Save to selected</button>
             <button type="button" data-locate-reuse>Use last saved</button>
             <button type="button" data-locate-clear>Remove location</button>
+            <button type="button" data-locate-delete>Delete photos</button>
             <span class="locate-status" data-locate-status role="status"></span>
           </div>
         </form>
@@ -333,6 +334,10 @@ import Layout from "../layouts/Layout.astro";
   .locate-page button[data-locate-save] {
     color: var(--text);
     font-weight: 500;
+  }
+
+  .locate-page button[data-locate-delete]:hover:not(:disabled) {
+    color: #d2483f;
   }
 
   .locate-page button:disabled {

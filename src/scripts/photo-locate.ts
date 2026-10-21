@@ -39,6 +39,7 @@ async function initialize() {
   const saveButton = $<HTMLButtonElement>("[data-locate-save]");
   const reuseButton = $<HTMLButtonElement>("[data-locate-reuse]");
   const clearButton = $<HTMLButtonElement>("[data-locate-clear]");
+  const deleteButton = $<HTMLButtonElement>("[data-locate-delete]");
   const items = new Map<string, HTMLLIElement>();
 
   await loadMapStyles();
@@ -77,6 +78,7 @@ async function initialize() {
       ? `${count} photo${count > 1 ? "s" : ""} selected${pending ? "" : " — click the map or paste coordinates."}`
       : "Select photos on the left, then click the map or paste coordinates.";
     saveButton.disabled = !count || !pending;
+    deleteButton.disabled = !count;
     clearButton.disabled = ![...selected].some((source) => photos.find((photo) => photo.source === source)?.location);
     reuseButton.disabled = !lastSaved;
   }
@@ -195,6 +197,20 @@ async function initialize() {
     updateControls();
   }
 
+  // Dropping deleted photos keeps the remaining rows (and their thumbnails)
+  // untouched instead of rebuilding the whole list.
+  function forgetPhotos(removed: Iterable<string>) {
+    const gone = new Set(removed);
+    for (const source of gone) {
+      items.get(source)?.remove();
+      items.delete(source);
+      selected.delete(source);
+    }
+    photos = photos.filter((photo) => !gone.has(photo.source));
+    renderSaved();
+    updateControls();
+  }
+
   async function send(updates: { source: string; location: { lat: number; lng: number; name?: string } | null }[]) {
     status.textContent = "Saving…";
     try {
@@ -217,6 +233,30 @@ async function initialize() {
       status.textContent = `Saved ${updates.length} photo${updates.length > 1 ? "s" : ""} to src/data/photos.meta.json.`;
     } catch (error) {
       status.textContent = `Not saved: ${(error as Error).message}`;
+    }
+  }
+
+  async function remove(sources: string[]) {
+    status.textContent = `Deleting ${sources.length} photo${sources.length > 1 ? "s" : ""}…`;
+    try {
+      const response = await fetch(ENDPOINT, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sources }),
+      });
+      const body = await response.json();
+      // A dev server started before this endpoint existed only knows GET/POST.
+      if (response.status === 405) throw new Error("this dev server still runs the old code — restart pnpm dev.");
+      if (!response.ok) throw new Error(body.error || response.statusText);
+      forgetPhotos(sources);
+      const missing = (body.imagesMissing as string[] | undefined)?.length ?? 0;
+      const notes = [];
+      if (body.backup) notes.push(`files moved to ${body.backup}`);
+      if (missing) notes.push(`${missing} image file${missing > 1 ? "s were" : " was"} already missing`);
+      if ((body.exportMissing as string[] | undefined)?.length) notes.push("the original export was already gone");
+      status.textContent = `Deleted ${sources.length} photo${sources.length > 1 ? "s" : ""} from the catalog${notes.length ? `; ${notes.join("; ")}` : ""}.`;
+    } catch (error) {
+      status.textContent = `Not deleted: ${(error as Error).message}`;
     }
   }
 
@@ -402,6 +442,17 @@ async function initialize() {
   clearButton.addEventListener("click", () => {
     const sources = [...selected].filter((source) => photos.find((photo) => photo.source === source)?.location);
     if (sources.length) void send(sources.map((source) => ({ source, location: null })));
+  });
+  deleteButton.addEventListener("click", () => {
+    const sources = [...selected];
+    if (!sources.length) return;
+    const labels = sources.map((source) => photos.find((photo) => photo.source === source)?.title || source);
+    const confirmed = confirm(
+      `Delete ${sources.length} photo${sources.length > 1 ? "s" : ""}?\n\n${labels.join("\n")}\n\n` +
+        "The catalog entry and metadata are removed; the original export and the generated images are moved to .photos-local/deleted/.",
+    );
+    if (!confirmed) return;
+    void remove(sources);
   });
 
   try {

@@ -9,7 +9,7 @@ import { readExifTags } from "../lib/photo-exif.mjs";
 import { formatPhotoSettings, formatPhotoEquipment } from "../../src/lib/photo-exif.mjs";
 import { preparePhotos } from "../prepare-photos.mjs";
 import { CATALOG_PATH, META_PATH, checkCatalog, readJson, validateOverrides } from "../lib/photo-catalog.mjs";
-import { setPhotoLocations } from "../lib/photo-locations.mjs";
+import { deletePhotos, setPhotoLocations } from "../lib/photo-locations.mjs";
 import { parseCoordinates } from "../../src/lib/photo-coordinates.mjs";
 
 const log = { info() {}, warn() {}, error() {} };
@@ -222,7 +222,7 @@ test("clean build validation catches missing assets and rejects unsafe or malfor
   await preparePhotos({ root, now, log });
   const photo = (await readJson(join(root, CATALOG_PATH))).photos[0];
   await rm(join(root, "public", photo.large.src));
-  await assert.rejects(checkCatalog(root), /ENOENT/);
+  await assert.rejects(checkCatalog(root), /is missing \(a\.webp\)/);
   for (const values of [{ date: "2024-02-30" }, { published: "false" }, { description: 12 }, { gps: "hidden" }, { location: { lat: 91, lng: 0 } }, { location: { lat: 30, lng: "120" } }, { location: { lat: 30.123456, lng: 120 } }, { location: { lat: 30, lng: 120, altitude: 4 } }]) {
     assert.throws(() => validateOverrides({ "a.webp": values }));
   }
@@ -321,6 +321,36 @@ test("manual locations round, flow into the catalog without re-encoding, and can
   await checkCatalog(root);
   await assert.rejects(setPhotoLocations(root, [{ source: "missing.jpg", location: { lat: 1, lng: 1 } }]), /Unknown photo/);
   await assert.rejects(setPhotoLocations(root, [{ source: "a.jpg", location: { lat: 100, lng: 1 } }]), /lat/);
+});
+
+test("deleting a photo clears the catalog, metadata, inbox and published files", async (t) => {
+  const root = await fixture(t);
+  await image(900, 600).jpeg().toFile(join(root, ".photos-local/inbox/trip/keep.jpg"));
+  await image(800, 500).jpeg().toFile(join(root, ".photos-local/inbox/drop.jpg"));
+  await preparePhotos({ root, now, log });
+  await setPhotoLocations(root, [{ source: "drop.jpg", location: { lat: 30.2431, lng: 120.15, name: "West Lake" } }]);
+  const victim = (await readJson(join(root, CATALOG_PATH))).photos.find((photo) => photo.source === "drop.jpg");
+
+  const result = await deletePhotos(root, ["drop.jpg"]);
+  assert.deepEqual(result.removed, ["drop.jpg"]);
+  assert.deepEqual(result.exportMissing, []);
+  assert.deepEqual(result.imagesMissing, []);
+  assert.deepEqual((await readJson(join(root, CATALOG_PATH))).photos.map((photo) => photo.source), ["trip/keep.jpg"]);
+  assert.deepEqual(await readJson(join(root, META_PATH)), {});
+  for (const variant of [...victim.thumbnails, victim.large]) {
+    await assert.rejects(stat(join(root, "public", variant.src.slice(1))), /ENOENT/);
+  }
+
+  // Nothing is destroyed: the export and the published images are recoverable.
+  const backup = join(root, result.backup);
+  assert.ok((await stat(join(backup, "inbox/drop.jpg"))).size > 0);
+  assert.ok((await stat(join(backup, "public", victim.large.src))).size > 0);
+
+  await checkCatalog(root);
+  await preparePhotos({ root, now, log });
+  assert.deepEqual((await readJson(join(root, CATALOG_PATH))).photos.map((photo) => photo.source), ["trip/keep.jpg"]);
+  await assert.rejects(deletePhotos(root, ["drop.jpg"]), /Unknown photo/);
+  await assert.rejects(deletePhotos(root, []), /non-empty/);
 });
 
 test("pasted coordinates accept common separators and correct a reversed lng, lat pair", () => {

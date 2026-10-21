@@ -1,5 +1,5 @@
-import { CATALOG_PATH, readJson } from "../../scripts/lib/photo-catalog.mjs";
-import { setPhotoLocations } from "../../scripts/lib/photo-locations.mjs";
+import { CATALOG_PATH, META_PATH, readJson } from "../../scripts/lib/photo-catalog.mjs";
+import { setPhotoLocations, deletePhotos } from "../../scripts/lib/photo-locations.mjs";
 /* global fetch, AbortSignal */
 import { Buffer } from "node:buffer";
 import { join } from "node:path";
@@ -76,6 +76,24 @@ export default function photoLocator() {
 				injectRoute({ pattern: "/photos/locate", entrypoint: new URL("../dev/photo-locate.astro", import.meta.url), prerender: true });
 			},
 			"astro:server:setup": ({ server }) => {
+				// Only the two files this editor rewrites are taken out of the watcher,
+				// and only while a save is running: Vite would otherwise answer with a
+				// full page reload halfway through editing. Files rewritten by
+				// `pnpm photos:prepare` (or edited by hand) still reload open pages.
+				const rewritten = [join(root, META_PATH), join(root, CATALOG_PATH)];
+				let writes = 0;
+				async function writeQuietly(write) {
+					const token = ++writes;
+					for (const path of rewritten) server.watcher.unwatch(path);
+					try {
+						return await write();
+					} finally {
+						void sleep(0.5).then(() => {
+							if (token !== writes) return;
+							for (const path of rewritten) server.watcher.add(path);
+						});
+					}
+				}
 				server.middlewares.use(GEOCODE_ENDPOINT, async (request, response) => {
 					try {
 						const query = new URL(request.url ?? "", "http://localhost").searchParams.get("q")?.trim() ?? "";
@@ -94,7 +112,7 @@ export default function photoLocator() {
 							send(response, 200, { photos: summarize(await readJson(join(root, CATALOG_PATH))) });
 							return;
 						}
-						if (request.method !== "POST") {
+						if (request.method !== "POST" && request.method !== "DELETE") {
 							send(response, 405, { error: "Method not allowed." });
 							return;
 						}
@@ -105,8 +123,14 @@ export default function photoLocator() {
 							send(response, 403, { error: "Forbidden." });
 							return;
 						}
+						if (request.method === "DELETE") {
+							const { sources } = await readBody(request);
+							const result = await writeQuietly(() => deletePhotos(root, sources));
+							send(response, 200, { photos: summarize(result.catalog), backup: result.backup, imagesMissing: result.imagesMissing, exportMissing: result.exportMissing });
+							return;
+						}
 						const { updates } = await readBody(request);
-						const catalog = await setPhotoLocations(root, updates);
+						const catalog = await writeQuietly(() => setPhotoLocations(root, updates));
 						send(response, 200, { photos: summarize(catalog) });
 					} catch (error) {
 						send(response, 400, { error: error.message });

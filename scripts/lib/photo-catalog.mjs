@@ -167,6 +167,11 @@ export async function checkCatalog(root) {
     for (const variant of [...photo.thumbnails, photo.large]) {
       if (checked.has(variant.src)) continue;
       const path = join(root, "public", variant.src.slice(1));
+      if (!(await exists(path))) {
+        // Generated files can be deleted by hand; say which photo is affected and
+        // what to do instead of failing on a raw ENOENT.
+        throw new Error(`${variant.src} is missing (${photo.source}). Run pnpm photos:prepare to rebuild it, or delete that photo's entry from ${CATALOG_PATH} if it was removed on purpose.`);
+      }
       const buffer = await readFile(path);
       const metadata = await sharp(buffer).metadata();
       if (buffer.length !== variant.bytes || metadata.width !== variant.width || metadata.height !== variant.height || metadata.format !== "webp") throw new Error(`Image does not match the catalog: ${variant.src}`);

@@ -35,14 +35,6 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 		// PhotoSwipe is already ESM; avoid stale dev pre-bundle URLs on first click.
 		optimizeDeps: { exclude: ['photoswipe'] },
-		server: {
-			watch: {
-				// The development-only photo locator rewrites these two files on every
-				// save. Watching them invalidates an SSR-only module, which makes Astro
-				// send a full page reload and throw away the editor state mid-edit.
-				ignored: ['**/src/data/photos.json', '**/src/data/photos.meta.json'],
-			},
-		},
 	},
 
 	adapter: vercel(),
