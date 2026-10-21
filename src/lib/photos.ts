@@ -5,6 +5,12 @@ export interface PhotoVariant {
   bytes: number;
 }
 
+export interface PhotoLocation {
+  lat: number;
+  lng: number;
+  name?: string;
+}
+
 export interface Photo {
   id: string;
   source: string;
@@ -22,6 +28,7 @@ export interface Photo {
   placeholder: string;
   thumbnails: PhotoVariant[];
   large: PhotoVariant;
+  location?: PhotoLocation;
   exif?: {
     make?: string;
     model?: string;

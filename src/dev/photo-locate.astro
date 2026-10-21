@@ -1,0 +1,449 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Locate photos — Abner (dev)" description="Development-only photo location editor." wide>
+  <section class="locate-page" data-locate>
+    <header class="locate-heading">
+      <h1>Locate photos</h1>
+      <p class="locate-progress" data-locate-progress aria-live="polite"></p>
+    </header>
+
+    <div class="locate-layout">
+      <aside class="locate-sidebar">
+        <div class="locate-filters" role="group" aria-label="Filter photos">
+          <label><input type="checkbox" data-locate-unlocated /> Only unlocated</label>
+          <button type="button" data-locate-select-none>Clear selection</button>
+        </div>
+        <ul class="locate-list" data-locate-list aria-label="Photos"></ul>
+      </aside>
+
+      <div class="locate-main">
+        <form class="locate-search" role="search" data-locate-search>
+          <label class="locate-search-field">
+            <span class="sr-only">Search for a place</span>
+            <input type="search" name="query" autocomplete="off" placeholder="Search a place, e.g. West Lake, Hangzhou" maxlength="200" />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+        <ul class="locate-results" data-locate-results aria-label="Place search results" hidden></ul>
+        <div class="locate-map" data-locate-map></div>
+        <form class="locate-form" data-locate-form>
+          <p class="locate-selection" data-locate-selection>Select photos on the left, then click the map or paste coordinates.</p>
+          <div class="locate-fields">
+            <label>
+              <span>Lat, lng (WGS-84)</span>
+              <input name="coordinates" autocomplete="off" spellcheck="false" placeholder="30.2431, 120.1500" />
+            </label>
+            <label>
+              <span>Place name (optional)</span>
+              <input name="name" autocomplete="off" maxlength="80" placeholder="Hangzhou · West Lake" />
+            </label>
+          </div>
+          <div class="locate-actions">
+            <button type="submit" data-locate-save>Save to selected</button>
+            <button type="button" data-locate-reuse>Use last saved</button>
+            <button type="button" data-locate-clear>Remove location</button>
+            <span class="locate-status" data-locate-status role="status"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import "../scripts/photo-locate";
+</script>
+
+<style is:global>
+  .locate-page {
+    padding-block: 2rem 4rem;
+  }
+
+  .locate-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .locate-heading h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+  }
+
+  .locate-progress,
+  .locate-selection,
+  .locate-status {
+    margin: 0;
+    color: var(--subtext);
+    font-size: 0.8125rem;
+  }
+
+  .locate-layout {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 60rem) {
+    .locate-layout {
+      grid-template-columns: 20rem minmax(0, 1fr);
+    }
+  }
+
+  .locate-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .locate-list {
+    display: grid;
+    gap: 2px;
+    max-height: min(70vh, 44rem);
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    list-style: none;
+  }
+
+  .locate-item {
+    display: grid;
+    grid-template-columns: auto 3rem minmax(0, 1fr);
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.35rem;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .locate-item[hidden] {
+    display: none;
+  }
+
+  .locate-item:hover {
+    background: var(--hover);
+  }
+
+  /* Lay the label's children out as cells of the row grid. */
+  .locate-item-label {
+    display: contents;
+    cursor: pointer;
+  }
+
+  .locate-item input {
+    grid-column: 1;
+    grid-row: 1;
+    cursor: pointer;
+  }
+
+  .locate-page .locate-item-thumb {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 0;
+    padding: 0;
+    border-radius: 0.2rem;
+    line-height: 0;
+    cursor: zoom-in;
+  }
+
+  .locate-page .locate-item-thumb:hover:not(:disabled) {
+    text-decoration: none;
+  }
+
+  .locate-item input:checked ~ .locate-item-thumb img {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  .locate-item img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    object-fit: cover;
+  }
+
+  .locate-item-text {
+    display: grid;
+    grid-column: 3;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .locate-item-text span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .locate-item-meta {
+    color: var(--subtext);
+  }
+
+  .locate-item[data-located="false"] .locate-item-meta {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .locate-search {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .locate-search-field {
+    flex: 1;
+  }
+
+  .locate-search input,
+  .locate-fields input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .locate-search input {
+    min-height: 2.75rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.35rem;
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9375rem;
+  }
+
+  .locate-results {
+    display: grid;
+    max-height: 16rem;
+    margin: 0 0 0.75rem;
+    padding: 0.25rem;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 0.35rem;
+    list-style: none;
+  }
+
+  .locate-results[hidden] {
+    display: none;
+  }
+
+  .locate-page .locate-results button {
+    display: grid;
+    width: 100%;
+    min-height: 0;
+    padding: 0.5rem 0.625rem;
+    border-radius: 0.2rem;
+    color: var(--text);
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .locate-page .locate-results button:hover {
+    background: var(--hover);
+    text-decoration: none;
+  }
+
+  .locate-result-address,
+  .locate-results-empty {
+    overflow: hidden;
+    color: var(--subtext);
+    font-size: 0.75rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .locate-results-empty {
+    padding: 0.5rem 0.625rem;
+    white-space: normal;
+  }
+
+  .locate-map {
+    height: min(60vh, 36rem);
+    border-radius: 0.35rem;
+    background: var(--surface);
+  }
+
+  .locate-form {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .locate-fields {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 40rem) {
+    .locate-fields {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .locate-fields label {
+    display: grid;
+    gap: 0.25rem;
+    font-size: 0.8125rem;
+    color: var(--subtext);
+  }
+
+  .locate-fields input {
+    min-height: 2.75rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.35rem;
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9375rem;
+  }
+
+  .locate-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+
+  .locate-page button {
+    min-height: 2.75rem;
+    padding: 0 0.25rem;
+    border: 0;
+    background: transparent;
+    color: var(--subtext);
+    font: inherit;
+    font-size: 0.8125rem;
+    cursor: pointer;
+  }
+
+  .locate-page button:hover:not(:disabled) {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  .locate-page button[data-locate-save] {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .locate-page button:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+
+  .locate-page :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .locate-dot span,
+  .locate-pending span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid var(--background);
+    border-radius: 999px;
+    background: var(--subtext);
+    box-shadow: 0 0 0 1px var(--border-hover);
+  }
+
+  .locate-dot span[data-selected] {
+    background: var(--accent);
+  }
+
+  .locate-pending span {
+    border: 3px solid var(--accent);
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--background);
+    cursor: grab;
+  }
+
+  .locate-viewer {
+    position: fixed;
+    inset: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #0a0a0b;
+    color: #f2f2f3;
+    overflow: hidden;
+  }
+
+  .locate-viewer[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .locate-viewer::backdrop {
+    background: rgb(0 0 0 / 0.8);
+  }
+
+  .locate-viewer-scroller {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    padding: 0.5rem;
+    overflow: auto;
+  }
+
+  .locate-viewer-scroller img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+  }
+
+  .locate-viewer[data-zoom="actual"] .locate-viewer-scroller img {
+    max-width: none;
+    max-height: none;
+    cursor: zoom-out;
+  }
+
+  .locate-viewer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+  }
+
+  .locate-viewer-caption {
+    margin: 0;
+    overflow: hidden;
+    color: #c9c9ce;
+    font-size: 0.8125rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .locate-viewer-nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .locate-page .locate-viewer button {
+    color: #d9d9de;
+  }
+
+  .locate-page .locate-viewer button:hover:not(:disabled) {
+    color: #fff;
+  }
+</style>

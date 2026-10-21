@@ -57,26 +57,53 @@ export function validateOverrides(overrides) {
   for (const [source, values] of Object.entries(overrides)) {
     if (!values || typeof values !== "object" || Array.isArray(values)) throw new Error(`Invalid metadata for ${source}`);
     for (const key of Object.keys(values)) {
-      if (!["title", "description", "date", "published"].includes(key)) throw new Error(`Unknown photo metadata field: ${source}.${key}`);
+      if (!["title", "description", "date", "published", "location"].includes(key)) throw new Error(`Unknown photo metadata field: ${source}.${key}`);
     }
     for (const key of ["title", "description"]) {
       if (values[key] !== undefined && typeof values[key] !== "string") throw new Error(`${source}.${key} must be text`);
     }
     if (values.published !== undefined && typeof values.published !== "boolean") throw new Error(`${source}.published must be true or false`);
     if (values.date !== undefined && !validDate(values.date)) throw new Error(`${source}.date must be a valid ISO date (YYYY-MM-DD or a timestamp with timezone)`);
+    if (values.location !== undefined) assertLocation(values.location, `${source}.location`);
   }
+}
+
+// Manually tagged WGS-84 coordinates, rounded to about 10 m on save.
+export const LOCATION_PRECISION = 4;
+
+export function roundCoordinate(value) {
+  const factor = 10 ** LOCATION_PRECISION;
+  return Math.round(value * factor) / factor;
+}
+
+export function assertLocation(location, label) {
+  if (!location || typeof location !== "object" || Array.isArray(location)) throw new Error(`${label} must be an object with lat and lng`);
+  for (const key of Object.keys(location)) {
+    if (!["lat", "lng", "name"].includes(key)) throw new Error(`Unknown location field: ${label}.${key}`);
+  }
+  const { lat, lng, name } = location;
+  if (typeof lat !== "number" || !Number.isFinite(lat) || lat < -90 || lat > 90) throw new Error(`${label}.lat must be a number between -90 and 90`);
+  if (typeof lng !== "number" || !Number.isFinite(lng) || lng < -180 || lng > 180) throw new Error(`${label}.lng must be a number between -180 and 180`);
+  if (roundCoordinate(lat) !== lat || roundCoordinate(lng) !== lng) throw new Error(`${label} coordinates must have at most ${LOCATION_PRECISION} decimal places`);
+  if (name !== undefined && (typeof name !== "string" || !name.trim() || name.length > 80)) throw new Error(`${label}.name must be non-empty text up to 80 characters`);
 }
 
 export function applyMetadata(photo, overrides) {
   const meta = overrides[photo.source] ?? {};
   const takenAt = meta.date ? new Date(meta.date).toISOString() : photo.capturedAt || photo.importedAt;
-  return {
-    ...photo,
+  const { location: _previousLocation, ...rest } = photo;
+  const prepared = {
+    ...rest,
     takenAt,
     title: (meta.title ?? "").trim(),
     alt: (meta.description || meta.title || "").trim() || `Photo ${photo.sequence}, ${takenAt.slice(0, 10)}`,
     published: meta.published ?? true,
   };
+  if (meta.location) {
+    const name = meta.location.name?.trim();
+    prepared.location = { lat: meta.location.lat, lng: meta.location.lng, ...(name ? { name } : {}) };
+  }
+  return prepared;
 }
 
 function positiveInteger(value) {
@@ -104,6 +131,7 @@ export function assertCatalog(catalog) {
         if (text ? typeof value !== "string" || value.length > 160 : typeof value !== "number" || !Number.isFinite(value) || value <= 0) throw new Error(`Invalid camera setting: ${key}`);
       }
     }
+    if (photo.location !== undefined) assertLocation(photo.location, `${label} location`);
     if (!/^#[a-f0-9]{6}$/.test(photo.placeholder)) throw new Error(`Invalid placeholder color: ${label}`);
     if (![photo.width, photo.height, photo.sourceBytes].every(positiveInteger)) throw new Error(`Invalid source dimensions or size: ${label}`);
     if (!Array.isArray(photo.thumbnails) || !photo.thumbnails.length || photo.thumbnails.length > 3) throw new Error(`Missing thumbnails: ${label}`);

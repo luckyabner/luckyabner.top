@@ -41,7 +41,12 @@
       "takenAt": "2026-09-13T09:43:43.000Z",
       "title": "",
       "alt": "Photo 22, 2026-09-13",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 40.02,
+        "lng": 116.39,
+        "name": "奥林匹克森林公园，北京"
+      }
     },
     {
       "id": "2b3a28ec78f33cd4",
@@ -83,7 +88,12 @@
       "takenAt": "2026-09-12T09:07:50.000Z",
       "title": "",
       "alt": "Photo 21, 2026-09-12",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 40.1943,
+        "lng": 116.2516,
+        "name": "白浮泉公园，北京"
+      }
     },
     {
       "id": "3f8dfb45fe1cb923",
@@ -125,7 +135,12 @@
       "takenAt": "2026-06-28T08:57:33.000Z",
       "title": "",
       "alt": "Photo 20, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
     },
     {
       "id": "590450aa8cf9b011",
@@ -167,7 +182,12 @@
       "takenAt": "2026-06-28T08:56:42.000Z",
       "title": "",
       "alt": "Photo 19, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
     },
     {
       "id": "dfb0c901df1403c8",
@@ -209,7 +229,12 @@
       "takenAt": "2026-06-28T08:44:26.000Z",
       "title": "",
       "alt": "Photo 18, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
     },
     {
       "id": "b684c9885dfc2efd",
@@ -251,7 +276,12 @@
       "takenAt": "2026-06-28T08:43:12.000Z",
       "title": "",
       "alt": "Photo 17, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
     },
     {
       "id": "c219d447ded7b1e9",
@@ -293,7 +323,12 @@
       "takenAt": "2026-06-28T08:43:02.000Z",
       "title": "",
       "alt": "Photo 16, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
     },
     {
       "id": "11ef7928303836a3",
@@ -335,7 +370,12 @@
       "takenAt": "2026-06-28T08:35:24.000Z",
       "title": "",
       "alt": "Photo 15, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
     },
     {
       "id": "c7a75057342dd927",
@@ -377,7 +417,12 @@
       "takenAt": "2026-06-28T07:08:56.000Z",
       "title": "",
       "alt": "Photo 14, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5613,
+        "lng": 126.9851,
+        "name": "Myeong-dong, Seoul"
+      }
     },
     {
       "id": "ddcf7552855197ed",
@@ -419,7 +464,12 @@
       "takenAt": "2026-06-28T06:45:24.000Z",
       "title": "",
       "alt": "Photo 13, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5719,
+        "lng": 127.0115,
+        "name": "Dongdaemun, Seoul"
+      }
     },
     {
       "id": "dacf1b8296e168ba",
@@ -461,7 +511,12 @@
       "takenAt": "2026-06-28T06:35:52.000Z",
       "title": "",
       "alt": "Photo 12, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
     },
     {
       "id": "71ba068da8e0768e",
@@ -503,7 +558,12 @@
       "takenAt": "2026-06-28T06:07:23.000Z",
       "title": "",
       "alt": "Photo 11, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
     },
     {
       "id": "7c4fc9305b76a0d7",
@@ -545,7 +605,12 @@
       "takenAt": "2026-06-28T06:07:15.000Z",
       "title": "",
       "alt": "Photo 10, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
     },
     {
       "id": "663763608452e9a2",
@@ -587,7 +652,12 @@
       "takenAt": "2026-06-28T06:07:03.000Z",
       "title": "",
       "alt": "Photo 9, 2026-06-28",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 37.5821,
+        "lng": 127.002,
+        "name": "Hyehwa, Seoul"
+      }
     },
     {
       "id": "026fd3df890ac84d",
@@ -629,7 +699,12 @@
       "takenAt": "2026-06-13T13:04:59.000Z",
       "title": "",
       "alt": "Photo 24, 2026-06-13",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5497,
+        "lng": 84.9358,
+        "name": "中国石油大学（北京）（克拉玛依校区）"
+      }
     },
     {
       "id": "8e3abe2663461733",
@@ -670,7 +745,12 @@
       "takenAt": "2026-02-04T06:59:05.000Z",
       "title": "",
       "alt": "Photo 8, 2026-02-04",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 39.9744,
+        "lng": 116.3021,
+        "name": "海淀南路"
+      }
     },
     {
       "id": "35b8ae51c1f7c2ce",
@@ -712,7 +792,12 @@
       "takenAt": "2026-01-25T08:03:31.000Z",
       "title": "",
       "alt": "Photo 23, 2026-01-25",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 39.9264,
+        "lng": 116.3825,
+        "name": "北海公园, 北京"
+      }
     },
     {
       "id": "0eba1371f71cbebf",
@@ -831,7 +916,12 @@
       "takenAt": "2025-05-23T13:38:49.000Z",
       "title": "",
       "alt": "Photo 5, 2025-05-23",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5497,
+        "lng": 84.9358,
+        "name": "中国石油大学（北京）（克拉玛依校区）"
+      }
     },
     {
       "id": "4ce80962b8e2b615",
@@ -872,7 +962,12 @@
       "takenAt": "2025-05-23T11:18:23.000Z",
       "title": "",
       "alt": "Photo 4, 2025-05-23",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5497,
+        "lng": 84.9358,
+        "name": "中国石油大学（北京）（克拉玛依校区）"
+      }
     },
     {
       "id": "b4f90bb872bac2c2",
@@ -909,7 +1004,12 @@
       "takenAt": "2025-05-15T12:47:28.000Z",
       "title": "",
       "alt": "Photo 3, 2025-05-15",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5497,
+        "lng": 84.9358,
+        "name": "中国石油大学（北京）（克拉玛依校区）"
+      }
     },
     {
       "id": "ed9cd20217942b3e",
@@ -950,7 +1050,12 @@
       "takenAt": "2025-05-11T12:21:10.000Z",
       "title": "",
       "alt": "Photo 2, 2025-05-11",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5497,
+        "lng": 84.9358,
+        "name": "中国石油大学（北京）（克拉玛依校区）"
+      }
     },
     {
       "id": "3bfd329d1089d317",
@@ -991,7 +1096,12 @@
       "takenAt": "2025-05-11T11:24:12.000Z",
       "title": "",
       "alt": "Photo 1, 2025-05-11",
-      "published": true
+      "published": true,
+      "location": {
+        "lat": 45.5497,
+        "lng": 84.9358,
+        "name": "中国石油大学（北京）（克拉玛依校区）"
+      }
     }
   ]
 }

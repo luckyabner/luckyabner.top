@@ -9,6 +9,8 @@ import { readExifTags } from "../lib/photo-exif.mjs";
 import { formatPhotoSettings, formatPhotoEquipment } from "../../src/lib/photo-exif.mjs";
 import { preparePhotos } from "../prepare-photos.mjs";
 import { CATALOG_PATH, META_PATH, checkCatalog, readJson, validateOverrides } from "../lib/photo-catalog.mjs";
+import { setPhotoLocations } from "../lib/photo-locations.mjs";
+import { parseCoordinates } from "../../src/lib/photo-coordinates.mjs";
 
 const log = { info() {}, warn() {}, error() {} };
 const now = () => new Date("2026-10-20T10:00:00Z");
@@ -221,7 +223,7 @@ test("clean build validation catches missing assets and rejects unsafe or malfor
   const photo = (await readJson(join(root, CATALOG_PATH))).photos[0];
   await rm(join(root, "public", photo.large.src));
   await assert.rejects(checkCatalog(root), /ENOENT/);
-  for (const values of [{ date: "2024-02-30" }, { published: "false" }, { description: 12 }, { gps: "hidden" }]) {
+  for (const values of [{ date: "2024-02-30" }, { published: "false" }, { description: 12 }, { gps: "hidden" }, { location: { lat: 91, lng: 0 } }, { location: { lat: 30, lng: "120" } }, { location: { lat: 30.123456, lng: 120 } }, { location: { lat: 30, lng: 120, altitude: 4 } }]) {
     assert.throws(() => validateOverrides({ "a.webp": values }));
   }
   const result = await preparePhotos({ root, now, log });
@@ -288,4 +290,51 @@ test("photo captions format available settings and omit absent values", () => {
   assert.equal(formatPhotoEquipment({ make: "FUJIFILM", model: "FUJIFILM X-T5", lensModel: "XF 35mm" }), "FUJIFILM X-T5 · XF 35mm");
   assert.equal(formatPhotoEquipment({ make: "Panasonic", model: "DC-GX9" }), "Panasonic DC-GX9");
   assert.equal(formatPhotoEquipment(), "");
+});
+
+test("manual locations round, flow into the catalog without re-encoding, and can be cleared", async (t) => {
+  const root = await fixture(t);
+  await image(800, 600).jpeg().toFile(join(root, ".photos-local/inbox/a.jpg"));
+  await image(600, 800).jpeg().toFile(join(root, ".photos-local/inbox/b.jpg"));
+  await preparePhotos({ root, now, log });
+  await writeFile(join(root, META_PATH), JSON.stringify({ "a.jpg": { title: "Lake" } }));
+  await preparePhotos({ root, now, log });
+  const images = await readdir(join(root, "public/photos"));
+  await setPhotoLocations(root, [
+    { source: "a.jpg", location: { lat: 30.243149, lng: 120.150012, name: "  West Lake " } },
+    { source: "b.jpg", location: { lat: 30.2431, lng: 120.15 } },
+  ]);
+  const meta = await readJson(join(root, META_PATH));
+  assert.deepEqual(meta["a.jpg"], { title: "Lake", location: { lat: 30.2431, lng: 120.15, name: "West Lake" } });
+  const photos = (await readJson(join(root, CATALOG_PATH))).photos;
+  assert.deepEqual(photos.find((p) => p.source === "a.jpg").location, { lat: 30.2431, lng: 120.15, name: "West Lake" });
+  assert.deepEqual(photos.find((p) => p.source === "b.jpg").location, { lat: 30.2431, lng: 120.15 });
+  assert.deepEqual(await readdir(join(root, "public/photos")), images);
+  await checkCatalog(root);
+  const before = await readFile(join(root, CATALOG_PATH), "utf8");
+  await preparePhotos({ root, now, log });
+  assert.equal(await readFile(join(root, CATALOG_PATH), "utf8"), before);
+
+  await setPhotoLocations(root, [{ source: "a.jpg", location: null }, { source: "b.jpg", location: null }]);
+  assert.deepEqual(await readJson(join(root, META_PATH)), { "a.jpg": { title: "Lake" } });
+  assert.ok((await readJson(join(root, CATALOG_PATH))).photos.every((p) => p.location === undefined));
+  await checkCatalog(root);
+  await assert.rejects(setPhotoLocations(root, [{ source: "missing.jpg", location: { lat: 1, lng: 1 } }]), /Unknown photo/);
+  await assert.rejects(setPhotoLocations(root, [{ source: "a.jpg", location: { lat: 100, lng: 1 } }]), /lat/);
+});
+
+test("pasted coordinates accept common separators and correct a reversed lng, lat pair", () => {
+  assert.deepEqual(parseCoordinates("30.243149, 120.150012"), { lat: 30.2431, lng: 120.15, swapped: false });
+  assert.deepEqual(parseCoordinates("39.9042，116.4074"), { lat: 39.9042, lng: 116.4074, swapped: false });
+  // Amap / Baidu style "lng,lat": one value outside ±90 settles the order.
+  assert.deepEqual(parseCoordinates("116.397428,39.90923"), { lat: 39.9092, lng: 116.3974, swapped: true });
+  assert.deepEqual(parseCoordinates("-122.4194 37.7749"), { lat: 37.7749, lng: -122.4194, swapped: true });
+  // Both values within ±90: kept as typed unless a nearby area says otherwise.
+  const chengdu = { lat: 30.5728, lng: 104.0668 };
+  const lhasa = { lat: 29.65, lng: 91.1 };
+  assert.deepEqual(parseCoordinates("87.6168, 43.8256"), { lat: 87.6168, lng: 43.8256, swapped: false });
+  assert.deepEqual(parseCoordinates("87.6168, 43.8256", chengdu), { lat: 43.8256, lng: 87.6168, swapped: true });
+  assert.deepEqual(parseCoordinates("43.8256, 87.6168", lhasa), { lat: 43.8256, lng: 87.6168, swapped: false });
+  assert.deepEqual(parseCoordinates("2.3522, 48.8566", { lat: 48.85, lng: 2.35 }), { lat: 48.8566, lng: 2.3522, swapped: true });
+  for (const text of ["", "30.2", "200, 100", "abc, 120", "1, 2, 3"]) assert.equal(parseCoordinates(text), null);
 });
